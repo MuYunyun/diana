@@ -1,6 +1,6 @@
 {
-  "name": "mtool",
-  "version": "1.0.0",
+  "name": "diana",
+  "version": "0.0.1",
   "description": "Common libraries",
   "main": "index.js",
   "dependencies": {
@@ -21,17 +21,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MuYunyun/mtool.git"
+    "url": "git+https://github.com/MuYunyun/diana.git"
   },
   "keywords": [
     "tool",
     "util",
     "common-util"
   ],
-  "author": "MuYunyun",
-  "license": "ISC",
+  "author": "muyunyun",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MuYunyun/mtool/issues"
+    "url": "https://github.com/MuYunyun/diana/issues"
   },
-  "homepage": "https://github.com/MuYunyun/mtool#readme"
+  "homepage": "https://github.com/MuYunyun/diana#readme"
 }
