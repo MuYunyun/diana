@@ -1,6 +1,6 @@
 # diana
 
-![Build Status](https://travis-ci.org/MuYunyun/diana.svg?branch=master) ![LICENSE MIT](https://img.shields.io/npm/l/express.svg)
+![Build Status](https://travis-ci.org/MuYunyun/mtool.svg?branch=master) ![LICENSE MIT](https://img.shields.io/npm/l/express.svg)
 
 
 前端业务代码工具库，库名取自 LOL 皎月女神--黛安娜(月之力的不屈化身)。
@@ -38,9 +38,12 @@ const isArrEqual = diana.arrayEqual([1, 2, 3], [1, 2, 3])
 
 你真的不需要完整引入所有函数，所以只引入需要使用的方法即可。
 ``` javascript
-// 只引入部分方法('mytool/<方法名>')
-const arrayEqual = require('mytool/arrayEqual')
+// 只引入部分方法('diana/<方法名>')
+const arrayEqual = require('diana/arrayEqual')
 const isArrEqual = arrayEqual([1, 2, 3], [1, 2, 3])
 ```
 
-### API 文档
+## API 文档
+
+### Array
+#### &emsp;&emsp;[arrayEqual][arrayEqual]&emsp;&emsp;判断两个数组是否相等
