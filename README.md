@@ -2,17 +2,18 @@
 
 ![Build Status](https://travis-ci.org/MuYunyun/mtool.svg?branch=master) ![LICENSE MIT](https://img.shields.io/npm/l/express.svg) [![codecov](https://codecov.io/gh/MuYunyun/diana/branch/master/graph/badge.svg)](https://codecov.io/gh/MuYunyun/diana)
 
+Front-end business code tool library, library name from the LOL Moonlight goddess - Diana (Moon Force incarnation).
 
-前端业务代码工具库，库名取自 LOL 皎月女神--黛安娜(月之力的不屈化身)。
+> Purpose: Efficient completion of front-end business code
 
-> 目的：高效率完成前端业务代码
+> Maybe you want [中文文档](https://github.com/MuYunyun/diana/blob/master/README-zh_cn.md)
 
-## 安装使用
+## Installation
 
-1. 直接下载`min`目录下的[diana.min.js](https://github.com/proYang/outils/blob/master/min/outils.min.js)使用，支持UMD通用模块规范
-2. 使用 npm 安装
+1. Direct download [diana.min.js](https://github.com/proYang/outils/blob/master/min/outils.min.js) in `min` directory, support UMD common module specification
+2. Use npm to install
 
-### 浏览器:
+### Browser:
 
 ``` html
 <script src="diana.min.js"></script>
@@ -21,29 +22,29 @@
 </script>
 ```
 
-### npm:
+### Npm:
 
 ```bash
 npm install --save-dev diana
 ```
 
-webpack、RequireJS、SeaJS等
+webpack、RequireJS、SeaJS...
 ```js
-// 完整引人
+// introduce completely
 const diana = require('diana')
 const isArrEqual = diana.arrayEqual([1, 2, 3], [1, 2, 3])
 ```
 
-**推荐使用方法**
+**Recommended method**
 
-你真的不需要完整引入所有函数，所以只引入需要使用的方法即可。
+You really don't need to introduce all the functions in a complete way, so just introduce the methods you need to use.
 ``` javascript
-// 只引入部分方法('diana/<方法名>')
+// Only introduce some methods('diana/<method>')
 const arrayEqual = require('diana/arrayEqual')
 const isArrEqual = arrayEqual([1, 2, 3], [1, 2, 3])
 ```
 
-## API 文档
+## API Document
 
 ### Array
-#### &emsp;&emsp;[arrayEqual][arrayEqual]&emsp;&emsp;判断两个数组是否相等
+#### &emsp;&emsp;[arrayEqual](https://github.com/MuYunyun/diana/blob/master/src/index.js)&emsp;&emsp;Determine whether the two arrays are equal
