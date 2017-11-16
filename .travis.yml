@@ -6,9 +6,9 @@ node_js:
   - "8"
 install:
   - npm install
-  - npm test
 script:
   - npm run build
+  - npm run test
 branches:
   only:
     - master

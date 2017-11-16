@@ -1,6 +1,6 @@
 # diana
 
-![Build Status](https://travis-ci.org/MuYunyun/mtool.svg?branch=master) ![LICENSE MIT](https://img.shields.io/npm/l/express.svg)
+![Build Status](https://travis-ci.org/MuYunyun/mtool.svg?branch=master) ![LICENSE MIT](https://img.shields.io/npm/l/express.svg) [![codecov](https://codecov.io/gh/MuYunyun/diana/branch/master/graph/badge.svg)](https://codecov.io/gh/MuYunyun/diana)
 
 
 前端业务代码工具库，库名取自 LOL 皎月女神--黛安娜(月之力的不屈化身)。

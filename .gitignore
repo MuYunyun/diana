@@ -3,3 +3,4 @@
 
 # folders
 node_modules/*
+coverage
