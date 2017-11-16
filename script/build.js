@@ -41,7 +41,7 @@ new Promise((resolve, reject) => {
       copy(`src/${item}/*.js`, rootPath, (err, files) => {
         if (err) throw err
         if (index === folderList.length - 1) {
-          console.log(chalk.cyan('  Copy ccomplete.\n'))
+          console.log(chalk.cyan('  Copy complete.\n'))
           copying.stop()
         }
       })

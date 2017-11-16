@@ -4,10 +4,12 @@
   "description": "Common libraries",
   "main": "index.js",
   "dependencies": {
+    "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
     "chalk": "^2.3.0",
     "copy": "^0.3.1",
+    "mocha": "^4.0.1",
     "ora": "^1.3.0",
     "rimraf": "^2.6.2",
     "webpack": "^3.8.1"
@@ -15,7 +17,7 @@
   "devDependencies": {},
   "scripts": {
     "build": "node script/build.js",
-    "test": "node script/test.js"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
