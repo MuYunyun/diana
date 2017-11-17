@@ -1,8 +1,8 @@
 {
   "name": "diana",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Common libraries",
-  "main": "index.js",
+  "main": "min/diana.js",
   "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -19,7 +19,8 @@
   },
   "scripts": {
     "build": "node script/build.js",
-    "test": "mocha && istanbul cover node_modules/mocha/bin/_mocha && codecov"
+    "test": "mocha",
+    "codecov": "npm run test && istanbul cover node_modules/mocha/bin/_mocha && codecov --token=921e25b4-c2ac-488f-8007-2749741689d0"
   },
   "repository": {
     "type": "git",

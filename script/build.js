@@ -14,7 +14,7 @@ new Promise((resolve, reject) => {
   // 构建浏览器端压缩包
   let building = ora('building...')
   building.start()
-  rm(path.resolve(rootPath, 'min', `${pkg.name}.min.js`), err => {
+  rm(path.resolve(rootPath, 'min', `${pkg.name}.js`), err => {
     if (err) throw {err}
     webpack(config, (err, stats) => {   // https://webpack.js.org/api/compiler/
       if (err) throw err

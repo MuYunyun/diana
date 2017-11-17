@@ -1,6 +1,6 @@
 # diana
 
-![Build Status](https://travis-ci.org/MuYunyun/mtool.svg?branch=master) ![LICENSE MIT](https://img.shields.io/npm/l/express.svg) [![codecov](https://codecov.io/gh/MuYunyun/diana/branch/master/graph/badge.svg)](https://codecov.io/gh/MuYunyun/diana)
+![Build Status](https://travis-ci.org/MuYunyun/diana.svg?branch=master) [![codecov](https://codecov.io/gh/MuYunyun/diana/branch/master/graph/badge.svg)](https://codecov.io/gh/MuYunyun/diana) ![LICENSE MIT](https://img.shields.io/npm/l/express.svg)
 
 Front-end business code tool library, library name from the LOL Moonlight goddess - Diana (Moon Force incarnation).
 
@@ -16,7 +16,7 @@ Front-end business code tool library, library name from the LOL Moonlight goddes
 ### Browser:
 
 ``` html
-<script src="diana.min.js"></script>
+<script src="diana.js"></script>
 <script>
     var isArrEqual = diana.arrayEqual([1, 2, 3], [1, 2, 3])
 </script>
@@ -47,4 +47,16 @@ const isArrEqual = arrayEqual([1, 2, 3], [1, 2, 3])
 ## API Document
 
 ### Array
-#### &emsp;&emsp;[arrayEqual](https://github.com/MuYunyun/diana/blob/master/src/index.js)&emsp;&emsp;Determine whether the two arrays are equal
+#### &emsp;&emsp;[arrayEqual](https://github.com/MuYunyun/diana/blob/master/src/array/arrayEqual.js)&emsp;&emsp;Determine whether the two arrays are equal
+
+### Random
+#### &emsp;&emsp;[randomColor](https://github.com/MuYunyun/diana/blob/master/src/random/randomColor.js)&emsp;&emsp;Generate colors randomly
+#### &emsp;&emsp;[randomNum](https://github.com/MuYunyun/diana/blob/master/src/random/randomNum.js)&emsp;&emsp;Generate integers within the specified range
+```js
+let num = diana.randomNum(min, max, border)
+// The border defaults to 'both' (including the two borders), with the optional 'left' (including the left border), 'right' (including the right border), 'no' (without the border)
+```
+
+### Regexp
+#### &emsp;&emsp;[isEmail](https://github.com/MuYunyun/diana/blob/master/src/regexp/isEmail.js)&emsp;&emsp;Determine whether the email address
+#### &emsp;&emsp;[isPhoneNum](https://github.com/MuYunyun/diana/blob/master/src/regexp/isPhoneNum.js)&emsp;&emsp;Determine whether the phone number

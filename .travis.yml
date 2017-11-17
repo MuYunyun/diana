@@ -8,7 +8,7 @@ install:
   - npm install
 script:
   - npm run build
-  - npm run test
+  - npm run codecov
 branches:
   only:
     - master
