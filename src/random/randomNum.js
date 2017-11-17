@@ -6,7 +6,7 @@
  */
 function randomNum(min, max, border) {
   if (min === max) {
-    return min
+    return 'randomNum() 边界值不合理'
   }
   const range = max - min
   let random = Math.random()

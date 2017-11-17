@@ -10,7 +10,7 @@ Front-end business code tool library, library name from the LOL Moonlight goddes
 
 ## Installation
 
-1. Direct download [diana.min.js](https://github.com/proYang/outils/blob/master/min/outils.min.js) in `min` directory, support UMD common module specification
+1. Direct download [diana.js](https://github.com/proYang/outils/blob/master/min/outils.min.js) in `min` directory, support UMD common module specification
 2. Use npm to install
 
 ### Browser:

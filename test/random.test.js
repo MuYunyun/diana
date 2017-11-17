@@ -9,6 +9,9 @@ describe('Random API:', () => {
   })
 
   describe('#randomNum()', () => {
+    it(`diana.randomNum(1, 1) should return 'randomNum() 边界值不合理'`, () => {
+      assert.equal(diana.randomNum(1, 1), 'randomNum() 边界值不合理')
+    })
     it(`1 <= diana.randomNum(1, 3) <= 3 should return true`, () => {
       let num = diana.randomNum(1, 3)
       assert(num <= 3 && num >=1)

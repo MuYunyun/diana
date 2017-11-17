@@ -2,7 +2,6 @@ const path = require('path')
 const fs = require('fs')
 const ora = require('ora')
 const rm = require('rimraf')
-const copy = require('copy')
 const chalk = require('chalk')
 const webpack = require('webpack')
 
@@ -28,23 +27,6 @@ new Promise((resolve, reject) => {
       }) + '\n\n')
       resolve()
       console.log(chalk.cyan('  Build complete.\n'))
-    })
-  })
-}).then(() => {
-  // 拷贝函数模块至根目录
-  let copying = ora('copying...')
-  copying.start()
-  rm('*.js', err => {
-    if (err) throw err
-    let folderList = fs.readdirSync(path.resolve(rootPath, 'src'))
-    folderList.forEach((item, index) => {
-      copy(`src/${item}/*.js`, rootPath, (err, files) => {
-        if (err) throw err
-        if (index === folderList.length - 1) {
-          console.log(chalk.cyan('  Copy complete.\n'))
-          copying.stop()
-        }
-      })
     })
   })
 }).catch((err) => {
