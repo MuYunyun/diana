@@ -1,6 +1,6 @@
 {
   "name": "diana",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "Common libraries",
   "main": "min/diana.js",
   "dependencies": {},
