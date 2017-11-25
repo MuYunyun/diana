@@ -1,4 +1,4 @@
-# diana <sup>v0.08</sup>
+# diana <sup>v0.09</sup>
 
 ![Build Status](https://travis-ci.org/MuYunyun/diana.svg?branch=master) [![codecov](https://codecov.io/gh/MuYunyun/diana/branch/master/graph/badge.svg)](https://codecov.io/gh/MuYunyun/diana) ![LICENSE MIT](https://img.shields.io/npm/l/express.svg)
 
@@ -50,6 +50,7 @@ const isArrEqual = arrayEqual([1, 2, 3], [1, 2, 3])
 
 * [`_.arrayEqual`](#_arrayEqual)
 * [`_.arrayUniq`](#_arrayUniq)
+* [`_.arrayInter`](#_arrayInter)
 
 ### `Random`
 
@@ -82,13 +83,13 @@ _.arrayEqual([0, 1, 2], [0, 1, 2]);
 
 ***
 
-#### <a id="_arrayUniq"></a>`_.arrayUniq(arr1, arr2)`
+#### <a id="_arrayUniq"></a>`_.arrayUniq(...arr)`
 [#](#_arrayUniq) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/array/arrayUniq.js "View in source") [&#x24C9;][1]
 
 多个数组取并集 | 数组去重
 
 ##### Arguments
-1. `...arr` *(Array)*: 可传入多个数组
+1. `...arr` *(Array)*: 可传入 1 个或多个数组
 
 ##### Returns
 *(Array)*: 返回去重后的 array.
@@ -98,6 +99,25 @@ _.arrayEqual([0, 1, 2], [0, 1, 2]);
 _.arrayUniq([1, 3, 2, 2, 1]) // => [1, 3, 2]
 _.arrayUniq([1, 'a', 3, 1], [4, 'a', 'b'], [2, 3, 'b', 'c'])
 // => [1, 'a', 3, 4, 'b', 2, 'c']
+```
+
+***
+
+#### <a id="_arrayInter"></a>`_.arrayInter(...arr)`
+[#](#_arrayInter) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/array/arrayInter.js "View in source") [&#x24C9;][1]
+
+多个数组取交集.
+
+##### Arguments
+1. `...arr` *(Array)*: 可传入 1 个或多个数组
+
+##### Returns
+*(Array)*: 返回取交集后的 array.
+
+##### Example
+```js
+_.arrayInter([1, 2, 'a', 1, 'a']) // => [1, 'a']
+_.arrayInter([1, 2, 'a', 1], [4, 2, 'a'], [2, 'a', 'c']) // => [ 2, 'a']
 ```
 
 ***

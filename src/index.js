@@ -3,6 +3,7 @@
  */
 const arrayEqual = require('./array/arrayEqual')
 const arrayUniq = require('./array/arrayUniq')
+const arrayInter = require('./array/arrayInter')
 
 const randomColor = require('./random/randomColor')
 const randomNum = require('./random/randomNum')
@@ -13,6 +14,7 @@ const isPhoneNum = require('./regexp/isPhoneNum')
 module.exports = {
   arrayEqual,
   arrayUniq,
+  arrayInter,
   randomColor,
   randomNum,
   isEmail,
