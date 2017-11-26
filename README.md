@@ -1,4 +1,4 @@
-# diana <sup>v0.09</sup>
+# diana <sup>v0.10</sup>
 
 ![Build Status](https://travis-ci.org/MuYunyun/diana.svg?branch=master) [![codecov](https://codecov.io/gh/MuYunyun/diana/branch/master/graph/badge.svg)](https://codecov.io/gh/MuYunyun/diana) ![LICENSE MIT](https://img.shields.io/npm/l/express.svg)
 
@@ -18,7 +18,7 @@ Front-end business code tool library, library name from the LOL Moonlight goddes
 ``` html
 <script src="diana.js"></script>
 <script>
-    const num = diana.randomNum(1, 3)
+    const num = diana.rdNum(1, 3)
 </script>
 ```
 
@@ -31,8 +31,8 @@ npm install --save-dev diana
 webpack、RequireJS、SeaJS...
 ```js
 // introduce completely
-const randomNum = require('diana/randomNum')
-const num = randomNum(1, 3)
+const rdNum = require('diana/rdNum')
+const num = rdNum(1, 3)
 ```
 
 **Recommended method**
@@ -40,22 +40,22 @@ const num = randomNum(1, 3)
 You really don't need to introduce all the functions in a complete way, so just introduce the methods you need to use.
 ``` javascript
 // Only introduce some methods('diana/<method>')
-const arrayEqual = require('diana/arrayEqual')
-const isArrEqual = arrayEqual([1, 2, 3], [1, 2, 3])
+const equal = require('diana/equal')
+const isArrEqual = equal([1, 2, 3], [1, 2, 3])
 ```
 
 ## API Document
 
 ### <a id="Arrays"></a>`Arrays`
 
-* [`_.arrayEqual`](#_arrayEqual)
-* [`_.arrayUniq`](#_arrayUniq)
-* [`_.arrayInter`](#_arrayInter)
+* [`_.equal`](#_equal)
+* [`_.uniq`](#_uniq)
+* [`_.intersection`](#_intersection)
 
 ### `Random`
 
-* [`_.randomColor`](#_randomColor)
-* [`_.randomNum`](#_randomNum)
+* [`_.rdColor`](#_rdColor)
+* [`_.rdNum`](#_rdNum)
 
 ### `Regexp`
 
@@ -63,8 +63,8 @@ const isArrEqual = arrayEqual([1, 2, 3], [1, 2, 3])
 * [`_.isPhoneNum`](#_isPhoneNum)
 
 ### `"Arrays" Methods`
-#### <a id="_arrayEqual"></a>`_.arrayEqual(arr1, arr2)`
-[#](#_arrayEqual) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/array/arrayEqual.js "View in source") [&#x24C9;][1]
+#### <a id="_equal"></a>`_.equal(arr1, arr2)`
+[#](#_equal) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/array/equal.js "View in source") [&#x24C9;][1]
 
 判断两个数组是否相等.
 
@@ -77,14 +77,14 @@ const isArrEqual = arrayEqual([1, 2, 3], [1, 2, 3])
 
 ##### Example
 ```js
-_.arrayEqual([0, 1, 2], [0, 1, 2]);
+_.equal([0, 1, 2], [0, 1, 2]);
 // => true
 ```
 
 ***
 
-#### <a id="_arrayUniq"></a>`_.arrayUniq(...arr)`
-[#](#_arrayUniq) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/array/arrayUniq.js "View in source") [&#x24C9;][1]
+#### <a id="_uniq"></a>`_.uniq(...arr)`
+[#](#_uniq) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/array/uniq.js "View in source") [&#x24C9;][1]
 
 多个数组取并集 | 数组去重
 
@@ -96,15 +96,15 @@ _.arrayEqual([0, 1, 2], [0, 1, 2]);
 
 ##### Example
 ```js
-_.arrayUniq([1, 3, 2, 2, 1]) // => [1, 3, 2]
-_.arrayUniq([1, 'a', 3, 1], [4, 'a', 'b'], [2, 3, 'b', 'c'])
+_.uniq([1, 3, 2, 2, 1]) // => [1, 3, 2]
+_.uniq([1, 'a', 3, 1], [4, 'a', 'b'], [2, 3, 'b', 'c'])
 // => [1, 'a', 3, 4, 'b', 2, 'c']
 ```
 
 ***
 
-#### <a id="_arrayInter"></a>`_.arrayInter(...arr)`
-[#](#_arrayInter) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/array/arrayInter.js "View in source") [&#x24C9;][1]
+#### <a id="_intersection"></a>`_.intersection(...arr)`
+[#](#_intersection) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/array/intersection.js "View in source") [&#x24C9;][1]
 
 多个数组取交集.
 
@@ -116,15 +116,15 @@ _.arrayUniq([1, 'a', 3, 1], [4, 'a', 'b'], [2, 3, 'b', 'c'])
 
 ##### Example
 ```js
-_.arrayInter([1, 2, 'a', 1, 'a']) // => [1, 'a']
-_.arrayInter([1, 2, 'a', 1], [4, 2, 'a'], [2, 'a', 'c']) // => [ 2, 'a']
+_.intersection([1, 2, 'a', 1, 'a']) // => [1, 'a']
+_.intersection([1, 2, 'a', 1], [4, 2, 'a'], [2, 'a', 'c']) // => [ 2, 'a']
 ```
 
 ***
 
 ### `"Random" Methods`
-#### <a id="_randomColor"></a>`_.randomColor()`
-[#](#_randomColor) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/random/randomColor.js "View in source") [&#x24C9;][1]
+#### <a id="_rdColor"></a>`_.rdColor()`
+[#](#_rdColor) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/random/rdColor.js "View in source") [&#x24C9;][1]
 
 生成随机颜色.
 
@@ -133,14 +133,14 @@ _.arrayInter([1, 2, 'a', 1], [4, 2, 'a'], [2, 'a', 'c']) // => [ 2, 'a']
 
 ##### Example
 ```js
-_.randomColor();
+_.rdColor();
 // => #b4370c
 ```
 
 ***
 
-#### <a id="_randomNum"></a>`_.randomNum(min, max [, border])`
-[#](#_randomNum) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/random/randomNum.js "View in source") [&#x24C9;][1]
+#### <a id="_rdNum"></a>`_.rdNum(min, max [, border])`
+[#](#_rdNum) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/random/rdNum.js "View in source") [&#x24C9;][1]
 
 指定整数范围生成随机整数.
 
@@ -153,10 +153,10 @@ _.randomColor();
 
 ##### Example
 ```js
-_.randomNum(1, 3);            // =>   1 <= result <= 3
-_.randomNum(1, 3, 'left');    // =>   1 <= result < 3
-_.randomNum(1, 3, 'right');   // =>    1 < result <= 3
-_.randomNum(1, 3, 'no');      // =>    1 < result < 3
+_.rdNum(1, 3);            // =>   1 <= result <= 3
+_.rdNum(1, 3, 'left');    // =>   1 <= result < 3
+_.rdNum(1, 3, 'right');   // =>    1 < result <= 3
+_.rdNum(1, 3, 'no');      // =>    1 < result < 3
 ```
 
 ***

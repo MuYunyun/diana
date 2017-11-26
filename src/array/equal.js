@@ -3,8 +3,8 @@
  * @param {*} arr1
  * @param {*} arr2
  */
-function arrayEqual(arr1, arr2) {
+function equal(arr1, arr2) {
   return arr1.toString() === arr2.toString()
 }
 
-module.exports = arrayEqual
+module.exports = equal

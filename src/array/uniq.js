@@ -4,7 +4,7 @@
  * ... 
  */
 // 方法一
-// function arrayUniq(...arr) {
+// function uniq(...arr) {
 //   let array = []
 //   for (let i = 0; i < arr.length; i++) {
 //     array = array.concat(arr[i])
@@ -13,7 +13,7 @@
 // }
 
 // 方法二
-function arrayUniq(...arr) {
+function uniq(...arr) {
   let array = []
   for (let i = 0; i < arr.length; i++) {
     array = array.concat(arr[i])
@@ -29,4 +29,4 @@ function arrayUniq(...arr) {
   return result
 }
 
-module.exports = arrayUniq
+module.exports = uniq

@@ -1,22 +1,22 @@
 /**
  * webpack 打包入口文件
  */
-const arrayEqual = require('./array/arrayEqual')
-const arrayUniq = require('./array/arrayUniq')
-const arrayInter = require('./array/arrayInter')
+const equal = require('./array/equal')
+const uniq = require('./array/uniq')
+const intersection = require('./array/intersection')
 
-const randomColor = require('./random/randomColor')
-const randomNum = require('./random/randomNum')
+const rdColor = require('./random/rdColor')
+const rdNum = require('./random/rdNum')
 
 const isEmail = require('./regexp/isEmail')
 const isPhoneNum = require('./regexp/isPhoneNum')
 
 module.exports = {
-  arrayEqual,
-  arrayUniq,
-  arrayInter,
-  randomColor,
-  randomNum,
+  equal,
+  uniq,
+  intersection,
+  rdColor,
+  rdNum,
   isEmail,
   isPhoneNum,
 }

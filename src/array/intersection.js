@@ -1,12 +1,12 @@
-const arrayUniq = require('./arrayUniq')
+const uniq = require('./uniq')
 /**
  * 1 个或者多个数组取交集
  * @param {*} arr 可传入 1 个或多个数组
- * _.arrayInter([1, 3, 'a', 'a', 1]) => [1, 'a']
- * _.arrayInter([1, 'a', 'b', 1], [4, 'a', 'b'], ['a', 2, 'b', 'c']) => ['a', 'b']
+ * _.intersection([1, 3, 'a', 'a', 1]) => [1, 'a']
+ * _.intersection([1, 'a', 'b', 1], [4, 'a', 'b'], ['a', 2, 'b', 'c']) => ['a', 'b']
  */
-function arrayInter(...arr) {
-  if (arr.length === 1) { // _.arrayInter([1, 3, 'a', 1, 'a']) => [1, 'a']
+function intersection(...arr) {
+  if (arr.length === 1) { // _.intersection([1, 3, 'a', 1, 'a']) => [1, 'a']
     const arraySort = arr[0].sort()
     const arrayResult = []
     for (let i = 0; i < arraySort.length - 1; i++) {
@@ -15,10 +15,10 @@ function arrayInter(...arr) {
       }
     }
     return arrayResult
-  } else if (arr.length > 1) { // _.arrayInter([1, 2, 'a', 1], [4, 2, 'a'], [2, 'a', 'c']) => [2, 'a']
+  } else if (arr.length > 1) { // _.intersection([1, 2, 'a', 1], [4, 2, 'a'], [2, 'a', 'c']) => [2, 'a']
     let array = []
     for (let i = 0; i < arr.length; i++) {
-      array = array.concat(arrayUniq(arr[i]))
+      array = array.concat(uniq(arr[i]))
     }
     const arraySort = array.sort()
     const arrayResult = []
@@ -31,4 +31,4 @@ function arrayInter(...arr) {
   }
 }
 
-module.exports = arrayInter
+module.exports = intersection

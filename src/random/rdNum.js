@@ -4,9 +4,9 @@
  * @param {Number} min
  * @param {String} 'both'(default)、'left'、'right'、'no'
  */
-function randomNum(min, max, border) {
+function rdNum(min, max, border) {
   if (min === max) {
-    return 'randomNum() 边界值不合理'
+    return 'rdNum() 边界值不合理'
   }
   const range = max - min
   let random = Math.random()
@@ -19,7 +19,7 @@ function randomNum(min, max, border) {
       }
       return min + Math.ceil(random * range)
     case 'no':
-      if (max === min + 1) throw ('randomNum() 边界值不合理')
+      if (max === min + 1) throw ('rdNum() 边界值不合理')
       if (random === 0) {
         random = 1
       }
@@ -29,5 +29,5 @@ function randomNum(min, max, border) {
   }
 }
 
-module.exports = randomNum
+module.exports = rdNum
 
