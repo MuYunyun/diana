@@ -11,6 +11,9 @@ describe('#Array API:', () => {
     it(`_.equal([[1, 2, 3], [4, 5, 6]], [[1, 2, 3], [4, 5, 6]]) should return true`, () => {
       assert(_.equal([[1, 2, 3], [4, 5, 6]], [[1, 2, 3], [4, 5, 6]]))
     })
+    it(`_.equal('123', '123') should return 'parameter error in equal()'`, () => {
+      assert.equal(_.equal('123', '123'), 'parameter error in equal()')
+    })
   })
   describe('#uniq()', () => {
     it(`_.uniq([1, 3, 2, 2, 1]) should return [1, 3, 2]`, () => {

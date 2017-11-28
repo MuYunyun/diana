@@ -40,8 +40,8 @@ const num = rdNum(1, 3)
 You really don't need to introduce all the functions in a complete way, so just introduce the methods you need to use.
 ``` javascript
 // Only introduce some methods('diana/<method>')
-const equal = require('diana/equal')
-const isArrEqual = equal([1, 2, 3], [1, 2, 3])
+const _ = require('diana')
+const isArrEqual = _.equal([1, 2, 3], [1, 2, 3])
 ```
 
 ## API Document
@@ -61,6 +61,22 @@ const isArrEqual = equal([1, 2, 3], [1, 2, 3])
 
 * [`_.isEmail`](#_isEmail)
 * [`_.isPhoneNum`](#_isPhoneNum)
+
+### `String`
+
+* [`_.trim`](#_trim)
+* [`_.changeCase`](#_changeCase)
+
+### `Lang`
+
+* [`_.isArray`](#_isArray)
+
+### `Math`
+
+* [`_.max`](#_max)
+* [`_.min`](#_min)
+* [`_.sum`](#_sum)
+* [`_.mean`](#_mean)
 
 ### `"Arrays" Methods`
 #### <a id="_equal"></a>`_.equal(arr1, arr2)`
@@ -196,5 +212,130 @@ _.isPhoneNum('15712345678'); // => true
 ```
 ***
 
+### `"String" Methods`
+#### <a id="_trim"></a>`_.trim(str, type)`
+[#](#_trim) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/string/trim.js "View in source") [&#x24C9;][1]
 
-[1]: #Arrays "Jump back to the TOC."
+去除空格
+
+##### Arguments
+1. `str` *(String)*: 待去除空格的字符串
+2. `type` *(Number)*: 1-所有空格(默认)，2-前后空格，3-前空格，4-后空格
+
+##### Returns
+*(String)*: 返回 String 值
+
+##### Example
+```js
+_.trim(' ab cd ef '); // => 'abcdef'
+_.trim(' ab cd ef ', 2); // => 'ab cd ef'
+```
+
+***
+#### <a id="_changeCase"></a>`_.changeCase(str, type)`
+[#](#__changeCase) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/string/_changeCase.js "View in source") [&#x24C9;][1]
+
+大小写转化
+
+##### Arguments
+1. `str` *(String)*: 待去除空格的字符串
+2. `type` *(Number)*: 1：首字母大写(默认) 2：首页母小写　3：大小写转换
+
+##### Returns
+*(String)*: 返回 String 值
+
+##### Example
+```js
+_.changeCase('abcd'); // => 'Abcd'
+_.changeCase('aBcD', 3); // => 'AbCd'
+```
+
+***
+
+### `"Lang" Methods`
+#### <a id="_isArray"></a>`_.isArray(str, type)`
+[#](#__isArray) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/lang/_isArray.js "View in source") [&#x24C9;][1]
+
+判断是否为数组
+
+##### Arguments
+1. `str` *(String)*: 待去除空格的字符串
+2. `type` *(Number)*: 1：首字母大写(默认) 2：首页母小写　3：大小写转换
+
+##### Returns
+*(Boolean)*: 返回 Boolean 值
+
+##### Example
+```js
+_.isArray([1, 2]); // => true
+```
+
+***
+### `"Math" Methods`
+#### <a id="_max"></a>`_.max(arr)`
+[#](#__max) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/math/_max.js "View in source") [&#x24C9;][1]
+
+判断数组中的最大值
+
+##### Arguments
+1. `arr` *(Array)*
+
+##### Returns
+*(number)*: 返回 int
+
+##### Example
+```js
+_.max([1, 2, 3, 4]); // => 4
+```
+
+***
+#### <a id="_min"></a>`_.min(arr)`
+[#](#__min) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/math/_min.js "View in source") [&#x24C9;][1]
+
+判断数组中的最小值
+
+##### Arguments
+1. `arr` *(Array)*
+
+##### Returns
+*(number)*: 返回 int
+
+##### Example
+```js
+_.min([1, 2, 3, 4]); // => 1
+```
+
+***
+#### <a id="_sum"></a>`_.sum(arr)`
+[#](#__sum) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/math/_sum.js "View in source") [&#x24C9;][1]
+
+数组求和
+
+##### Arguments
+1. `arr` *(Array)*
+
+##### Returns
+*(number)*: 返回 int
+
+##### Example
+```js
+_.sum([1, 2, 3, 4]); // => 10
+```
+
+***
+#### <a id="_mean"></a>`_.mean(arr)`
+[#](#__mean) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/math/_mean.js "View in source") [&#x24C9;][1]
+
+数组求平均值
+
+##### Arguments
+1. `arr` *(Array)*
+
+##### Returns
+*(number)*: 返回 number
+
+##### Example
+```js
+_.mean([1, 2, 3, 4]); // => 2.5
+```
+***
