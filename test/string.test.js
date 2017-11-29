@@ -30,8 +30,8 @@ describe('String API:', () => {
     it('_.changeCase("AbCd", 2) should return "aBCD"', () => {
       assert.equal(_.changeCase("AbCd", 2), "aBCD")
     })
-    it('_.changeCase("AbCd", 3) should return "aBcD"', () => {
-      assert.equal(_.changeCase("AbCd", 3), "aBcD")
+    it('_.changeCase("Ab@Cd", 3) should return "aB@cD"', () => {
+      assert.equal(_.changeCase("Ab@Cd", 3), "aB@cD")
     })
   })
 })

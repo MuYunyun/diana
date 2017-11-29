@@ -1,3 +1,4 @@
+// https://github.com/wengjq/Blog/issues/3
 /**
  * 深拷贝，支持常见类型
  * @param {Any} values

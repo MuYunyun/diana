@@ -16,6 +16,7 @@ const changeCase = require('./string/changeCase')
 
 // lang
 const isArray = require('./lang/isArray')
+const clone = require('./lang/clone')
 const cloneDeep = require('./lang/cloneDeep')
 
 // math
@@ -35,6 +36,7 @@ module.exports = {
   trim,
   changeCase,
   isArray,
+  clone,
   cloneDeep,
   sum,
   mean,

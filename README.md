@@ -1,4 +1,4 @@
-# diana <sup>v0.10</sup>
+# diana <sup>v0.1.2</sup>
 
 ![Build Status](https://travis-ci.org/MuYunyun/diana.svg?branch=master) [![codecov](https://codecov.io/gh/MuYunyun/diana/branch/master/graph/badge.svg)](https://codecov.io/gh/MuYunyun/diana) ![LICENSE MIT](https://img.shields.io/npm/l/express.svg)
 
@@ -31,8 +31,8 @@ npm install --save-dev diana
 webpack、RequireJS、SeaJS...
 ```js
 // introduce completely
-const rdNum = require('diana/rdNum')
-const num = rdNum(1, 3)
+const _ = require('diana')
+const isArrEqual = _.equal([1, 2, 3], [1, 2, 3])
 ```
 
 **Recommended method**
@@ -40,8 +40,8 @@ const num = rdNum(1, 3)
 You really don't need to introduce all the functions in a complete way, so just introduce the methods you need to use.
 ``` javascript
 // Only introduce some methods('diana/<method>')
-const _ = require('diana')
-const isArrEqual = _.equal([1, 2, 3], [1, 2, 3])
+const rdNum = require('diana/rdNum')
+const num = rdNum(1, 3)
 ```
 
 ## API Document
@@ -70,6 +70,8 @@ const isArrEqual = _.equal([1, 2, 3], [1, 2, 3])
 ### `Lang`
 
 * [`_.isArray`](#_isArray)
+* [`_.clone`](#_clone)
+* [`_.cloneDeep`](#_cloneDeep)
 
 ### `Math`
 
@@ -271,9 +273,45 @@ _.isArray([1, 2]); // => true
 ```
 
 ***
+#### <a id="_clone"></a>`_.clone({a: 1})`
+[#](#__clone) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/lang/_clone.js "View in source")[&#x24C9;][1]
+
+浅拷贝
+
+##### Arguments
+1. `any` *(values)*: 拷贝对象
+
+##### Returns
+*(any)*: 拷贝出的对象
+
+##### Example
+```js
+let obj = {a: 1}
+_.clone(obj).a === obj.a; // => true
+```
+***
+
+#### <a id="_cloneDeep"></a>`_.clone({a: 1})`
+[#](#_cloneDeep) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/lang/_cloneDeep.js "View in source")[&#x24C9;][1]
+
+深拷贝
+
+##### Arguments
+1. `any` *(values)*: 拷贝对象
+
+##### Returns
+*(any)*: 拷贝出的对象
+
+##### Example
+```js
+let obj = {a: 1}
+_.cloneDeep(obj).a === obj.a; // => false
+```
+
+***
 ### `"Math" Methods`
 #### <a id="_max"></a>`_.max(arr)`
-[#](#__max) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/math/_max.js "View in source") [&#x24C9;][1]
+[#](#__max) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/math/_max.js "View in source")[&#x24C9;][1]
 
 判断数组中的最大值
 
@@ -339,3 +377,5 @@ _.sum([1, 2, 3, 4]); // => 10
 _.mean([1, 2, 3, 4]); // => 2.5
 ```
 ***
+
+[1]: #Arrays "Jump back to the TOC."
