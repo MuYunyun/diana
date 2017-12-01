@@ -31,4 +31,4 @@ function intersection(...arr) {
   }
 }
 
-module.exports = intersection;
+module.exports = intersection

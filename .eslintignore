@@ -4,6 +4,9 @@ min
 
 node_modules
 
-script
+script/
 
 test
+
+.eslintrc.js
+
