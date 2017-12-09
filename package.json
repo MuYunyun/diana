@@ -15,7 +15,6 @@
     "karma": "^1.7.1",
     "karma-chrome-launcher": "^2.2.0",
     "karma-coverage": "^1.1.1",
-    "karma-coverage-istanbul-reporter": "^1.3.0",
     "karma-mocha": "^1.3.0",
     "karma-power-assert": "^1.0.0",
     "mocha": "^4.0.1",
@@ -28,7 +27,7 @@
   "scripts": {
     "build": "node script/build.js",
     "test": "karma start karma.conf.js",
-    "codecov": "npm test && codecov --token=921e25b4-c2ac-488f-8007-2749741689d0",
+    "codecov": "npm run test && codecov --token=921e25b4-c2ac-488f-8007-2749741689d0",
     "pre-lint": "node script/check.js"
   },
   "repository": {

@@ -58,7 +58,7 @@ module.exports = function(config) {
 
     // optionally, configure the reporter
     coverageReporter: {
-      type: 'html',
+      type: 'lcov',
       dir: 'coverage/'
     },
 
@@ -66,7 +66,7 @@ module.exports = function(config) {
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
     // reporters: ['progress', 'coverage'],
-    reporters: ['progress', 'coverage', 'coverage-istanbul'],
+    reporters: ['progress', 'coverage'],
 
     // reporter options
     mochaReporter: {
