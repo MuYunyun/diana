@@ -6,17 +6,17 @@ const pkg = require('../package.json')
 const rootPath = path.resolve(__dirname, '../')
 
 const config = {
-  entry: path.resolve(rootPath, 'src', 'index.js'),
+  entry: path.resolve(rootPath, 'src/node', 'index.js'),
   output: {
-    filename: `${pkg.name}.js`,
-    path: path.resolve(rootPath, 'min'),
+    filename: `${pkg.name}.back.js`,
+    path: path.resolve(rootPath, 'lib'),
     library: `${pkg.name}`,
     libraryTarget: 'umd' // http://www.imooc.com/article/10969
   },
   module: {
     rules: [{
       test: /\.js$/,
-      loader: "babel-loader"
+      loader: "babel-loader",
     }]
   },
   plugins: [

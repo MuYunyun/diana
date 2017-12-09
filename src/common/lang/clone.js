@@ -21,7 +21,7 @@ function clone(values) {
   if (values instanceof Array) {
     clone = []
     for (let i = 0, len = values.length; i < len; i++) {
-      copy[i] = values[i]
+      clone[i] = values[i]
     }
     return clone
   }

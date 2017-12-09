@@ -1,6 +1,7 @@
 /**
  * webpack 打包入口文件
  */
+/* ---------------- common ------------------- */
 const equal = require('./array/equal')
 const uniq = require('./array/uniq')
 const intersection = require('./array/intersection')
@@ -25,7 +26,7 @@ const mean = require('./math/mean')
 const max = require('./math/max')
 const min = require('./math/min')
 
-module.exports = {
+const commonFn = {
   equal,
   uniq,
   intersection,
@@ -43,3 +44,5 @@ module.exports = {
   max,
   min,
 }
+
+module.exports = commonFn

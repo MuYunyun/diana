@@ -1,14 +1,11 @@
-const _ = require('../src/index')
-const assert = require('assert')
-
 describe('Lang API:', () => {
   describe('#isArray()', () => {
-    it('_.isArray([1, 2, 3]) should return true', () => {
+    it('diana.isArray([1, 2, 3]) should return true', () => {
       Array.isArray = false
-      assert(_.isArray([1, 2, 3]))
+      assert(diana.isArray([1, 2, 3]))
     })
-    it('_.isArray("abc") should return false', () => {
-      assert.equal(_.isArray("abc"), false)
+    it('diana.isArray("abc") should return false', () => {
+      assert.equal(diana.isArray("abc"), false)
     })
   })
   describe('#cloneDeep()', () => {
@@ -21,9 +18,9 @@ describe('Lang API:', () => {
       d: new Date('2017'),
       e: array,
     };
-    it(`assert(myObject.e !== (_.cloneDeep(myObject)).e) should return true`, () => {
-      assert.deepEqual(myObject, _.cloneDeep(myObject))
-      assert(myObject.e !== (_.cloneDeep(myObject)).e)
+    it(`assert(myObject.e !== (diana.cloneDeep(myObject)).e) should return true`, () => {
+      assert.deepEqual(myObject, diana.cloneDeep(myObject))
+      assert(myObject.e !== (diana.cloneDeep(myObject)).e)
     })
   })
   describe('#clone()', () => {
@@ -36,8 +33,8 @@ describe('Lang API:', () => {
       d: new Date('2017'),
       e: array,
     };
-    it(`myObject.e === (_.clone(myObject)).e should return true`, () => {
-      assert(myObject.e === (_.clone(myObject)).e)
+    it(`myObject.e === (diana.clone(myObject)).e should return true`, () => {
+      assert(myObject.e === (diana.clone(myObject)).e)
     })
   })
 })

@@ -4,3 +4,5 @@
 # folders
 node_modules/*
 coverage
+
+.vscode/
