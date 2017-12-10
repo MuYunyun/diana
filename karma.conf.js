@@ -15,7 +15,8 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     // 导入测试文件的入口
     files: [
-      'test/**/*.spec.js'
+      // 'test/**/*.spec.js',
+      'test/index.js'
     ],
 
     // list of files to exclude
@@ -28,23 +29,30 @@ module.exports = function(config) {
       // do not include tests or libraries
       // (these files will be instrumented by Istanbul)
 
-      'test/**/*.spec.js': ['browserify', 'coverage'],
+      // 'test/**/*.spec.js': ['browserify'],
+      'test/index.js': ['webpack', 'coverage']
     },
 
-    // webpack: {
-    //   devtool: 'inline-source-map',
-    //   module: {
-    //     rules: [{
-    //       test: /\.js$/,
-    //       use: { loader: 'istanbul-instrumenter-loader' },
-    //       // exclude: [/node_modules/, /\.spec.js$/],
-    //       // include: [/node_modules/, /\.spec.js$/],
-    //     }],
-    //     loaders: [
-    //       { test: /\.js$/, exclude: [/node_modules/], loader: 'babel-loader' },
-    //     ]
-    //   }
-    // },
+    webpack: {
+      devtool: 'inline-source-map',
+      module: {
+        rules: [{
+          test: /\.js$/,
+          use: { loader: 'istanbul-instrumenter-loader' },
+          exclude: [/node_modules/, /\.spec.js$/],
+          // include: [/node_modules/, /\.spec.js$/],
+        }],
+        // loaders: [{
+        //   test: /\.js$/,
+        //   exclude: /node_modules/,
+        //   loader: 'babel-loader',
+        //   query: {
+        //     presets: ['env'],
+        //     plugins: ['istanbul']
+        //   }
+        // }]
+      }
+    },
 
     // webpackServer: {
     //   noInfo: true // prevent console spamming when running in Karma!
@@ -60,23 +68,7 @@ module.exports = function(config) {
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
     // reporters: ['progress', 'coverage'],
-    reporters: ['progress', 'coverage'],
-
-    // reporter options
-    mochaReporter: {
-      colors: {
-        success: 'blue',
-        info: 'bgGreen',
-        warning: 'cyan',
-        error: 'bgRed'
-      },
-      symbols: {
-        success: '+',
-        info: '#',
-        warning: '!',
-        error: 'x'
-      }
-    },
+    reporters: ['progress', 'coverage-istanbul'],
 
     coverageIstanbulReporter: {
       reports: ['text-summary'],
