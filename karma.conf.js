@@ -7,13 +7,11 @@ module.exports = function(config) {
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
 
-
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha', 'browserify'],
+    frameworks: ['mocha'],
 
-    // list of files / patterns to load in the browser
-    // 导入测试文件的入口
+    // 把文件导入浏览器，和下面的 preprocessors 对应
     files: [
       // 'test/**/*.spec.js',
       'test/index.js'
@@ -25,38 +23,22 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      // source files, that you wanna generate coverage for
-      // do not include tests or libraries
-      // (these files will be instrumented by Istanbul)
-
-      // 'test/**/*.spec.js': ['browserify'],
-      'test/index.js': ['webpack', 'coverage']
+      // 'test/**/*.spec.js': ['browserify'], // 踩了 browserify 的坑，生成的 coverage 只是一个 require 路径，就没深找还有什么类似 webpack 的 istanbul 插件了
+      'test/index.js': ['webpack', 'sourcemap', 'coverage']
     },
 
     webpack: {
       devtool: 'inline-source-map',
       module: {
         rules: [{
+          enforce: 'post',
           test: /\.js$/,
-          use: { loader: 'istanbul-instrumenter-loader' },
+          use: { loader: 'sourcemap-istanbul-instrumenter-loader' },
           exclude: [/node_modules/, /\.spec.js$/],
           // include: [/node_modules/, /\.spec.js$/],
         }],
-        // loaders: [{
-        //   test: /\.js$/,
-        //   exclude: /node_modules/,
-        //   loader: 'babel-loader',
-        //   query: {
-        //     presets: ['env'],
-        //     plugins: ['istanbul']
-        //   }
-        // }]
       }
     },
-
-    // webpackServer: {
-    //   noInfo: true // prevent console spamming when running in Karma!
-    // },
 
     // optionally, configure the reporter
     coverageReporter: {
@@ -67,13 +49,25 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    // reporters: ['progress', 'coverage'],
-    reporters: ['progress', 'coverage-istanbul'],
+    // reporters: ['progress', 'coverage'], // 这个有 bug~~ 改用下面 karma-remap-istanbul
 
-    coverageIstanbulReporter: {
-      reports: ['text-summary'],
-      fixWebpackSourcePaths: true
+    // coverageIstanbulReporter: {
+    //   reports: ['text-summary'],
+    //   fixWebpackSourcePaths: true
+    // },
+
+    remapIstanbulReporter: {
+      remapOptions: {}, //additional remap options
+      reportOptions: {}, //additional report options
+      reports: {
+        'text-summary': null, // to display summary results on console
+        json: 'coverage/coverage.json',
+        lcovonly: 'coverage/lcov.info',
+        html: 'coverage/html/',
+      }
     },
+
+    reporters: ['progress', 'karma-remap-istanbul'], // 好吧，，remap-isbanbul 也报了一个未找到 sourcemap 的 error，直接注释了 remap-istanbul 包的 CoverageTransformer.js 文件的 169 行，以后有机会再捣鼓吧。（心累）
 
     // web server port
     port: 9876,
@@ -102,10 +96,9 @@ module.exports = function(config) {
       }
     },
 
-
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: true,
+    singleRun: false,
 
     // Concurrency level
     // how many browser should be started simultaneous
