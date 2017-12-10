@@ -1,3 +1,6 @@
+const diana = require('../../src/common/index.js')
+const assert = require('assert')
+
 describe('String API:', () => {
   describe('#trim()', () => {
     it('diana.trim(" 你好 ， 我在 测试 ") should return "你好，我在测试"', () => {

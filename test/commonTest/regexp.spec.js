@@ -1,3 +1,6 @@
+const diana = require('../../src/common/index.js')
+const assert = require('assert')
+
 describe('Regexp API:', () => {
 
   describe('#isEmail()', () => {

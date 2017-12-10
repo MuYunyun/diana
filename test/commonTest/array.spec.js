@@ -1,3 +1,6 @@
+const diana = require('../../src/common/index.js')
+const assert = require('assert')
+
 describe('#Array API:', () => {
   describe('#equal()', () => {
     it(`diana.equal([0, 2, 3], [1, 2, 3]) should return false`, () => {

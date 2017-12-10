@@ -1,3 +1,6 @@
+const diana = require('../../src/common/index.js')
+const assert = require('assert')
+
 describe('Lang API:', () => {
   describe('#isArray()', () => {
     it('diana.isArray([1, 2, 3]) should return true', () => {

@@ -10,12 +10,11 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha', 'power-assert'],
+    frameworks: ['mocha', 'browserify'],
 
     // list of files / patterns to load in the browser
     // 导入测试文件的入口
     files: [
-      'lib/diana.js',
       'test/**/*.spec.js'
     ],
 
@@ -29,12 +28,7 @@ module.exports = function(config) {
       // do not include tests or libraries
       // (these files will be instrumented by Istanbul)
 
-      // 'src/**/*.js': ['webpack', 'sourcemap', 'coverage'],
-      // 'src/**/*.js': ['babel', 'coverage'],
-      // 'src/browser/index.js': ['babel', 'webpack', 'sourcemap', 'coverage'],
-      // 'src/node/index.js': ['webpack', 'sourcemap', 'coverage'],
-      // 'src/common/index.js': ['webpack', 'sourcemap', 'coverage'],
-      'lib/diana.js': ['coverage'], // 统计覆盖率的文件
+      'test/**/*.spec.js': ['browserify', 'coverage'],
     },
 
     // webpack: {

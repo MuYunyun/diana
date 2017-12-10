@@ -1,3 +1,6 @@
+const diana = require('../../src/common/index.js')
+const assert = require('assert')
+
 describe('#Math API:', () => {
   describe('#sum()', () => {
     it(`diana.sum([1, 2, 3, 4]) should return 10`, () => {

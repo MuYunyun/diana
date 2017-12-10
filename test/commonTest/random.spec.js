@@ -1,3 +1,6 @@
+const diana = require('../../src/common/index.js')
+const assert = require('assert')
+
 describe('Random API:', () => {
   describe('#rdColor()', () => {
     it(`/^#[0-9a-fA-F]$/.test(diana.rdColor()) should return true`, () => {
