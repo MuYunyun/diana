@@ -19,7 +19,7 @@ function rdNum(min, max, border) {
     }
     return min + Math.ceil(random * range)
   case 'no':
-    if (max === min + 1) throw ('rdNum() 边界值不合理')
+    if ((max - min < 1) || (max - min) === 1) return 'rdNum() 边界值不合理'
     if (random === 0) {
       random = 1
     }

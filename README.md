@@ -1,4 +1,4 @@
-# diana <sup>v0.1.8</sup>
+# diana <sup>v0.1.9</sup>
 
 ![Build Status](https://travis-ci.org/MuYunyun/diana.svg?branch=master) [![codecov](https://codecov.io/gh/MuYunyun/diana/branch/master/graph/badge.svg)](https://codecov.io/gh/MuYunyun/diana) ![LICENSE MIT](https://img.shields.io/npm/l/express.svg)
 
@@ -42,7 +42,7 @@ const rdNum = require('diana/rdNum')
 const num = rdNum(1, 3)
 ```
 
-## Common API Document
+## API Document
 
 ### <a id="Arrays"></a>`Arrays`
 
@@ -78,11 +78,18 @@ const num = rdNum(1, 3)
 * [`_.sum`](#_sum)
 * [`_.mean`](#_mean)
 
-## 浏览器端 API 文档（在通用 API 上扩展）
+### `Url`
+
+* [`_.obj2query`](#_obj2query)
+* [`_.query2obj`](#_query2obj)
+
+***
 
 ### `Device`
 * [`_.getOS`](#_getOS)
 * [`_.isMobile`](#_isMobile)
+
+***
 
 ### `"Arrays" Methods`
 #### <a id="_equal"></a>`_.equal(arr1, arr2)`
@@ -239,7 +246,7 @@ _.trim(' ab cd ef ', 2); // => 'ab cd ef'
 
 ***
 #### <a id="_changeCase"></a>`_.changeCase(str, type)`
-[#](#__changeCase) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/string/_changeCase.js "View in source") [&#x24C9;][1]
+[#](#__changeCase) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/string/changeCase.js "View in source") [&#x24C9;][1]
 
 大小写转化
 
@@ -260,7 +267,7 @@ _.changeCase('aBcD', 3); // => 'AbCd'
 
 ### `"Lang" Methods`
 #### <a id="_isArray"></a>`_.isArray(str, type)`
-[#](#__isArray) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/lang/_isArray.js "View in source") [&#x24C9;][1]
+[#](#__isArray) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/lang/isArray.js "View in source") [&#x24C9;][1]
 
 判断是否为数组
 
@@ -278,7 +285,7 @@ _.isArray([1, 2]); // => true
 
 ***
 #### <a id="_clone"></a>`_.clone({a: 1})`
-[#](#__clone) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/lang/_clone.js "View in source")[&#x24C9;][1]
+[#](#__clone) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/lang/clone.js "View in source")[&#x24C9;][1]
 
 浅拷贝
 
@@ -295,8 +302,8 @@ _.clone(obj).a === obj.a; // => true
 ```
 ***
 
-#### <a id="_cloneDeep"></a>`_.clone({a: 1})`
-[#](#_cloneDeep) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/lang/_cloneDeep.js "View in source")[&#x24C9;][1]
+#### <a id="_cloneDeep"></a>`_.cloneDeep({a: 1})`
+[#](#_cloneDeep) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/lang/cloneDeep.js "View in source")[&#x24C9;][1]
 
 深拷贝
 
@@ -315,7 +322,7 @@ _.cloneDeep(obj).a === obj.a; // => false
 ***
 ### `"Math" Methods`
 #### <a id="_max"></a>`_.max(arr)`
-[#](#__max) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/math/_max.js "View in source")[&#x24C9;][1]
+[#](#__max) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/math/max.js "View in source")[&#x24C9;][1]
 
 判断数组中的最大值
 
@@ -332,7 +339,7 @@ _.max([1, 2, 3, 4]); // => 4
 
 ***
 #### <a id="_min"></a>`_.min(arr)`
-[#](#__min) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/math/_min.js "View in source") [&#x24C9;][1]
+[#](#__min) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/math/min.js "View in source") [&#x24C9;][1]
 
 判断数组中的最小值
 
@@ -349,7 +356,7 @@ _.min([1, 2, 3, 4]); // => 1
 
 ***
 #### <a id="_sum"></a>`_.sum(arr)`
-[#](#__sum) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/math/_sum.js "View in source") [&#x24C9;][1]
+[#](#__sum) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/math/sum.js "View in source") [&#x24C9;][1]
 
 数组求和
 
@@ -366,7 +373,7 @@ _.sum([1, 2, 3, 4]); // => 10
 
 ***
 #### <a id="_mean"></a>`_.mean(arr)`
-[#](#__mean) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/math/_mean.js "View in source") [&#x24C9;][1]
+[#](#__mean) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/math/mean.js "View in source") [&#x24C9;][1]
 
 数组求平均值
 
@@ -381,8 +388,41 @@ _.sum([1, 2, 3, 4]); // => 10
 _.mean([1, 2, 3, 4]); // => 2.5
 ```
 ***
+#### <a id="_obj2query"></a>`_.obj2query(baseurl, obj)`
+[#](#_obj2query) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/url/obj2query.js "View in source") [&#x24C9;][1]
+
+对象转成 URL 中的 query
+
+##### Arguments
+1. `baseurl` *(String)* 基础 url
+2. `obj` *(Object)* 待解析对象
+
+##### Returns
+*(String)*: 返回 queryurl
+
+##### Example
+```js
+_.obj2query('http://abc.com', {a: 1, b: 2}); // => http://abc.com?a=1&b=2
+```
+***
+#### <a id="_query2obj"></a>`_.query2obj(queryurl)`
+[#](#_query2obj) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/url/query2obj.js "View in source") [&#x24C9;][1]
+
+URL 中的 query 转为对象
+
+##### Arguments
+1. `queryurl` *(String)* 基础 url
+
+##### Returns
+*(Object)*: 返回解析后的对象
+
+##### Example
+```js
+_.query2obj('http://abc.com?a=1&b=2'); // => {a: 1, b: 2}
+```
+***
 #### <a id="_getOS"></a>`_.getOS()`
-[#](#__getOS) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/browser/device/_getOS.js "View in source") [&#x24C9;][1]
+[#](#__getOS) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/browser/device/getOS.js "View in source") [&#x24C9;][1]
 
 获取当前的操作系统
 
@@ -397,7 +437,7 @@ _.getOS(); // => 'MacOSX'
 ```
 ***
 #### <a id="_isMobile"></a>`_.isMobile()`
-[#](#__isMobile) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/browser/device/_isMobile.js "View in source") [&#x24C9;][1]
+[#](#__isMobile) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/browser/device/isMobile.js "View in source") [&#x24C9;][1]
 
 判断当前环境是否为手机
 

@@ -26,6 +26,10 @@ const mean = require('./math/mean')
 const max = require('./math/max')
 const min = require('./math/min')
 
+// url
+const obj2query = require('./url/obj2query')
+const query2obj = require('./url/query2obj')
+
 const commonFn = {
   equal,
   uniq,
@@ -43,6 +47,8 @@ const commonFn = {
   mean,
   max,
   min,
+  obj2query,
+  query2obj,
 }
 
 module.exports = commonFn
