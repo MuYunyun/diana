@@ -1,4 +1,4 @@
-# diana <sup>v0.1.9</sup>
+# diana <sup>v0.1.10</sup>
 
 ![Build Status](https://travis-ci.org/MuYunyun/diana.svg?branch=master) [![codecov](https://codecov.io/gh/MuYunyun/diana/branch/master/graph/badge.svg)](https://codecov.io/gh/MuYunyun/diana) ![LICENSE MIT](https://img.shields.io/npm/l/express.svg)
 
@@ -70,6 +70,13 @@ const num = rdNum(1, 3)
 * [`_.isArray`](#_isArray)
 * [`_.clone`](#_clone)
 * [`_.cloneDeep`](#_cloneDeep)
+* [`_.isArguments`](#_isArguments)
+* [`_.isFunction`](#_isFunction)
+* [`_.isString`](#_isString)
+* [`_.isNumber`](#_isNumber)
+* [`_.isDate`](#_isDate)
+* [`_.isRegExp`](#_isRegExp)
+* [`_.Error`](#_Error)
 
 ### `Math`
 
@@ -84,6 +91,10 @@ const num = rdNum(1, 3)
 * [`_.query2obj`](#_query2obj)
 
 ***
+
+### `Collection`
+
+* [`_.each`](#_each)
 
 ### `Device`
 * [`_.getOS`](#_getOS)
@@ -318,7 +329,77 @@ _.clone(obj).a === obj.a; // => true
 let obj = {a: 1}
 _.cloneDeep(obj).a === obj.a; // => false
 ```
+***
+#### <a id="_isArguments"></a>`_.isArguments(object)`
+[#](#_isArguments) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.js "View in source")[&#x24C9;][1]
 
+如果 object 是一个参数对象，返回 true。
+
+##### Example
+```js
+(function(){ return _.isArguments(arguments); })(1, 2, 3); // => true
+_.isArguments([1,2,3]); // => false
+```
+***
+#### <a id="_isFunction"></a>`_.isFunction(object)`
+[#](#_isFunction) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.js "View in source")[&#x24C9;][1]
+
+如果 object 是一个函数（Function），返回 true。
+
+##### Example
+```js
+_.isFunction(() => {return 1}); // => true
+```
+***
+#### <a id="_isString"></a>`_.isString(object)`
+[#](#_isString) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.js "View in source")[&#x24C9;][1]
+
+如果 object 是一个字符串，返回 true。
+
+##### Example
+```js
+_.isString('abc'); // => true
+```
+***
+#### <a id="_isNumber"></a>`_.isNumber(object)`
+[#](#_isNumber) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.js "View in source")[&#x24C9;][1]
+
+如果 object 是一个数值，返回 true。
+
+##### Example
+```js
+_.isNumber(123); // => true
+```
+***
+#### <a id="_isDate"></a>`_.isDate(object)`
+[#](#_isDate) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.js "View in source")[&#x24C9;][1]
+
+如果 object 是一个日期，返回 true。
+
+##### Example
+```js
+_.isDate(new Date()); // => true
+```
+***
+#### <a id="_isRegExp"></a>`_.isRegExp(object)`
+[#](#_isRegExp) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.js "View in source")[&#x24C9;][1]
+
+如果 object 是一个正则表达式，返回 true。
+
+##### Example
+```js
+_.isRegExp(/abc/); // => true
+```
+***
+#### <a id="_isError"></a>`_.isError(object)`
+[#](#_isError) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.js "View in source")[&#x24C9;][1]
+
+如果object继承至 Error 对象，那么返回 true。
+
+##### Example
+```js
+_.isError(/abc/); // => true
+```
 ***
 ### `"Math" Methods`
 #### <a id="_max"></a>`_.max(arr)`
@@ -421,15 +502,21 @@ URL 中的 query 转为对象
 _.query2obj('http://abc.com?a=1&b=2'); // => {a: 1, b: 2}
 ```
 ***
+#### <a id="_each"></a>`_.each(list, iteratee)`
+[#](#__each) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/object/equal.js "View in source") [&#x24C9;][1]
+
+遍历 list 中的所有元素，按顺序用每个元素当做参数调用 iteratee 函数。支持数组，对象，和类数组对象。
+
+##### Example
+```js
+_.each([1, 2, 3], (value) => {console.log(value)}); // => 1, 2, 3
+_.each({1, 2, 3}, (value) => {console.log(value)}); // => 1, 2, 3
+```
+***
 #### <a id="_getOS"></a>`_.getOS()`
 [#](#__getOS) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/browser/device/getOS.js "View in source") [&#x24C9;][1]
 
 获取当前的操作系统
-
-##### Arguments
-1. `void`
-##### Returns
-*(string)*: 返回当前的操作系统
 
 ##### Example
 ```js
@@ -440,12 +527,6 @@ _.getOS(); // => 'MacOSX'
 [#](#__isMobile) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/browser/device/isMobile.js "View in source") [&#x24C9;][1]
 
 判断当前环境是否为手机
-
-##### Arguments
-1. `void`
-
-##### Returns
-*(boolean)*: 返回 boolean
 
 ##### Example
 ```js

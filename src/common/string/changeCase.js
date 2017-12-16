@@ -13,20 +13,20 @@
 // console.log(newString);  // abc - 12345 - #$*%
 function changeCase(str, type) {
   switch (type) {
-  case 1:
-    return str.replace(/^(\w)(\w+)/, (v, v1, v2) => {
-      return v1.toUpperCase() + v2.toLowerCase()
-    })
-  case 2:
-    return str.replace(/^(\w)(\w+)/, (v, v1, v2) => {
-      return v1.toLowerCase() + v2.toUpperCase()
-    })
-  case 3:
-    return ToggleCase(str)
-  default:
-    return str.replace(/^(\w)(\w+)/, (v, v1, v2) => {
-      return v1.toUpperCase() + v2.toLowerCase()
-    })
+    case 1:
+      return str.replace(/^(\w)(\w+)/, (v, v1, v2) => {
+        return v1.toUpperCase() + v2.toLowerCase()
+      })
+    case 2:
+      return str.replace(/^(\w)(\w+)/, (v, v1, v2) => {
+        return v1.toLowerCase() + v2.toUpperCase()
+      })
+    case 3:
+      return ToggleCase(str)
+    default:
+      return str.replace(/^(\w)(\w+)/, (v, v1, v2) => {
+        return v1.toUpperCase() + v2.toLowerCase()
+      })
   }
 }
 

@@ -41,4 +41,12 @@ describe('Lang API:', () => {
       assert(myObject.e === copyObject.e)
     })
   })
+  describe('#isType()', () => {
+    it(`test isString()`, () => {
+      assert(_.isString('I\'m String'))
+    })
+    it(`test isFunction()`, () => {
+      assert(_.isFunction(() => {return 1}))
+    })
+  })
 })
