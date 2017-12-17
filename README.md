@@ -1,8 +1,8 @@
-# diana <sup>v0.1.10</sup>
+# diana <sup>v0.2.0</sup>
 
 ![Build Status](https://travis-ci.org/MuYunyun/diana.svg?branch=master) [![codecov](https://codecov.io/gh/MuYunyun/diana/branch/master/graph/badge.svg)](https://codecov.io/gh/MuYunyun/diana) ![LICENSE MIT](https://img.shields.io/npm/l/express.svg)
 
-Front-end business code tool library (Support for `browser` and `node` environments), library name from the LOL Moonlight goddess - Diana (Moon Force incarnation).
+Front-end business code tool library (Support for `browser` and `node` environments), library name from the LOL Moonlight goddess - Diana.
 
 > Purpose: Efficient completion of front-end business code
 
@@ -18,35 +18,26 @@ Front-end business code tool library (Support for `browser` and `node` environme
 ``` html
 <script src="diana.js"></script>
 <script>
-    const num = diana.rdNum(1, 3)
+    const isEqual = diana.equal([1, 2, 3], [1, 2, 3]) // true
 </script>
 ```
 
 ### Npm:
 
 ```bash
-npm install --save-dev diana
+npm install diana --save-dev
 ```
 
 webpack、RequireJS、SeaJS...
 ```js
-// introduce completely
 const _ = require('diana')
-const isArrEqual = _.equal([1, 2, 3], [1, 2, 3])
-```
-
-Of course you can just introduce the methods you need to use.
-``` javascript
-// Only introduce some methods('diana/<method>')
-const rdNum = require('diana/rdNum')
-const num = rdNum(1, 3)
+const isEqual = _.equal([1, 2, 3], [1, 2, 3]) // true
 ```
 
 ## API Document
 
 ### <a id="Arrays"></a>`Arrays`
 
-* [`_.equal`](#_equal)
 * [`_.uniq`](#_uniq)
 * [`_.intersection`](#_intersection)
 
@@ -76,7 +67,7 @@ const num = rdNum(1, 3)
 * [`_.isNumber`](#_isNumber)
 * [`_.isDate`](#_isDate)
 * [`_.isRegExp`](#_isRegExp)
-* [`_.Error`](#_Error)
+* [`_.isError`](#_Error)
 
 ### `Math`
 
@@ -84,6 +75,10 @@ const num = rdNum(1, 3)
 * [`_.min`](#_min)
 * [`_.sum`](#_sum)
 * [`_.mean`](#_mean)
+
+### `Object`
+
+* [`_.equal`](#_equal)
 
 ### `Url`
 
@@ -102,26 +97,27 @@ const num = rdNum(1, 3)
 
 ***
 
-### `"Arrays" Methods`
+### `"Object" Methods`
 #### <a id="_equal"></a>`_.equal(arr1, arr2)`
-[#](#_equal) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/array/equal.js "View in source") [&#x24C9;][1]
+[#](#_equal) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/object/equal.js "View in source") [&#x24C9;][1]
 
-判断两个数组是否相等.
-
-##### Arguments
-1. `arr1` *(Array)*:
-2. `arr2` *(Array)*:
-
-##### Returns
-*(Boolean)*: 返回 bool 值.
+判断两个任意值是否相等(包含对象、数组深度遍历)
 
 ##### Example
 ```js
-_.equal([0, 1, 2], [0, 1, 2]);
-// => true
+const obj1 = {
+    a: 1,
+    b: [1, this.obj1],
+}
+const obj2 = {
+    a: 1,
+    b: [1, this.obj2],
+}
+_.equal(obj1, obj2) // => true
 ```
-
 ***
+
+### `"Arrays" Methods`
 
 #### <a id="_uniq"></a>`_.uniq(...arr)`
 [#](#_uniq) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/array/uniq.js "View in source") [&#x24C9;][1]
@@ -407,12 +403,6 @@ _.isError(/abc/); // => true
 
 判断数组中的最大值
 
-##### Arguments
-1. `arr` *(Array)*
-
-##### Returns
-*(number)*: 返回 int
-
 ##### Example
 ```js
 _.max([1, 2, 3, 4]); // => 4
@@ -423,12 +413,6 @@ _.max([1, 2, 3, 4]); // => 4
 [#](#__min) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/math/min.js "View in source") [&#x24C9;][1]
 
 判断数组中的最小值
-
-##### Arguments
-1. `arr` *(Array)*
-
-##### Returns
-*(number)*: 返回 int
 
 ##### Example
 ```js
@@ -441,12 +425,6 @@ _.min([1, 2, 3, 4]); // => 1
 
 数组求和
 
-##### Arguments
-1. `arr` *(Array)*
-
-##### Returns
-*(number)*: 返回 int
-
 ##### Example
 ```js
 _.sum([1, 2, 3, 4]); // => 10
@@ -457,12 +435,6 @@ _.sum([1, 2, 3, 4]); // => 10
 [#](#__mean) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/math/mean.js "View in source") [&#x24C9;][1]
 
 数组求平均值
-
-##### Arguments
-1. `arr` *(Array)*
-
-##### Returns
-*(number)*: 返回 number
 
 ##### Example
 ```js

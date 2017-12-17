@@ -1,11 +1,12 @@
-# diana <sup>v0.1.9</sup>
+# diana <sup>v0.2.0</sup>
 
 ![Build Status](https://travis-ci.org/MuYunyun/diana.svg?branch=master) [![codecov](https://codecov.io/gh/MuYunyun/diana/branch/master/graph/badge.svg)](https://codecov.io/gh/MuYunyun/diana) ![LICENSE MIT](https://img.shields.io/npm/l/express.svg)
 
 
-前端业务代码工具库（支持`浏览器`和 `node` 环境），库名取自 LOL 皎月女神--黛安娜(月之力的不屈化身)。
+前端业务代码工具库（支持`浏览器`和 `node` 环境），库名取自 LOL 皎月女神--黛安娜。
 
 > 目的：高效率完成前端业务代码
+
 > [开发记录待整理](https://github.com/MuYunyun/diana/blob/master/README-zh_cn.md)
 
 ## 安装使用
@@ -18,35 +19,26 @@
 ``` html
 <script src="diana.js"></script>
 <script>
-    const num = diana.rdNum(1, 3)
+    const isEqual = diana.equal([1, 2, 3], [1, 2, 3]) // true
 </script>
 ```
 
 ### npm:
 
 ```bash
-npm install --save-dev diana
+npm install diana --save-dev
 ```
 
 webpack、RequireJS、SeaJS等
 ```js
-// 完整引人
 const _ = require('diana')
-const isArrEqual = _.equal([1, 2, 3], [1, 2, 3])
-```
-
-当然你也可以只引入需要使用的方法。
-``` javascript
-// 只引入部分方法('diana/<方法名>')
-const rdNum = require('diana/rdNum')
-const num = rdNum(1, 3)
+const isEqual = _.equal([1, 2, 3], [1, 2, 3]) // true
 ```
 
 ## API 文档
 
 ### <a id="Arrays"></a>`Arrays`
 
-* [`_.equal`](#_equal)
 * [`_.uniq`](#_uniq)
 * [`_.intersection`](#_intersection)
 
@@ -70,6 +62,13 @@ const num = rdNum(1, 3)
 * [`_.isArray`](#_isArray)
 * [`_.clone`](#_clone)
 * [`_.cloneDeep`](#_cloneDeep)
+* [`_.isArguments`](#_isArguments)
+* [`_.isFunction`](#_isFunction)
+* [`_.isString`](#_isString)
+* [`_.isNumber`](#_isNumber)
+* [`_.isDate`](#_isDate)
+* [`_.isRegExp`](#_isRegExp)
+* [`_.isError`](#_Error)
 
 ### `Math`
 
@@ -78,6 +77,10 @@ const num = rdNum(1, 3)
 * [`_.sum`](#_sum)
 * [`_.mean`](#_mean)
 
+### `Object`
+
+* [`_.equal`](#_equal)
+
 ### `Url`
 
 * [`_.obj2query`](#_obj2query)
@@ -85,32 +88,37 @@ const num = rdNum(1, 3)
 
 ***
 
+### `Collection`
+
+* [`_.each`](#_each)
+
 ### `Device`
 * [`_.getOS`](#_getOS)
 * [`_.isMobile`](#_isMobile)
 
 ***
 
-### `"Arrays" Methods`
+### `"Object" Methods`
 #### <a id="_equal"></a>`_.equal(arr1, arr2)`
-[#](#_equal) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/array/equal.js "View in source") [&#x24C9;][1]
+[#](#_equal) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/object/equal.js "View in source") [&#x24C9;][1]
 
-判断两个数组是否相等.
-
-##### Arguments
-1. `arr1` *(Array)*:
-2. `arr2` *(Array)*:
-
-##### Returns
-*(Boolean)*: 返回 bool 值.
+判断两个任意值是否相等(包含对象、数组深度遍历)
 
 ##### Example
 ```js
-_.equal([0, 1, 2], [0, 1, 2]);
-// => true
+const obj1 = {
+    a: 1,
+    b: [1, this.obj1],
+}
+const obj2 = {
+    a: 1,
+    b: [1, this.obj2],
+}
+_.equal(obj1, obj2) // => true
 ```
-
 ***
+
+### `"Arrays" Methods`
 
 #### <a id="_uniq"></a>`_.uniq(...arr)`
 [#](#_uniq) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/array/uniq.js "View in source") [&#x24C9;][1]
@@ -318,19 +326,83 @@ _.clone(obj).a === obj.a; // => true
 let obj = {a: 1}
 _.cloneDeep(obj).a === obj.a; // => false
 ```
+***
+#### <a id="_isArguments"></a>`_.isArguments(object)`
+[#](#_isArguments) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.js "View in source")[&#x24C9;][1]
 
+如果 object 是一个参数对象，返回 true。
+
+##### Example
+```js
+(function(){ return _.isArguments(arguments); })(1, 2, 3); // => true
+_.isArguments([1,2,3]); // => false
+```
+***
+#### <a id="_isFunction"></a>`_.isFunction(object)`
+[#](#_isFunction) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.js "View in source")[&#x24C9;][1]
+
+如果 object 是一个函数（Function），返回 true。
+
+##### Example
+```js
+_.isFunction(() => {return 1}); // => true
+```
+***
+#### <a id="_isString"></a>`_.isString(object)`
+[#](#_isString) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.js "View in source")[&#x24C9;][1]
+
+如果 object 是一个字符串，返回 true。
+
+##### Example
+```js
+_.isString('abc'); // => true
+```
+***
+#### <a id="_isNumber"></a>`_.isNumber(object)`
+[#](#_isNumber) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.js "View in source")[&#x24C9;][1]
+
+如果 object 是一个数值，返回 true。
+
+##### Example
+```js
+_.isNumber(123); // => true
+```
+***
+#### <a id="_isDate"></a>`_.isDate(object)`
+[#](#_isDate) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.js "View in source")[&#x24C9;][1]
+
+如果 object 是一个日期，返回 true。
+
+##### Example
+```js
+_.isDate(new Date()); // => true
+```
+***
+#### <a id="_isRegExp"></a>`_.isRegExp(object)`
+[#](#_isRegExp) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.js "View in source")[&#x24C9;][1]
+
+如果 object 是一个正则表达式，返回 true。
+
+##### Example
+```js
+_.isRegExp(/abc/); // => true
+```
+***
+#### <a id="_isError"></a>`_.isError(object)`
+[#](#_isError) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.js "View in source")[&#x24C9;][1]
+
+如果object继承至 Error 对象，那么返回 true。
+
+##### Example
+```js
+_.isError(/abc/); // => true
+```
 ***
 ### `"Math" Methods`
 #### <a id="_max"></a>`_.max(arr)`
 [#](#__max) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/math/max.js "View in source")[&#x24C9;][1]
 
 判断数组中的最大值
-
-##### Arguments
-1. `arr` *(Array)*
-
-##### Returns
-*(number)*: 返回 int
 
 ##### Example
 ```js
@@ -343,12 +415,6 @@ _.max([1, 2, 3, 4]); // => 4
 
 判断数组中的最小值
 
-##### Arguments
-1. `arr` *(Array)*
-
-##### Returns
-*(number)*: 返回 int
-
 ##### Example
 ```js
 _.min([1, 2, 3, 4]); // => 1
@@ -360,12 +426,6 @@ _.min([1, 2, 3, 4]); // => 1
 
 数组求和
 
-##### Arguments
-1. `arr` *(Array)*
-
-##### Returns
-*(number)*: 返回 int
-
 ##### Example
 ```js
 _.sum([1, 2, 3, 4]); // => 10
@@ -376,12 +436,6 @@ _.sum([1, 2, 3, 4]); // => 10
 [#](#__mean) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/math/mean.js "View in source") [&#x24C9;][1]
 
 数组求平均值
-
-##### Arguments
-1. `arr` *(Array)*
-
-##### Returns
-*(number)*: 返回 number
 
 ##### Example
 ```js
@@ -421,15 +475,21 @@ URL 中的 query 转为对象
 _.query2obj('http://abc.com?a=1&b=2'); // => {a: 1, b: 2}
 ```
 ***
+#### <a id="_each"></a>`_.each(list, iteratee)`
+[#](#__each) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/object/equal.js "View in source") [&#x24C9;][1]
+
+遍历 list 中的所有元素，按顺序用每个元素当做参数调用 iteratee 函数。支持数组，对象，和类数组对象。
+
+##### Example
+```js
+_.each([1, 2, 3], (value) => {console.log(value)}); // => 1, 2, 3
+_.each({1, 2, 3}, (value) => {console.log(value)}); // => 1, 2, 3
+```
+***
 #### <a id="_getOS"></a>`_.getOS()`
 [#](#__getOS) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/browser/device/getOS.js "View in source") [&#x24C9;][1]
 
 获取当前的操作系统
-
-##### Arguments
-1. `void`
-##### Returns
-*(string)*: 返回当前的操作系统
 
 ##### Example
 ```js
@@ -440,12 +500,6 @@ _.getOS(); // => 'MacOSX'
 [#](#__isMobile) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/browser/device/isMobile.js "View in source") [&#x24C9;][1]
 
 判断当前环境是否为手机
-
-##### Arguments
-1. `void`
-
-##### Returns
-*(boolean)*: 返回 boolean
 
 ##### Example
 ```js

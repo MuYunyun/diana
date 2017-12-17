@@ -3,7 +3,6 @@
  */
 /* ---------------- common ------------------- */
 // array
-const equal = require('./array/equal')
 const uniq = require('./array/uniq')
 const intersection = require('./array/intersection')
 
@@ -31,6 +30,9 @@ const mean = require('./math/mean')
 const max = require('./math/max')
 const min = require('./math/min')
 
+// object
+const equal = require('./object/equal')
+
 // url
 const obj2query = require('./url/obj2query')
 const query2obj = require('./url/query2obj')
@@ -39,7 +41,6 @@ const query2obj = require('./url/query2obj')
 const each = require('./collection/each')
 
 const fn = {
-  equal,
   uniq,
   intersection,
   rdColor,
@@ -55,6 +56,7 @@ const fn = {
   mean,
   max,
   min,
+  equal,
   obj2query,
   query2obj,
   each,
