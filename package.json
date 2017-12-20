@@ -32,8 +32,7 @@
     "build": "node script/build.js",
     "test": "karma start karma.conf.js",
     "codecov": "codecov --token=921e25b4-c2ac-488f-8007-2749741689d0",
-    "pre-lint": "node script/check.js",
-    "testtest": "mocha test/**/*.js"
+    "pre-lint": "node script/check.js"
   },
   "repository": {
     "type": "git",

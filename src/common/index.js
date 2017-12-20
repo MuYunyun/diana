@@ -40,6 +40,10 @@ const query2obj = require('./url/query2obj')
 // collection
 const each = require('./collection/each')
 
+// function
+const debounce = require('./function/debounce')
+const throttle = require('./function/throttle')
+
 const fn = {
   uniq,
   intersection,
@@ -60,6 +64,8 @@ const fn = {
   obj2query,
   query2obj,
   each,
+  debounce,
+  throttle,
 }
 
 const commonFn = Object.assign({}, fn, isType)

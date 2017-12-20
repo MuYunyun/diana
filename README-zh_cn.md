@@ -1,27 +1,18 @@
-# diana <sup>v0.2.1</sup>
+# diana <sup>v0.2.2</sup>
 
 ![Build Status](https://travis-ci.org/MuYunyun/diana.svg?branch=master) [![codecov](https://codecov.io/gh/MuYunyun/diana/branch/master/graph/badge.svg)](https://codecov.io/gh/MuYunyun/diana) ![LICENSE MIT](https://img.shields.io/npm/l/express.svg)
 
 
 前端业务代码工具库（支持`浏览器`和 `node` 环境），库名取自 LOL 皎月女神--黛安娜。
 
-> 目的：高效率完成前端业务代码
+> 目的：归纳总结以及高效率完成前端业务代码
 
 > [开发记录待整理](https://github.com/MuYunyun/diana/blob/master/README-zh_cn.md)
 
 ## 安装使用
 
-1. 直接下载`min`目录下的[diana.js](https://github.com/MuYunyun/diana/blob/master/min/diana.js)使用，支持UMD通用模块规范
-2. 使用 npm 安装
-
-### 浏览器:
-
-``` html
-<script src="diana.js"></script>
-<script>
-    const isEqual = diana.equal([1, 2, 3], [1, 2, 3]) // true
-</script>
-```
+1. 使用 npm 安装
+2. 直接下载`min`目录下的[diana.js](https://github.com/MuYunyun/diana/blob/master/min/diana.js)使用，支持UMD通用模块规范
 
 ### npm:
 
@@ -33,6 +24,15 @@ webpack、RequireJS、SeaJS等
 ```js
 const _ = require('diana')
 const isEqual = _.equal([1, 2, 3], [1, 2, 3]) // true
+```
+
+### 浏览器:
+
+``` html
+<script src="diana.js"></script>
+<script>
+    const isEqual = diana.equal([1, 2, 3], [1, 2, 3]) // true
+</script>
 ```
 
 ## API 文档
@@ -86,11 +86,16 @@ const isEqual = _.equal([1, 2, 3], [1, 2, 3]) // true
 * [`_.obj2query`](#_obj2query)
 * [`_.query2obj`](#_query2obj)
 
-***
-
 ### `Collection`
 
 * [`_.each`](#_each)
+
+### `Function`
+
+* [`_.debounce`](#_debounce)
+* [`_.throttle`](#_throttle)
+
+***
 
 ### `Device`
 * [`_.getOS`](#_getOS)
@@ -254,7 +259,7 @@ _.trim(' ab cd ef ', 2); // => 'ab cd ef'
 
 ***
 #### <a id="_changeCase"></a>`_.changeCase(str, type)`
-[#](#__changeCase) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/string/changeCase.js "View in source") [&#x24C9;][1]
+[#](#_changeCase) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/string/changeCase.js "View in source") [&#x24C9;][1]
 
 大小写转化
 
@@ -275,7 +280,7 @@ _.changeCase('aBcD', 3); // => 'AbCd'
 
 ### `"Lang" Methods`
 #### <a id="_isArray"></a>`_.isArray(str, type)`
-[#](#__isArray) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/lang/isArray.js "View in source") [&#x24C9;][1]
+[#](#_isArray) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/lang/isArray.js "View in source") [&#x24C9;][1]
 
 判断是否为数组
 
@@ -293,7 +298,7 @@ _.isArray([1, 2]); // => true
 
 ***
 #### <a id="_clone"></a>`_.clone({a: 1})`
-[#](#__clone) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/lang/clone.js "View in source")[&#x24C9;][1]
+[#](#_clone) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/lang/clone.js "View in source")[&#x24C9;][1]
 
 浅拷贝
 
@@ -400,7 +405,7 @@ _.isError(/abc/); // => true
 ***
 ### `"Math" Methods`
 #### <a id="_max"></a>`_.max(arr)`
-[#](#__max) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/math/max.js "View in source")[&#x24C9;][1]
+[#](#_max) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/math/max.js "View in source")[&#x24C9;][1]
 
 判断数组中的最大值
 
@@ -411,7 +416,7 @@ _.max([1, 2, 3, 4]); // => 4
 
 ***
 #### <a id="_min"></a>`_.min(arr)`
-[#](#__min) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/math/min.js "View in source") [&#x24C9;][1]
+[#](#_min) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/math/min.js "View in source") [&#x24C9;][1]
 
 判断数组中的最小值
 
@@ -422,7 +427,7 @@ _.min([1, 2, 3, 4]); // => 1
 
 ***
 #### <a id="_sum"></a>`_.sum(arr)`
-[#](#__sum) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/math/sum.js "View in source") [&#x24C9;][1]
+[#](#_sum) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/math/sum.js "View in source") [&#x24C9;][1]
 
 数组求和
 
@@ -433,7 +438,7 @@ _.sum([1, 2, 3, 4]); // => 10
 
 ***
 #### <a id="_mean"></a>`_.mean(arr)`
-[#](#__mean) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/math/mean.js "View in source") [&#x24C9;][1]
+[#](#_mean) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/math/mean.js "View in source") [&#x24C9;][1]
 
 数组求平均值
 
@@ -476,7 +481,7 @@ _.query2obj('http://abc.com?a=1&b=2'); // => {a: 1, b: 2}
 ```
 ***
 #### <a id="_each"></a>`_.each(list, iteratee)`
-[#](#__each) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/object/equal.js "View in source") [&#x24C9;][1]
+[#](#_each) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/collection/equal.js "View in source") [&#x24C9;][1]
 
 遍历 list 中的所有元素，按顺序用每个元素当做参数调用 iteratee 函数。支持数组，对象，和类数组对象。
 
@@ -486,8 +491,30 @@ _.each([1, 2, 3], (value) => {console.log(value)}); // => 1, 2, 3
 _.each({1, 2, 3}, (value) => {console.log(value)}); // => 1, 2, 3
 ```
 ***
+#### <a id="_debounce"></a>`_.debounce(function, wait, [immediate])`
+[#](#_debounce) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/function/debounce.js "View in source") [&#x24C9;][1]
+
+函数防抖。限制事件的频繁触发，将延迟函数的执行(真正的执行)在函数最后一次调用时刻的 wait 毫秒之后，对于必须在一些输入（多是一些用户操作）停止到达之后执行的行为有帮助。例如: 渲染一个 Markdown 格式的评论预览, 当窗口停止改变大小之后重新计算布局, 等等。传参 immediate 为 true，debounce会在 wait 时间间隔的开始调用这个函数。
+
+##### Example
+```js
+const lazyLayout = _.debounce(calculateLayout, 300)
+$(window).resize(lazyLayout)
+```
+***
+#### <a id="_throttle"></a>`_.throttle(function, wait, [options]) `
+[#](#_throttle) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/function/throttle.js "View in source") [&#x24C9;][1]
+
+函数节流。创建并返回一个像节流阀一样的函数，当重复调用函数的时候，至少每隔 wait 毫秒调用一次该函数。对于想控制一些触发频率较高的事件有帮助。默认情况下，throttle 将在你调用的第一时间尽快执行这个 function，(默认第一次和最后一次都执行function)。如果你想禁用第一次首先执行的话，传递{leading: false}，还有如果你想禁用最后一次执行的话，传递{trailing: false}。
+
+##### Example
+```js
+const throttled = _.throttle(updatePosition, 100)
+$(window).scroll(throttled)
+```
+***
 #### <a id="_getOS"></a>`_.getOS()`
-[#](#__getOS) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/browser/device/getOS.js "View in source") [&#x24C9;][1]
+[#](#_getOS) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/browser/device/getOS.js "View in source") [&#x24C9;][1]
 
 获取当前的操作系统
 
@@ -497,7 +524,7 @@ _.getOS(); // => 'MacOSX'
 ```
 ***
 #### <a id="_isMobile"></a>`_.isMobile()`
-[#](#__isMobile) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/browser/device/isMobile.js "View in source") [&#x24C9;][1]
+[#](#_isMobile) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/browser/device/isMobile.js "View in source") [&#x24C9;][1]
 
 判断当前环境是否为手机
 
