@@ -32,6 +32,7 @@ const min = require('./math/min')
 
 // object
 const equal = require('./object/equal')
+const pairs2obj = require('./object/pairs2obj')
 
 // url
 const obj2query = require('./url/obj2query')
@@ -61,6 +62,7 @@ const fn = {
   max,
   min,
   equal,
+  pairs2obj,
   obj2query,
   query2obj,
   each,

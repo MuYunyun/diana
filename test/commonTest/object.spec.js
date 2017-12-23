@@ -42,4 +42,11 @@ describe('#Object API:', () => {
       && test9 && test11 & !test12 & !test13 && test14)
     })
   })
+  describe('test pairs2obj()', () => {
+    it(`test pairs2obj()`, () => {
+      const obj = _.pairs2obj([['a', 1], ['b', 2]])
+      assert(_.equal(obj, { a: 1, b: 2 }))
+    })
+  })
+
 })

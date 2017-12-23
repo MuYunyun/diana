@@ -1,8 +1,8 @@
-# diana <sup>v0.2.2</sup>
+# diana <sup>v0.2.3</sup>
 
 ![Build Status](https://travis-ci.org/MuYunyun/diana.svg?branch=master) [![codecov](https://codecov.io/gh/MuYunyun/diana/branch/master/graph/badge.svg)](https://codecov.io/gh/MuYunyun/diana) ![LICENSE MIT](https://img.shields.io/npm/l/express.svg)
 
-Front-end business code tool library (Support for `browser` and `node` environments), library name from the LOL Moonlight goddess.
+Front-end business code tool library (Support for `browser` and `node` environments), library name from the LOL Moonlight goddess.[document address](http://muyunyun.cn/diana/)
 
 > Purpose: Efficient completion of front-end business code
 

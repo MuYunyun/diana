@@ -3,7 +3,7 @@
 ![Build Status](https://travis-ci.org/MuYunyun/diana.svg?branch=master) [![codecov](https://codecov.io/gh/MuYunyun/diana/branch/master/graph/badge.svg)](https://codecov.io/gh/MuYunyun/diana) ![LICENSE MIT](https://img.shields.io/npm/l/express.svg)
 
 
-前端业务代码工具库（支持`浏览器`和 `node` 环境），库名取自 LOL 皎月女神。
+前端业务代码工具库（支持`浏览器`和 `node` 环境），库名取自 LOL 皎月女神。[文档地址](http://muyunyun.cn/diana/)
 
 > 目的：归纳总结以及高效率完成前端业务代码
 
@@ -79,6 +79,7 @@ const isEqual = _.equal([1, 2, 3], [1, 2, 3]) // true
 ### `Object`
 
 * [`_.equal`](#_equal)
+* [`_.pairs2obj`](#_pairs2obj)
 
 ### `Url`
 
@@ -119,6 +120,16 @@ const obj2 = {
     b: [1, this.obj2],
 }
 _.equal(obj1, obj2) // => true
+```
+***
+#### <a id="_pairs2obj"></a>`_.pairs2obj(arr)`
+[#](#_pairs2obj) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/object/pairs2obj.js "View in source") [&#x24C9;][1]
+
+将给定的键值对转换为一个对象
+
+##### Example
+```js
+_.pairs2obj([['a',1],['b',2]]) // => {a: 1, b: 2}
 ```
 ***
 
