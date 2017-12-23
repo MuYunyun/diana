@@ -216,8 +216,8 @@ _.isArguments([1,2,3]); // =&gt; false
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="isarray">_.isArray(val)</h3></div><div class="section double-padded">
 <p>判断是否为数组 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/isArray.js" title="View in source">Ⓢ</a></p>
 <h5>Arguments</h5>
-<p><code>str</code> <em>(String)</em>: 待去除空格的字符串
-<code>type</code> <em>(Number)</em>: 1：首字母大写(默认) 2：首页母小写　3：大小写转换</p>
+<p><code>str</code> <em>(String)</em>: 待去除空格的字符串</p>
+<p><code>type</code> <em>(Number)</em>: 1：首字母大写(默认) 2：首页母小写　3：大小写转换</p>
 <p>  </p>
 <h5>Returns</h5>
 <p><em>(Boolean)</em>: 返回 Boolean 值</p>
@@ -303,9 +303,9 @@ _.equal(obj1, obj2) // =&gt; true
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="rdnum">_.rdNum(min, max [, border])</h3></div><div class="section double-padded">
 <p>指定整数范围生成随机整数. <a href="https://github.com/MuYunyun/diana/blob/master/src/common/random/rdNum.js" title="View in source">Ⓢ</a></p>
 <h5>Arguments</h5>
-<p><code>min</code> <em>(Number)</em>: 边界最小值
-<code>max</code> <em>(Number)</em>: 边界最大值
-<code>border</code> <em>(String)</em>: 设定边界(默认参数为 'both', 可选参数: 'left', 'right', 'no')</p>
+<p><code>min</code> <em>(Number)</em>: 边界最小值</p>
+<p><code>max</code> <em>(Number)</em>: 边界最大值</p>
+<p><code>border</code> <em>(String)</em>: 设定边界(默认参数为 'both', 可选参数: 'left', 'right', 'no')</p>
 <p>  </p>
 <h5>Returns</h5>
 <p><em>(Number)</em>: 指定整数范围生成的随机整数.</p>
@@ -331,8 +331,8 @@ _.rdNum(1, 3, 'no');      // =&gt;    1 &lt; result &lt; 3
 <div class="card fluid"><div class="section double-padded"><h3 id="changecase">_.changeCase(str, type)</h3></div><div class="section double-padded">
 <p>大小写转化 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/string/changeCase.js" title="View in source">Ⓢ</a></p>
 <h5>Arguments</h5>
-<p><code>str</code> <em>(String)</em>: 待去除空格的字符串
-<code>type</code> <em>(Number)</em>: 1：首字母大写(默认) 2：首页母小写　3：大小写转换</p>
+<p><code>str</code> <em>(String)</em>: 待去除空格的字符串</p>
+<p><code>type</code> <em>(Number)</em>: 1：首字母大写(默认) 2：首页母小写　3：大小写转换</p>
 <p>  </p>
 <h5>Returns</h5>
 <p><em>(String)</em>: 返回 String 值</p>
@@ -344,8 +344,8 @@ _.changeCase('aBcD', 3); // =&gt; 'AbCd'
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="trim">_.trim(str, type)</h3></div><div class="section double-padded">
 <p>去除空格 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/string/trim.js" title="View in source">Ⓢ</a></p>
 <h5>Arguments</h5>
-<p><code>str</code> <em>(String)</em>: 待去除空格的字符串
-<code>type</code> <em>(Number)</em>: 1-所有空格(默认)，2-前后空格，3-前空格，4-后空格</p>
+<p><code>str</code> <em>(String)</em>: 待去除空格的字符串</p>
+<p><code>type</code> <em>(Number)</em>: 1-所有空格(默认)，2-前后空格，3-前空格，4-后空格</p>
 <p>  </p>
 <h5>Returns</h5>
 <p><em>(String)</em>: 返回 String 值</p>
@@ -358,8 +358,8 @@ _.trim(' ab cd ef ', 2); // =&gt; 'ab cd ef'
 <div class="card fluid"><div class="section double-padded"><h3 id="obj2query">_.obj2query(baseurl, obj)</h3></div><div class="section double-padded">
 <p>对象转成 URL 中的 query <a href="https://github.com/MuYunyun/diana/blob/master/src/common/url/obj2query.js" title="View in source">Ⓢ</a></p>
 <h5>Arguments</h5>
-<p><code>baseurl</code> <em>(String)</em> 基础 url
-<code>obj</code> <em>(Object)</em> 待解析对象</p>
+<p><code>baseurl</code> <em>(String)</em> 基础 url</p>
+<p><code>obj</code> <em>(Object)</em> 待解析对象</p>
 <p>  </p>
 <h5>Returns</h5>
 <p><em>(String)</em>: 返回 queryurl</p>
@@ -389,7 +389,6 @@ _.trim(' ab cd ef ', 2); // =&gt; 'ab cd ef'
 </footer>
 </main>
 </div>
-<script src="prism.js"></script>
 <script>
   // 修复左侧查找，最后一个类名称不隐藏的 bug
   const nodes = document.getElementsByClassName('sublink-1')
@@ -404,5 +403,6 @@ _.trim(' ab cd ef ', 2); // =&gt; 'ab cd ef'
       : (x.style.display == '' ? remove = false : remove = remove))
   }
 </script>
+<script src="prism.js"></script>
 </body>
 </html>
