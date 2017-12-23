@@ -21,6 +21,7 @@ max:Math
 mean:Math
 min:Math
 obj2query:Url
+pairs2obj:Object
 query2obj:Url
 rdColor:Random
 rdNum:Random

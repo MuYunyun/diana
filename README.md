@@ -1,18 +1,20 @@
-# diana <sup>v0.2.2</sup>
+# diana <sup>v0.2.3</sup>
 
 ![Build Status](https://travis-ci.org/MuYunyun/diana.svg?branch=master) [![codecov](https://codecov.io/gh/MuYunyun/diana/branch/master/graph/badge.svg)](https://codecov.io/gh/MuYunyun/diana) ![LICENSE MIT](https://img.shields.io/npm/l/express.svg)
 
 
-前端业务代码工具库（支持`浏览器`和 `node` 环境），库名取自 LOL 皎月女神。[文档地址](http://muyunyun.cn/diana/)
+前端业务代码工具库（支持`浏览器`和 `node` 环境），库名取自 LOL 皎月女神。
 
 > 目的：归纳总结以及高效率完成前端业务代码
+
+> [文档地址](http://muyunyun.cn/diana/)
 
 > [开发记录整理ing](https://github.com/MuYunyun/diana/blob/master/README-zh_cn.md)
 
 ## 安装使用
 
 1. 使用 npm 安装
-2. 直接下载`min`目录下的[diana.js](https://github.com/MuYunyun/diana/blob/master/min/diana.js)使用，支持UMD通用模块规范
+2. 直接下载`min`目录下的 [diana.js](https://github.com/MuYunyun/diana/blob/master/lib/diana.js) 使用，支持UMD通用模块规范
 
 ### npm:
 

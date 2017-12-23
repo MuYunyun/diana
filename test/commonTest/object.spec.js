@@ -48,5 +48,4 @@ describe('#Object API:', () => {
       assert(_.equal(obj, { a: 1, b: 2 }))
     })
   })
-
 })

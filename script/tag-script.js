@@ -3,10 +3,12 @@
   Run using `npm run tagger`.
 */
 // Load modules
-const fs = require('fs'), path = require('path'), chalk = require('chalk')
+const fs = require('fs'),
+      path = require('path'),
+      chalk = require('chalk'),
+      _ = require('diana')
 const snippetsPath = './snippets'
 let snippets = {}, output = '', tagDbData = {}, missingTags = 0, tagDbStats = {}
-const objectFromPairs = arr => arr.reduce((a, v) => (a[v[0]] = v[1], a), {})
 // Start the timer of the script
 console.time('Tagger')
 // Synchronously read all snippets and sort them as necessary (case-insensitive)
@@ -32,7 +34,7 @@ catch (err) { // Handle errors (hopefully not!)
 try {
   // 根据 split('\n'), 所以 tag_database 的末尾必须多加一行
   const pairs = fs.readFileSync('tag_database', 'utf8').split('\n').slice(0, -1).map(v => v.split(':').slice(0, 2)) // [['anagrams', 'string'], ['arrayAverage', 'array']]
-  tagDbData = objectFromPairs(pairs) // {anagrams: 'string', arrayAverage: 'array'}
+  tagDbData = _.pairs2obj(pairs) // {anagrams: 'string', arrayAverage: 'array'}
   // 统计相同标签含有的数量
   tagDbStats = pairs.sort((a, b) => a[1].localeCompare(b[1])).reduce((acc, val) =>
   { acc.hasOwnProperty(val[1]) ? acc[val[1]]++ : acc[val[1]] = 1; return acc }, {})

@@ -2,16 +2,18 @@
 
 ![Build Status](https://travis-ci.org/MuYunyun/diana.svg?branch=master) [![codecov](https://codecov.io/gh/MuYunyun/diana/branch/master/graph/badge.svg)](https://codecov.io/gh/MuYunyun/diana) ![LICENSE MIT](https://img.shields.io/npm/l/express.svg)
 
-Front-end business code tool library (Support for `browser` and `node` environments), library name from the LOL Moonlight goddess.[document address](http://muyunyun.cn/diana/)
+Front-end business code tool library (Support for `browser` and `node` environments), library name from the LOL Moonlight goddess.
 
 > Purpose: Efficient completion of front-end business code
+
+> [document](http://muyunyun.cn/diana/)
 
 > Maybe you want [中文文档](https://github.com/MuYunyun/diana/blob/master/README-zh_cn.md)
 
 ## Installation
 
 1. Use npm to install
-2. Direct download [diana.js](https://github.com/MuYunyun/diana/blob/master/min/diana.js) in `min` directory, support UMD common module specification
+2. Direct download [diana.js](https://github.com/MuYunyun/diana/blob/master/lib/diana.js) in `min` directory, support UMD common module specification
 
 ### Npm:
 
