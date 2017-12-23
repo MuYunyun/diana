@@ -2,30 +2,30 @@
 
 ![Build Status](https://travis-ci.org/MuYunyun/diana.svg?branch=master) [![codecov](https://codecov.io/gh/MuYunyun/diana/branch/master/graph/badge.svg)](https://codecov.io/gh/MuYunyun/diana) ![LICENSE MIT](https://img.shields.io/npm/l/express.svg)
 
-Front-end business code tool library (Support for `browser` and `node` environments), library name from the LOL Moonlight goddess - Diana.
 
-> Purpose: Efficient completion of front-end business code
+前端业务代码工具库（支持`浏览器`和 `node` 环境），库名取自 LOL 皎月女神。
 
-> Maybe you want [中文文档](https://github.com/MuYunyun/diana/blob/master/README-zh_cn.md)
+> 目的：归纳总结以及高效率完成前端业务代码
 
-## Installation
+> [开发记录整理ing](https://github.com/MuYunyun/diana/blob/master/README-zh_cn.md)
 
-1. Use npm to install
-2. Direct download [diana.js](https://github.com/MuYunyun/diana/blob/master/min/diana.js) in `min` directory, support UMD common module specification
+## 安装使用
 
-### Npm:
+1. 使用 npm 安装
+2. 直接下载`min`目录下的[diana.js](https://github.com/MuYunyun/diana/blob/master/min/diana.js)使用，支持UMD通用模块规范
+
+### npm:
 
 ```bash
 npm install diana --save-dev
 ```
 
-webpack、RequireJS、SeaJS...
 ```js
 const _ = require('diana')
 const isEqual = _.equal([1, 2, 3], [1, 2, 3]) // true
 ```
 
-### Browser:
+### 浏览器:
 
 ``` html
 <script src="diana.js"></script>
@@ -34,9 +34,9 @@ const isEqual = _.equal([1, 2, 3], [1, 2, 3]) // true
 </script>
 ```
 
-## API Document
+## API 文档
 
-### <a id="Arrays"></a>`Arrays`
+### <a id="Array"></a>`Array`
 
 * [`_.uniq`](#_uniq)
 * [`_.intersection`](#_intersection)
@@ -103,7 +103,7 @@ const isEqual = _.equal([1, 2, 3], [1, 2, 3]) // true
 ***
 
 ### `"Object" Methods`
-#### <a id="_equal"></a>`_.equal(arr1, arr2)`
+#### <a id="_equal"></a>`_.equal(value1, value2)`
 [#](#_equal) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/object/equal.js "View in source") [&#x24C9;][1]
 
 判断两个任意值是否相等(包含对象、数组深度遍历)
@@ -122,7 +122,7 @@ _.equal(obj1, obj2) // => true
 ```
 ***
 
-### `"Arrays" Methods`
+### `"Array" Methods`
 
 #### <a id="_uniq"></a>`_.uniq(...arr)`
 [#](#_uniq) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/array/uniq.js "View in source") [&#x24C9;][1]
@@ -208,12 +208,6 @@ _.rdNum(1, 3, 'no');      // =>    1 < result < 3
 
 判断是否为邮箱地址.
 
-##### Arguments
-1. `email` *(String)*: 待检验的 email 地址
-
-##### Returns
-*(Boolean)*: 返回 bool 值
-
 ##### Example
 ```js
 _.isEmail('muyy95@gmail.com'); // => true
@@ -224,12 +218,6 @@ _.isEmail('muyy95@gmail.com'); // => true
 [#](#_isPhoneNum) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/regexp/isPhoneNum.js "View in source") [&#x24C9;][1]
 
 判断是否为手机号.
-
-##### Arguments
-1. `phoneNum` *(String)*: 待检验的手机号码
-
-##### Returns
-*(Boolean)*: 返回 bool 值
 
 ##### Example
 ```js
@@ -283,20 +271,13 @@ _.changeCase('aBcD', 3); // => 'AbCd'
 
 判断是否为数组
 
-##### Arguments
-1. `str` *(String)*: 待去除空格的字符串
-2. `type` *(Number)*: 1：首字母大写(默认) 2：首页母小写　3：大小写转换
-
-##### Returns
-*(Boolean)*: 返回 Boolean 值
-
 ##### Example
 ```js
 _.isArray([1, 2]); // => true
 ```
 
 ***
-#### <a id="_clone"></a>`_.clone({a: 1})`
+#### <a id="_clone"></a>`_.clone(obj)`
 [#](#_clone) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/lang/clone.js "View in source")[&#x24C9;][1]
 
 浅拷贝
@@ -314,7 +295,7 @@ _.clone(obj).a === obj.a; // => true
 ```
 ***
 
-#### <a id="_cloneDeep"></a>`_.cloneDeep({a: 1})`
+#### <a id="_cloneDeep"></a>`_.cloneDeep(obj)`
 [#](#_cloneDeep) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/lang/cloneDeep.js "View in source")[&#x24C9;][1]
 
 深拷贝
@@ -466,7 +447,7 @@ _.obj2query('http://abc.com', {a: 1, b: 2}); // => http://abc.com?a=1&b=2
 #### <a id="_query2obj"></a>`_.query2obj(queryurl)`
 [#](#_query2obj) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/url/query2obj.js "View in source") [&#x24C9;][1]
 
-URL 中的 query 转为对象
+将 URL 中的 query 转为对象
 
 ##### Arguments
 1. `queryurl` *(String)* 基础 url
@@ -533,4 +514,4 @@ _.isMobile(); // => true
 ```
 ***
 
-[1]: #Arrays "Jump back to the TOC."
+[1]: #Array "Jump back to the TOC."

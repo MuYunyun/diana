@@ -1,0 +1,27 @@
+<footer>
+  <p style="display: inline-block;">
+    <strong>Diana</strong> is licensed under the
+    <a href="https://github.com/MuYunyun/diana/blob/master/LICENSE">MIT</a> license.
+  <a href="#top">
+    <p style="display: inline-block;float: right;padding-right: 2em;">Back to top</p>
+  </a>
+</footer>
+</main>
+</div>
+<script src="prism.js"></script>
+<script>
+  // 修复左侧查找，最后一个类名称不隐藏的 bug
+  const nodes = document.getElementsByClassName('sublink-1')
+  nodes[nodes.length - 1].after(document.createElement('h3'))
+  // 查询逻辑
+  const search = (node) => {
+    Array.from(node.parentElement.parentElement.getElementsByTagName('a')).forEach(x =>
+      x.style.display = x.getAttribute("href").toUpperCase().indexOf(node.value.toUpperCase()) + 1 ? '' : 'none')
+    var remove = false, childs = Array.from(node.parentElement.parentElement.children), toRemove = childs[0]
+    Array.from(node.parentElement.parentElement.children).forEach(x => x.tagName == 'H3'
+      ? (toRemove.style.display = (remove ? 'none' : ''), toRemove = x, remove = true)
+      : (x.style.display == '' ? remove = false : remove = remove))
+  }
+</script>
+</body>
+</html>

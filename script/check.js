@@ -1,3 +1,6 @@
+/**
+ * inspection the documents submitted with eslint
+ */
 const process = require('process')
 const exec = require('child_process').exec
 const CLIEngine = require('eslint').CLIEngine
