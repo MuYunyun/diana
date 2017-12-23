@@ -36,7 +36,8 @@
     "codecov": "codecov --token=921e25b4-c2ac-488f-8007-2749741689d0",
     "pre-lint": "node script/check.js",
     "tagger": "node script/tag-script.js",
-    "webber": "node script/web-script.js"
+    "webber": "node script/web-script.js",
+    "publish": "git subtree push --prefix=docs origin gh-pages"
   },
   "repository": {
     "type": "git",

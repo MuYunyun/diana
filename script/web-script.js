@@ -23,7 +23,7 @@ sass.render({
 })
 
 // 因为是 npm 的命令，所以路径是 '.' 不是 '..'
-const snippetsPath = './snippets/', staticPartsPath = './static-parts', docsPath = './docs', snippets = {}
+const snippetsPath = './snippets/', staticPartsPath = './docs/static-parts', docsPath = './docs', snippets = {}
 let startPart = '', endPart = '', output = '', tagDbData = {}
 const objectFromPairs = arr => arr.reduce((a, v) => (a[v[0]] = v[1], a), {})
 const capitalize = (str, lowerRest = false) => str.slice(0, 1).toUpperCase() + (lowerRest ? str.slice(1).toLowerCase() : str.slice(1));
