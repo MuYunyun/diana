@@ -4,7 +4,7 @@
  * @param {*} arr
  */
 function pairs2obj(arr) {
-  arr.reduce((a, v) => (a[v[0]] = v[1], a), {});
+  arr.reduce((a, v) => (a[v[0]] = v[1], a), {})
 }
 
 module.exports = pairs2obj
