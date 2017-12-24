@@ -1,10 +1,16 @@
 changeCase:String
 clone:Lang
 cloneDeep:Lang
+countInArr:Array
+curry:Function
 debounce:Function
+difference:Array
+distance:Math
 each:Collection
 equal:Object
-getOS:Device
+escapeStr:String
+gcd:Math
+getOS:Device(B)
 intersection:Array
 isArguments:Lang
 isArray:Lang
@@ -12,7 +18,7 @@ isDate:Lang
 isEmail:Regexp
 isError:Lang
 isFunction:Lang
-isMobile:Device
+isMobile:Device(B)
 isNumber:Lang
 isPhoneNum:Regexp
 isRegExp:Lang
@@ -25,7 +31,10 @@ pairs2obj:Object
 query2obj:Url
 rdColor:Random
 rdNum:Random
+redirect:Http(B)
+sortStr:String
 sum:Math
 throttle:Function
+timeTaken:Time
 trim:String
 uniq:Array

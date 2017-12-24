@@ -160,4 +160,11 @@ describe('#Function API:', () => {
       }, 100)
     })
   })
+  describe('#curry()', () => {
+    it(`test curry()`, () => {
+      assert(_.curry(Math.pow)(2)(10) === 1024)
+      assert(_.curry(Math.min, 3)(10)(50)(2) === 2)
+      assert(typeof(_.curry(Math.pow)(2)) === 'function')
+    })
+  })
 })

@@ -1,4 +1,4 @@
-# diana <sup>v0.2.3</sup>
+# diana <sup>v0.2.4</sup>
 
 ![Build Status](https://travis-ci.org/MuYunyun/diana.svg?branch=master) [![codecov](https://codecov.io/gh/MuYunyun/diana/branch/master/graph/badge.svg)](https://codecov.io/gh/MuYunyun/diana) ![LICENSE MIT](https://img.shields.io/npm/l/express.svg)
 
@@ -42,6 +42,8 @@ const isEqual = _.equal([1, 2, 3], [1, 2, 3]) // true
 
 * [`_.uniq`](#_uniq)
 * [`_.intersection`](#_intersection)
+* [`_.difference`](#_difference)
+* [`_.countInArr`](#_countInArr)
 
 ### `Random`
 
@@ -57,6 +59,8 @@ const isEqual = _.equal([1, 2, 3], [1, 2, 3]) // true
 
 * [`_.trim`](#_trim)
 * [`_.changeCase`](#_changeCase)
+* [`_.sortStr`](#_sortStr)
+* [`_.escapeStr`](#_escapeStr)
 
 ### `Lang`
 
@@ -77,6 +81,8 @@ const isEqual = _.equal([1, 2, 3], [1, 2, 3]) // true
 * [`_.min`](#_min)
 * [`_.sum`](#_sum)
 * [`_.mean`](#_mean)
+* [`_.distance`](#_distance)
+* [`_.gcd`](#_gcd)
 
 ### `Object`
 
@@ -96,12 +102,19 @@ const isEqual = _.equal([1, 2, 3], [1, 2, 3]) // true
 
 * [`_.debounce`](#_debounce)
 * [`_.throttle`](#_throttle)
+* [`_.curry`](#_curry)
+
+### `Time`
+* [`_.timeTaken`](#_timeTaken)
 
 ***
 
 ### `Device`
 * [`_.getOS`](#_getOS)
 * [`_.isMobile`](#_isMobile)
+
+### `Http`
+* [`_.redirect`](#_redirect)
 
 ***
 
@@ -174,6 +187,32 @@ _.intersection([1, 2, 'a', 1, 'a']) // => [1, 'a']
 _.intersection([1, 2, 'a', 1], [4, 2, 'a'], [2, 'a', 'c']) // => [ 2, 'a']
 ```
 
+***
+#### <a id="_difference"></a>`_.difference(arr1, arr2)`
+[#](#_difference) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/array/difference.js "View in source") [&#x24C9;][1]
+
+数组取差集(即取 arr1 中存在，arr2 中不存在的值)
+
+##### Returns
+*(Array)*: 返回取差集后的 array.
+
+##### Example
+```js
+_.difference([1,2,3], [1,2,4]) // => [3]
+```
+***
+#### <a id="_countInArr"></a>`_.countInArr(arr, value)`
+[#](#_countInArr) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/array/countInArr.js "View in source") [&#x24C9;][1]
+
+统计数组中特定值出现的次数
+
+##### Returns
+*(Number)*: 返回数组中特定值出现的次数.
+
+##### Example
+```js
+_.countInArr([1, 1, 2, 1, 2, 3], 1) // => 3
+```
 ***
 
 ### `"Random" Methods`
@@ -275,7 +314,26 @@ _.trim(' ab cd ef ', 2); // => 'ab cd ef'
 _.changeCase('abcd'); // => 'Abcd'
 _.changeCase('aBcD', 3); // => 'AbCd'
 ```
+***
+#### <a id="_sortStr"></a>`_.sortStr(str)`
+[#](#_sortStr) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/string/sortStr.js "View in source") [&#x24C9;][1]
 
+将字符串按字母顺序排序
+
+##### Example
+```js
+_.sortStr('cabbage') // => 'aabbceg'
+```
+***
+#### <a id="_escapeStr"></a>`_.escapeStr(str)`
+[#](#_escapeStr) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/string/escapeStr.js "View in source") [&#x24C9;][1]
+
+转义特殊字符
+
+##### Example
+```js
+_.escapeRegExp('(test)') // => \\(test\\)
+```
 ***
 
 ### `"Lang" Methods`
@@ -440,6 +498,26 @@ _.sum([1, 2, 3, 4]); // => 10
 _.mean([1, 2, 3, 4]); // => 2.5
 ```
 ***
+#### <a id="_distance"></a>`_.distance(x0, y0, x1, y1)`
+[#](#_distance) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/math/distance.js "View in source") [&#x24C9;][1]
+
+计算两点 (x0, y0), (x1, y1) 之间的欧几里得距离
+
+##### Example
+```js
+_.distance(1,1, 2,3) // => 2.23606797749979
+```
+***
+#### <a id="_gcd"></a>`_.gcd(x, y)`
+[#](#_gcd) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/math/gcd.js "View in source") [&#x24C9;][1]
+
+求最大公约数
+
+##### Example
+```js
+_.gcd(8, 36) // => 4
+```
+***
 #### <a id="_obj2query"></a>`_.obj2query(baseurl, obj)`
 [#](#_obj2query) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/url/obj2query.js "View in source") [&#x24C9;][1]
 
@@ -506,6 +584,32 @@ const throttled = _.throttle(updatePosition, 100)
 $(window).scroll(throttled)
 ```
 ***
+#### <a id="_curry"></a>`_.curry(fn, arity = fn.length, ...args)`
+[#](#_curry) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/function/curry.js "View in source") [&#x24C9;][1]
+
+函数柯里化。如果提供的参数 (args) 数量足够，则调用传递函数 f ，否则返回一个 curried 函数 f
+
+##### Arguments
+1. `fn` *(Function)* 调用函数
+2. `arity` *(Number)* 参数数量(可不传)
+3. `...args` *(any)* 剩余参数
+
+##### Example
+```js
+_.curry(Math.pow)(2)(10) // => 1024
+```
+***
+#### <a id="_timeTaken"></a>`_.timeTaken(callback)`
+[#](#_timeTaken) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/time/timeTaken.js "View in source") [&#x24C9;][1]
+
+测试功能所花费的时间
+
+##### Example
+```js
+_.timeTaken(() => Math.pow(2, 10)) // => 1024
+// (logged): timeTaken: 0.019775390625ms
+```
+***
 #### <a id="_getOS"></a>`_.getOS()`
 [#](#_getOS) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/browser/device/getOS.js "View in source") [&#x24C9;][1]
 
@@ -524,6 +628,20 @@ _.getOS(); // => 'MacOSX'
 ##### Example
 ```js
 _.isMobile(); // => true
+```
+***
+#### <a id="_redirect"></a>`_.redirect(url, aslink = true)`
+[#](#_redirect) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/browser/http/redirect.js "View in source") [&#x24C9;][1]
+
+重定向到指定的 URL
+
+##### Arguments
+1. `url` *(String)* 待跳转 URL
+2. `aslink` *(Boolean)* 默认为 true, 传 false 时，你不能通过 “前进” 和 “后退” 来访问已经被替换的 URL
+
+##### Example
+```js
+_.redirect('http://muyunyun.cn/diana/'); // 重定向到 http://muyunyun.cn/diana/ 这个网址
 ```
 ***
 

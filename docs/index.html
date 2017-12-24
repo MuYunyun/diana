@@ -77,19 +77,25 @@
       </div>
       <label for="doc-drawer-checkbox" class="button drawer-close"></label>
 <h3>Array
-</h3><a class="sublink-1" href="#intersection">intersection</a>
+</h3><a class="sublink-1" href="#countinarr">countInArr</a>
+<a class="sublink-1" href="#difference">difference</a>
+<a class="sublink-1" href="#intersection">intersection</a>
 <a class="sublink-1" href="#uniq">uniq</a>
 
 <h3>Collection
 </h3><a class="sublink-1" href="#each">each</a>
 
-<h3>Device
+<h3>Device(B)
 </h3><a class="sublink-1" href="#getos">getOS</a>
 <a class="sublink-1" href="#ismobile">isMobile</a>
 
 <h3>Function
-</h3><a class="sublink-1" href="#debounce">debounce</a>
+</h3><a class="sublink-1" href="#curry">curry</a>
+<a class="sublink-1" href="#debounce">debounce</a>
 <a class="sublink-1" href="#throttle">throttle</a>
+
+<h3>Http(B)
+</h3><a class="sublink-1" href="#redirect">redirect</a>
 
 <h3>Lang
 </h3><a class="sublink-1" href="#clone">clone</a>
@@ -104,7 +110,9 @@
 <a class="sublink-1" href="#isstring">isString</a>
 
 <h3>Math
-</h3><a class="sublink-1" href="#max">max</a>
+</h3><a class="sublink-1" href="#distance">distance</a>
+<a class="sublink-1" href="#gcd">gcd</a>
+<a class="sublink-1" href="#max">max</a>
 <a class="sublink-1" href="#mean">mean</a>
 <a class="sublink-1" href="#min">min</a>
 <a class="sublink-1" href="#sum">sum</a>
@@ -123,14 +131,35 @@
 
 <h3>String
 </h3><a class="sublink-1" href="#changecase">changeCase</a>
+<a class="sublink-1" href="#escapestr">escapeStr</a>
+<a class="sublink-1" href="#sortstr">sortStr</a>
 <a class="sublink-1" href="#trim">trim</a>
+
+<h3>Time
+</h3><a class="sublink-1" href="#timetaken">timeTaken</a>
 
 <h3>Url
 </h3><a class="sublink-1" href="#obj2query">obj2query</a>
 <a class="sublink-1" href="#query2obj">query2obj</a>
 
 </nav><main class="col-sm-12 col-md-8 col-lg-9" style="height: 100%;overflow-y: auto; background: #eceef2;"><a id="top">&nbsp;</a><h2 style="text-align:center;">Array</h2>
-<div class="card fluid"><div class="section double-padded"><h3 id="intersection">_.intersection(...arr)</h3></div><div class="section double-padded">
+<div class="card fluid"><div class="section double-padded"><h3 id="countinarr">_.countInArr(arr, value)</h3></div><div class="section double-padded">
+<p>统计数组中特定值出现的次数 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/array/countInArr.js" title="View in source">Ⓢ</a></p>
+<h5>Returns</h5>
+<p><em>(Number)</em>: 返回数组中特定值出现的次数.</p>
+<p>  </p>
+<h5>Example</h5>
+<pre><code class="language-js">_.countInArr([1, 1, 2, 1, 2, 3], 1) // =&gt; 3
+</code></pre>
+</div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="difference">_.difference(arr1, arr2)</h3></div><div class="section double-padded">
+<p>数组取差集(即取 arr1 中存在，arr2 中不存在的值) <a href="https://github.com/MuYunyun/diana/blob/master/src/common/array/difference.js" title="View in source">Ⓢ</a></p>
+<h5>Returns</h5>
+<p><em>(Array)</em>: 返回取差集后的 array.</p>
+<p>  </p>
+<h5>Example</h5>
+<pre><code class="language-js">_.difference([1,2,3], [1,2,4]) // =&gt; [3]
+</code></pre>
+</div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="intersection">_.intersection(...arr)</h3></div><div class="section double-padded">
 <p>多个数组取交集 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/array/intersection.js" title="View in source">Ⓢ</a></p>
 <h5>Arguments</h5>
 <p><code>...arr</code> <em>(Array)</em>: 可传入 1 个或多个数组</p>
@@ -162,7 +191,7 @@ _.uniq([1, 'a', 3, 1], [4, 'a', 'b'], [2, 3, 'b', 'c'])
 <pre><code class="language-js">_.each([1, 2, 3], (value) =&gt; {console.log(value)}); // =&gt; 1, 2, 3
 _.each({1, 2, 3}, (value) =&gt; {console.log(value)}); // =&gt; 1, 2, 3
 </code></pre>
-</div></div><br/><h2 style="text-align:center;">Device</h2>
+</div></div><br/><h2 style="text-align:center;">Device(B)</h2>
 <div class="card fluid"><div class="section double-padded"><h3 id="getos">_.getOS()</h3></div><div class="section double-padded">
 <p>获取当前的操作系统 <a href="https://github.com/MuYunyun/diana/blob/master/src/browser/device/getOS.js" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
@@ -174,7 +203,17 @@ _.each({1, 2, 3}, (value) =&gt; {console.log(value)}); // =&gt; 1, 2, 3
 <pre><code class="language-js">_.isMobile(); // =&gt; true
 </code></pre>
 </div></div><br/><h2 style="text-align:center;">Function</h2>
-<div class="card fluid"><div class="section double-padded"><h3 id="debounce">_.debounce(function, wait, [immediate])</h3></div><div class="section double-padded">
+<div class="card fluid"><div class="section double-padded"><h3 id="curry">_.curry(fn, arity = fn.length, ...args)</h3></div><div class="section double-padded">
+<p>函数柯里化。如果提供的参数 (args) 数量足够，则调用传递函数 f ，否则返回一个 curried 函数 f <a href="https://github.com/MuYunyun/diana/blob/master/src/common/function/curry.js" title="View in source">Ⓢ</a></p>
+<h5>Arguments</h5>
+<p><code>fn</code> <em>(Function)</em> 调用函数</p>
+<p><code>arity</code> <em>(Number)</em> 参数数量(可不传)</p>
+<p><code>...args</code> <em>(any)</em> 剩余参数</p>
+<p>  </p>
+<h5>Example</h5>
+<pre><code class="language-js">_.curry(Math.pow)(2)(10) // =&gt; 1024
+</code></pre>
+</div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="debounce">_.debounce(function, wait, [immediate])</h3></div><div class="section double-padded">
 <p>函数防抖。限制事件的频繁触发，将延迟函数的执行(真正的执行)在函数最后一次调用时刻的 wait 毫秒之后，对于必须在一些输入（多是一些用户操作）停止到达之后执行的行为有帮助。例如: 渲染一个 Markdown 格式的评论预览, 当窗口停止改变大小之后重新计算布局, 等等。传参 immediate 为 true，debounce会在 wait 时间间隔的开始调用这个函数。 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/function/debounce.js" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
 <pre><code class="language-js">const lazyLayout = _.debounce(calculateLayout, 300)
@@ -185,6 +224,16 @@ $(window).resize(lazyLayout)
 <h5>Example</h5>
 <pre><code class="language-js">const throttled = _.throttle(updatePosition, 100)
 $(window).scroll(throttled)
+</code></pre>
+</div></div><br/><h2 style="text-align:center;">Http(B)</h2>
+<div class="card fluid"><div class="section double-padded"><h3 id="redirect">_.redirect(url, aslink = true)</h3></div><div class="section double-padded">
+<p>重定向到指定的 URL <a href="https://github.com/MuYunyun/diana/blob/master/src/browser/http/redirect.js" title="View in source">Ⓢ</a></p>
+<h5>Arguments</h5>
+<p><code>url</code> <em>(String)</em> 待跳转 URL</p>
+<p><code>aslink</code> <em>(Boolean)</em> 默认为 true, 传 false 时，你不能通过 “前进” 和 “后退” 来访问已经被替换的 URL</p>
+<p>  </p>
+<h5>Example</h5>
+<pre><code class="language-js">_.redirect('http://muyunyun.cn/diana/'); // 重定向到 http://muyunyun.cn/diana/ 这个网址
 </code></pre>
 </div></div><br/><h2 style="text-align:center;">Lang</h2>
 <div class="card fluid"><div class="section double-padded"><h3 id="clone">_.clone(obj)</h3></div><div class="section double-padded">
@@ -257,7 +306,17 @@ _.isArguments([1,2,3]); // =&gt; false
 <pre><code class="language-js">_.isString('abc'); // =&gt; true
 </code></pre>
 </div></div><br/><h2 style="text-align:center;">Math</h2>
-<div class="card fluid"><div class="section double-padded"><h3 id="max">_.max(arr)</h3></div><div class="section double-padded">
+<div class="card fluid"><div class="section double-padded"><h3 id="distance">_.distance(x0, y0, x1, y1)</h3></div><div class="section double-padded">
+<p>计算两点 (x0, y0), (x1, y1) 之间的欧几里得距离 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/math/distance.js" title="View in source">Ⓢ</a></p>
+<h5>Example</h5>
+<pre><code class="language-js">_.distance(1,1, 2,3) // =&gt; 2.23606797749979
+</code></pre>
+</div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="gcd">_.gcd(x, y)</h3></div><div class="section double-padded">
+<p>求最大公约数 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/math/gcd.js" title="View in source">Ⓢ</a></p>
+<h5>Example</h5>
+<pre><code class="language-js">_.gcd(8, 36) // =&gt; 4
+</code></pre>
+</div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="max">_.max(arr)</h3></div><div class="section double-padded">
 <p>判断数组中的最大值 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/math/max.js" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
 <pre><code class="language-js">_.max([1, 2, 3, 4]); // =&gt; 4
@@ -347,6 +406,16 @@ _.rdNum(1, 3, 'no');      // =&gt;    1 &lt; result &lt; 3
 <pre><code class="language-js">_.changeCase('abcd'); // =&gt; 'Abcd'
 _.changeCase('aBcD', 3); // =&gt; 'AbCd'
 </code></pre>
+</div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="escapestr">_.escapeStr(str)</h3></div><div class="section double-padded">
+<p>转义特殊字符 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/string/escapeStr.js" title="View in source">Ⓢ</a></p>
+<h5>Example</h5>
+<pre><code class="language-js">_.escapeRegExp('(test)') // =&gt; \\(test\\)
+</code></pre>
+</div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="sortstr">_.sortStr(str)</h3></div><div class="section double-padded">
+<p>将字符串按字母顺序排序 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/string/sortStr.js" title="View in source">Ⓢ</a></p>
+<h5>Example</h5>
+<pre><code class="language-js">_.sortStr('cabbage') // =&gt; 'aabbceg'
+</code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="trim">_.trim(str, type)</h3></div><div class="section double-padded">
 <p>去除空格 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/string/trim.js" title="View in source">Ⓢ</a></p>
 <h5>Arguments</h5>
@@ -359,6 +428,13 @@ _.changeCase('aBcD', 3); // =&gt; 'AbCd'
 <h5>Example</h5>
 <pre><code class="language-js">_.trim(' ab cd ef '); // =&gt; 'abcdef'
 _.trim(' ab cd ef ', 2); // =&gt; 'ab cd ef'
+</code></pre>
+</div></div><br/><h2 style="text-align:center;">Time</h2>
+<div class="card fluid"><div class="section double-padded"><h3 id="timetaken">_.timeTaken(callback)</h3></div><div class="section double-padded">
+<p>测试功能所花费的时间 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/time/timeTaken.js" title="View in source">Ⓢ</a></p>
+<h5>Example</h5>
+<pre><code class="language-js">_.timeTaken(() =&gt; Math.pow(2, 10)) // =&gt; 1024
+// (logged): timeTaken: 0.019775390625ms
 </code></pre>
 </div></div><br/><h2 style="text-align:center;">Url</h2>
 <div class="card fluid"><div class="section double-padded"><h3 id="obj2query">_.obj2query(baseurl, obj)</h3></div><div class="section double-padded">

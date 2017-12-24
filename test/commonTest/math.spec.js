@@ -22,4 +22,14 @@ describe('#Math API:', () => {
       assert.equal(_.min([1, 2, 3, 4]), 1)
     })
   })
+  describe('#distance()', () => {
+    it(`test _.distance()`, () => {
+      assert.equal(_.distance(0, 0, 3, 4), 5)
+    })
+  })
+  describe('#gcd()', () => {
+    it(`test _.gcd()`, () => {
+      assert.equal(_.gcd(8, 36), 4)
+    })
+  })
 })

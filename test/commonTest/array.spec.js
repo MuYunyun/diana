@@ -18,4 +18,14 @@ describe('#Array API:', () => {
       assert(_.equal(_.intersection([1, 2, 'a', 1], [4, 2, 'a'], [2, 'a', 'c']), [2, 'a']))
     })
   })
+  describe('#countInArr()', () => {
+    it(`test _.countInArr`, () => {
+      assert.equal(_.countInArr([1, 1, 2, 1, 2, 3], 1), 3)
+    })
+  })
+  describe('#difference()', () => {
+    it(`test _.difference`, () => {
+      assert(_.equal(_.difference([1, 2, 3], [1, 2, 4]), [3]))
+    })
+  })
 })

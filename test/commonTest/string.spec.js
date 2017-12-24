@@ -34,4 +34,16 @@ describe('String API:', () => {
       assert.equal(_.changeCase("Ab@Cd", 3), "aB@cD")
     })
   })
+
+  describe('#sortStr()', () => {
+    it('test _.sortStr()', () => {
+      assert.equal(_.sortStr('cabbage'), 'aabbceg')
+    })
+  })
+
+  describe('#escapeStr()', () => {
+    it('test _.escapeStr()', () => {
+      assert.equal(_.escapeStr('(test)'), '\\(test\\)')
+    })
+  })
 })

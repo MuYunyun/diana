@@ -1,6 +1,6 @@
 /**
  * 多个数组取并集 | 数组去重
- * @param {*} arr1 传入的数组
+ * @param {Array} ...arr 可传入 1 个或多个数组
  * ... 
  */
 // 方法一
@@ -12,7 +12,17 @@
 //   return Array.from(new Set(array))
 // }
 
-// 方法二
+// 方法二
+// function uniq(...arr) {
+//   let array = []
+//   for (let i = 0; i < arr.length; i++) {
+//     array = array.concat(arr[i])
+//   }
+//   const result = array.filter(i => array.indexOf(i) === array.lastIndexOf(i))
+//   return result
+// }
+
+// 方法三
 function uniq(...arr) {
   let array = []
   for (let i = 0; i < arr.length; i++) {
