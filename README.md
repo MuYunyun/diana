@@ -9,7 +9,7 @@
 
 > [文档地址](http://muyunyun.cn/diana/)
 
-> [开发记录整理ing](https://github.com/MuYunyun/diana/blob/master/README-zh_cn.md)
+> [开发记录整理](https://github.com/MuYunyun/diana/issues/1)
 
 ## 安装使用
 
