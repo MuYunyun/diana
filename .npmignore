@@ -1,0 +1,14 @@
+LICENCE
+coverage/
+test/
+.travis.yml
+docs
+node_modules
+script
+snippets
+.babelrc
+.eslintignore
+.eslintrc.js
+.gitignore
+karma.conf.js
+tag_database

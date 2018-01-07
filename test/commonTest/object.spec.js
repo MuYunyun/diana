@@ -48,4 +48,10 @@ describe('#Object API:', () => {
       assert(_.equal(obj, { a: 1, b: 2 }))
     })
   })
+  describe('test str2numInObj()', () => {
+    it(`test str2numInObj()`, () => {
+      const obj = _.str2numInObj({ att1: '1', att2: '2', att3: 'att3value', att4: '' }, ['att1', 'att2', 'att4'])
+      assert(_.equal(obj, { att1: 1, att2: 2, att3: 'att3value', att4: null }))
+    })
+  })
 })

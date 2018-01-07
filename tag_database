@@ -33,6 +33,7 @@ rdColor:Random
 rdNum:Random
 redirect:Http(B)
 sortStr:String
+str2numInObj:Object
 sum:Math
 throttle:Function
 timeTaken:Time

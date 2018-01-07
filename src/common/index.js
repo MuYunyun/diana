@@ -39,6 +39,7 @@ const gcd = require('./math/gcd')
 // object
 const equal = require('./object/equal')
 const pairs2obj = require('./object/pairs2obj')
+const str2numInObj = require('./object/str2numInObj')
 
 // url
 const obj2query = require('./url/obj2query')
@@ -79,6 +80,7 @@ const fn = {
   gcd,
   equal,
   pairs2obj,
+  str2numInObj,
   obj2query,
   query2obj,
   each,

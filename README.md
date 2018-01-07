@@ -1,4 +1,4 @@
-# diana <sup>v0.2.4</sup>
+# diana <sup>v0.2.5</sup>
 
 ![Build Status](https://travis-ci.org/MuYunyun/diana.svg?branch=master) [![codecov](https://codecov.io/gh/MuYunyun/diana/branch/master/graph/badge.svg)](https://codecov.io/gh/MuYunyun/diana) ![LICENSE MIT](https://img.shields.io/npm/l/express.svg)
 
@@ -9,7 +9,7 @@
 
 > [文档地址](http://muyunyun.cn/diana/)
 
-> [开发记录整理](https://github.com/MuYunyun/diana/issues/1)
+> [issues](https://github.com/MuYunyun/diana/issues/1)
 
 ## 安装使用
 
@@ -88,6 +88,7 @@ const isEqual = _.equal([1, 2, 3], [1, 2, 3]) // true
 
 * [`_.equal`](#_equal)
 * [`_.pairs2obj`](#_pairs2obj)
+* [`_.str2numInObj`](#_str2numInObj)
 
 ### `Url`
 
@@ -145,6 +146,21 @@ _.equal(obj1, obj2) // => true
 ##### Example
 ```js
 _.pairs2obj([['a',1],['b',2]]) // => {a: 1, b: 2}
+```
+***
+#### <a id="str2numInObj"></a>`_.str2numInObj(obj, arr)`
+[#](#str2numInObj) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/object/str2numInObj.js "View in source") [&#x24C9;][1]
+
+将对象中指定元素转换为 number 格式
+
+##### Arguments
+1. `obj` *(Object)*
+2. `arr` *(Array)*: 数组的值为 obj 对象中要替换的元素
+
+##### Example
+```js
+_.str2numInObj({ att1: '1', att2: '2', att3: 'att3value', att4: '' },['att1', 'att2', 'att4'])
+// => { att1: 1, att2: 2, att3: 'att3value', att4: null }
 ```
 ***
 
