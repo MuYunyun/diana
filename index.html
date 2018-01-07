@@ -120,6 +120,7 @@
 <h3>Object
 </h3><a class="sublink-1" href="#equal">equal</a>
 <a class="sublink-1" href="#pairs2obj">pairs2obj</a>
+<a class="sublink-1" href="#str2numinobj">str2numInObj</a>
 
 <h3>Random
 </h3><a class="sublink-1" href="#rdcolor">rdColor</a>
@@ -355,6 +356,17 @@ _.equal(obj1, obj2) // =&gt; true
 <h5>Example</h5>
 <pre><code class="language-js">_.pairs2obj([['a',1],['b',2]]) // =&gt; {a: 1, b: 2}
 </code></pre>
+</div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="str2numinobj">_.str2numInObj(obj, arr)</h3></div><div class="section double-padded">
+<p>将对象中指定元素转换为 number 格式 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/object/str2numInObj.js" title="View in source">Ⓢ</a></p>
+<h5>Arguments</h5>
+<p><code>obj</code> <em>(Object)</em></p>
+<p><code>arr</code> <em>(Array)</em>: 数组的值为 obj 对象中要替换的元素</p>
+<p>  </p>
+<h5>Example</h5>
+<pre><code class="language-js">_.str2numInObj({ att1: '1', att2: '2', att3: 'att3value', att4: '' },['att1', 'att2', 'att4'])
+// =&gt; { att1: 1, att2: 2, att3: 'att3value', att4: null }
+</code></pre>
+<hr>
 </div></div><br/><h2 style="text-align:center;">Random</h2>
 <div class="card fluid"><div class="section double-padded"><h3 id="rdcolor">_.rdColor()</h3></div><div class="section double-padded">
 <p>生成随机颜色. <a href="https://github.com/MuYunyun/diana/blob/master/src/common/random/rdColor.js" title="View in source">Ⓢ</a></p>
