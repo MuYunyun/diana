@@ -1,6 +1,7 @@
 changeCase:String
 clone:Lang
 cloneDeep:Lang
+convertInObj:Object
 countInArr:Array
 curry:Function
 debounce:Function
@@ -33,7 +34,6 @@ rdColor:Random
 rdNum:Random
 redirect:Http(B)
 sortStr:String
-str2numInObj:Object
 sum:Math
 throttle:Function
 timeTaken:Time

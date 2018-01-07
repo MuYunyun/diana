@@ -118,9 +118,9 @@
 <a class="sublink-1" href="#sum">sum</a>
 
 <h3>Object
-</h3><a class="sublink-1" href="#equal">equal</a>
+</h3><a class="sublink-1" href="#convertinobj">convertInObj</a>
+<a class="sublink-1" href="#equal">equal</a>
 <a class="sublink-1" href="#pairs2obj">pairs2obj</a>
-<a class="sublink-1" href="#str2numinobj">str2numInObj</a>
 
 <h3>Random
 </h3><a class="sublink-1" href="#rdcolor">rdColor</a>
@@ -338,7 +338,22 @@ _.isArguments([1,2,3]); // =&gt; false
 <pre><code class="language-js">_.sum([1, 2, 3, 4]); // =&gt; 10
 </code></pre>
 </div></div><br/><h2 style="text-align:center;">Object</h2>
-<div class="card fluid"><div class="section double-padded"><h3 id="equal">_.equal(value1, value2)</h3></div><div class="section double-padded">
+<div class="card fluid"><div class="section double-padded"><h3 id="convertinobj">_.convertInObj(obj, ruleObj)</h3></div><div class="section double-padded">
+<p>该函数可以将相应字段转化为指定格式 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/object/convertInObj.js" title="View in source">Ⓢ</a></p>
+<h5>Arguments</h5>
+<p><code>obj</code> <em>(Object)</em></p>
+<p><code>ruleObj</code> <em>(Object)</em>: 给相应字段配置规则，暂时支持 number、string、boolean 类型</p>
+<p>  </p>
+<h5>Example</h5>
+<pre><code class="language-js">_.convertInObj({ att1: '1', att2: '2', att3: 'att3value', att4: '', att5: 5, att6: 0 },
+      {
+        number: ['att1', 'att2', 'att4'],
+        string: ['att3','att5'],
+        boolean: ['att6'],
+      })
+    =&gt; { att1: 1, att2: 2, att3: 'att3value', att4: null, att5: '5', att6: false }
+</code></pre>
+</div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="equal">_.equal(value1, value2)</h3></div><div class="section double-padded">
 <p>判断两个任意值是否相等(包含对象、数组深度遍历) <a href="https://github.com/MuYunyun/diana/blob/master/src/common/object/equal.js" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
 <pre><code class="language-js">const obj1 = {
@@ -356,17 +371,6 @@ _.equal(obj1, obj2) // =&gt; true
 <h5>Example</h5>
 <pre><code class="language-js">_.pairs2obj([['a',1],['b',2]]) // =&gt; {a: 1, b: 2}
 </code></pre>
-</div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="str2numinobj">_.str2numInObj(obj, arr)</h3></div><div class="section double-padded">
-<p>将对象中指定元素转换为 number 格式 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/object/str2numInObj.js" title="View in source">Ⓢ</a></p>
-<h5>Arguments</h5>
-<p><code>obj</code> <em>(Object)</em></p>
-<p><code>arr</code> <em>(Array)</em>: 数组的值为 obj 对象中要替换的元素</p>
-<p>  </p>
-<h5>Example</h5>
-<pre><code class="language-js">_.str2numInObj({ att1: '1', att2: '2', att3: 'att3value', att4: '' },['att1', 'att2', 'att4'])
-// =&gt; { att1: 1, att2: 2, att3: 'att3value', att4: null }
-</code></pre>
-<hr>
 </div></div><br/><h2 style="text-align:center;">Random</h2>
 <div class="card fluid"><div class="section double-padded"><h3 id="rdcolor">_.rdColor()</h3></div><div class="section double-padded">
 <p>生成随机颜色. <a href="https://github.com/MuYunyun/diana/blob/master/src/common/random/rdColor.js" title="View in source">Ⓢ</a></p>
