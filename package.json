@@ -1,6 +1,6 @@
 {
   "name": "diana",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "Common libraries",
   "browser": "lib/diana.js",
   "main": "lib/diana.back.js",
