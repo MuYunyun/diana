@@ -1,6 +1,5 @@
 {
   "name": "diana",
-  "version": "0.2.8",
   "description": "fe tool library",
   "main": "lib/diana.js",
   "authors": [
