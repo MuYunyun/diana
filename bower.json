@@ -13,7 +13,7 @@
     "common-util"
   ],
   "homepage": "https://github.com/MuYunyun/diana",
-  "private": true,
+  "private": false,
   "ignore": [
     "node_modules",
     "bower_components",
