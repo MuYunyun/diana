@@ -89,6 +89,10 @@
 </h3><a class="sublink-1" href="#getos">getOS</a>
 <a class="sublink-1" href="#ismobile">isMobile</a>
 
+<h3>Dom(B)
+</h3><a class="sublink-1" href="#addloadevent">addLoadEvent</a>
+<a class="sublink-1" href="#insertafter">insertAfter</a>
+
 <h3>Function
 </h3><a class="sublink-1" href="#curry">curry</a>
 <a class="sublink-1" href="#debounce">debounce</a>
@@ -203,6 +207,24 @@ _.each({1, 2, 3}, (value) =&gt; {console.log(value)}); // =&gt; 1, 2, 3
 <h5>Example</h5>
 <pre><code class="language-js">_.isMobile(); // =&gt; true
 </code></pre>
+</div></div><br/><h2 style="text-align:center;">Dom(B)</h2>
+<div class="card fluid"><div class="section double-padded"><h4>&lt;a id=&quot;_addLoadEvent&quot;&gt;&lt;/a&gt;<code>_.addLoadEvent(func)</code></h4>
+<p><a href="#_addLoadEvent">#</a> <a href="https://github.com/MuYunyun/diana/blob/master/src/browser/dom/addLoadEvent.js" title="View in source">Ⓢ</a> [Ⓣ][1]</p>
+<p>把在页面加载完毕时执行的函数创建为一个队列(摘自 JavaScript DOM 编程艺术)</p>
+<h5>Arguments</h5>
+<p><code>func</code> <em>(Function)</em> 需加进队列的函数</p>
+</div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="insertafter">insertAfter(newNode, referenceNode)</h3></div><div class="section double-padded">
+<p>在指定节点后插入节点(摘自 JavaScript DOM 编程艺术) <a href="https://github.com/MuYunyun/diana/blob/master/src/browser/dom/insertAfter.js" title="View in source">Ⓢ</a></p>
+<h5>Arguments</h5>
+<p><code>newNode</code> <em>(Dom)</em> 新节点</p>
+<p><code>referenceNode</code> <em>(Dom)</em> 指定节点</p>
+<p>  </p>
+<h5>Example</h5>
+<pre><code class="language-js">  const image = document.createElement('img')
+  image.setAttribute('src', 'images/1.png')
+  const imagegallery = document.getElementById('imagegallery')
+  _.insertAfter(image, imagegallery)
+</code></pre>
 </div></div><br/><h2 style="text-align:center;">Function</h2>
 <div class="card fluid"><div class="section double-padded"><h3 id="curry">_.curry(fn, arity = fn.length, ...args)</h3></div><div class="section double-padded">
 <p>函数柯里化。如果提供的参数 (args) 数量足够，则调用传递函数 f ，否则返回一个 curried 函数 f <a href="https://github.com/MuYunyun/diana/blob/master/src/common/function/curry.js" title="View in source">Ⓢ</a></p>
@@ -266,12 +288,6 @@ _.isArguments([1,2,3]); // =&gt; false
 <hr>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="isarray">_.isArray(val)</h3></div><div class="section double-padded">
 <p>判断是否为数组 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/isArray.js" title="View in source">Ⓢ</a></p>
-<h5>Arguments</h5>
-<p><code>str</code> <em>(String)</em>: 待去除空格的字符串</p>
-<p><code>type</code> <em>(Number)</em>: 1：首字母大写(默认) 2：首页母小写　3：大小写转换</p>
-<p>  </p>
-<h5>Returns</h5>
-<p><em>(Boolean)</em>: 返回 Boolean 值</p>
 <p>  </p>
 <h5>Example</h5>
 <pre><code class="language-js">_.isArray([1, 2]); // =&gt; true
