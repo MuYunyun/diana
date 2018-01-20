@@ -4,8 +4,8 @@ const commonFn = require('../common')
 const getOS = require('./device/getOS')
 const isMobile = require('./device/isMobile')
 const redirect = require('./http/redirect')
-const addLoadEvent = require('./http/addLoadEvent')
-const insertAfter = require('./http/insertAfter')
+const addLoadEvent = require('./dom/addLoadEvent')
+const insertAfter = require('./dom/insertAfter')
 
 const browserFn = {
   getOS,
