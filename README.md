@@ -10,15 +10,12 @@
 
 > [文档地址](http://muyunyun.cn/diana/)
 
-## 安装使用
+## usage
 
-1. 使用 npm 安装
-2. 直接下载`min`目录下的 [diana.js](https://github.com/MuYunyun/diana/blob/master/lib/diana.js) 使用，支持UMD通用模块规范
-
-### npm:
+### npm || yarn (推荐)
 
 ```bash
-npm install diana --save-dev
+npm install diana --save || yarn add diana
 ```
 
 ```js
@@ -26,11 +23,17 @@ const _ = require('diana')
 const isEqual = _.equal([1, 2, 3], [1, 2, 3]) // true
 ```
 
-### 浏览器:
+### bower 安装
 
-``` html
-<script src="diana.js"></script>
+```bash
+bower install diana
+```
+
+```html
+<script src="bower_components/diana/lib/diana.js"></script>
 <script>
     const isEqual = diana.equal([1, 2, 3], [1, 2, 3]) // true
 </script>
 ```
+
+当然，在浏览器端你也可以直接下载`min`目录下的 [diana.js](https://github.com/MuYunyun/diana/blob/master/lib/diana.js) 使用，支持UMD通用模块规范。
