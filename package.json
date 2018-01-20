@@ -1,7 +1,7 @@
 {
   "name": "diana",
   "version": "0.2.8",
-  "description": "Common libraries",
+  "description": "fe tool library",
   "browser": "lib/diana.js",
   "main": "lib/diana.back.js",
   "dependencies": {

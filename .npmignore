@@ -12,3 +12,4 @@ snippets
 .gitignore
 karma.conf.js
 tag_database
+bower.json
