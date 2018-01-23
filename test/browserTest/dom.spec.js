@@ -13,6 +13,7 @@ describe('#DOM API:', () => {
     p1.appendChild(test1)
 
     const p2 = document.createElement('p')
+    p2.setAttribute('id', 'p2Test')
     const test2 = document.createTextNode('test2')
     p2.appendChild(test2)
 
@@ -26,6 +27,11 @@ describe('#DOM API:', () => {
 
     $ele = document.getElementById('m_addClass')
   })
+  describe('#addLoadEvent()', () => {
+    it(`_.addLoadEvent()`, () => {
+      _.addLoadEvent(_.addClass)
+    })
+  })
   describe('#addClass()', () => {
     it(`_.addClass()`, () => {
       _.addClass($ele, 'test')
@@ -38,6 +44,23 @@ describe('#DOM API:', () => {
       const p1 = document.getElementById('p1Test')
       const hopeP2 = _.getNextElement(p1)
       _.equal(hopeP2.lastChild.nodeValue, 'test2')
+    })
+  })
+  describe('#insertAfter()', () => {
+    it(`_.insertAfter()`, () => {
+      const container = document.createElement('p')
+      container.setAttribute('id', 'm_insertAfter')
+      const test = document.createTextNode('m_insertAfter')
+      container.appendChild(test)
+
+      document.body.appendChild(container)
+
+      const $newele = document.getElementById('m_insertAfter')
+      const $oldele = document.getElementById('p2Test')
+      _.insertAfter($newele, $oldele)
+
+      const hopenewele = _.getNextElement($oldele)
+      _.equal(hopenewele.lastChild.nodeValue, 'm_insertAfter')
     })
   })
   afterEach(function() {
