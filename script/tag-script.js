@@ -7,7 +7,7 @@ const fs = require('fs'),
       path = require('path'),
       chalk = require('chalk'),
       _ = require('diana')
-const snippetsPath = './snippets'
+const snippetsPath = './docs/snippets'
 let snippets = {}, output = '', tagDbData = {}, missingTags = 0, tagDbStats = {}
 // Start the timer of the script
 console.time('Tagger')
@@ -33,7 +33,7 @@ catch (err) { // Handle errors (hopefully not!)
 // Load tag data from the database
 try {
   // 根据 split('\n'), 所以 tag_database 的末尾必须多加一行
-  const pairs = fs.readFileSync('tag_database', 'utf8').split('\n').slice(0, -1).map(v => v.split(':').slice(0, 2)) // [['anagrams', 'string'], ['arrayAverage', 'array']]
+  const pairs = fs.readFileSync('docs/tag_database', 'utf8').split('\n').slice(0, -1).map(v => v.split(':').slice(0, 2)) // [['anagrams', 'string'], ['arrayAverage', 'array']]
   tagDbData = _.pairs2obj(pairs) // {anagrams: 'string', arrayAverage: 'array'}
   // 统计相同标签含有的数量
   tagDbStats = pairs.sort((a, b) => a[1].localeCompare(b[1])).reduce((acc, val) =>
@@ -57,7 +57,7 @@ try {
     }
   }
   // Write to tag_database
-  fs.writeFileSync('tag_database', output)
+  fs.writeFileSync('docs/tag_database', output)
 }
 catch (err) {  // Handle errors (hopefully not!)
   console.log(`${chalk.red('ERROR!')} During tag_database generation: ${err}`)

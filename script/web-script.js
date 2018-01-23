@@ -24,7 +24,7 @@ sass.render({
 })
 
 // 因为是 npm 的命令，所以路径是 '.' 不是 '..'
-const snippetsPath = './snippets/', staticPartsPath = './docs/static-parts', docsPath = './docs', snippets = {}
+const snippetsPath = './docs/snippets/', staticPartsPath = './docs/static-parts', docsPath = './docs', snippets = {}
 let startPart = '', endPart = '', output = '', tagDbData = {}
 // start the time
 console.time('Builder')
@@ -59,7 +59,7 @@ catch (err) { // Handle errors (hopefully not!)
 // Load tag data from the database
 try {
   // 根据 split('\n'), 所以 tag_database 的末尾必须多加一行
-  const pairs = fs.readFileSync('tag_database', 'utf8').split('\n').slice(0, -1).map(v => v.split(':').slice(0, 2)) // [['anagrams', 'string'], ['arrayAverage', 'array']]
+  const pairs = fs.readFileSync('docs/tag_database', 'utf8').split('\n').slice(0, -1).map(v => v.split(':').slice(0, 2)) // [['anagrams', 'string'], ['arrayAverage', 'array']]
   tagDbData = _.pairs2obj(pairs) // {anagrams: 'string', arrayAverage: 'array'}
   // 统计相同标签含有的数量
   tagDbStats = pairs.sort((a, b) => a[1].localeCompare(b[1])).reduce((acc, val) => { acc.hasOwnProperty(val[1]) ? acc[val[1]]++ : acc[val[1]] = 1; return acc }, {})

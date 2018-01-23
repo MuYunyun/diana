@@ -1,3 +1,4 @@
+addClass:Dom(B)
 addLoadEvent:Dom(B)
 changeCase:String
 clone:Lang
@@ -12,6 +13,7 @@ each:Collection
 equal:Object
 escapeStr:String
 gcd:Math
+getNextElement:Dom(B)
 getOS:Device(B)
 insertAfter:Dom(B)
 intersection:Array
