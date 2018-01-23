@@ -90,7 +90,9 @@
 <a class="sublink-1" href="#ismobile">isMobile</a>
 
 <h3>Dom(B)
-</h3><a class="sublink-1" href="#addloadevent">addLoadEvent</a>
+</h3><a class="sublink-1" href="#addclass">addClass</a>
+<a class="sublink-1" href="#addloadevent">addLoadEvent</a>
+<a class="sublink-1" href="#getnextelement">getNextElement</a>
 <a class="sublink-1" href="#insertafter">insertAfter</a>
 
 <h3>Function
@@ -208,10 +210,22 @@ _.each({1, 2, 3}, (value) =&gt; {console.log(value)}); // =&gt; 1, 2, 3
 <pre><code class="language-js">_.isMobile(); // =&gt; true
 </code></pre>
 </div></div><br/><h2 style="text-align:center;">Dom(B)</h2>
-<div class="card fluid"><div class="section double-padded"><h3 id="addloadevent">_.addLoadEvent(func)</h3></div><div class="section double-padded">
+<div class="card fluid"><div class="section double-padded"><h3 id="addclass">_.addClass(element, className)</h3></div><div class="section double-padded">
+<p>为元素添加类名 <a href="https://github.com/MuYunyun/diana/blob/master/src/browser/dom/addClass.js" title="View in source">Ⓢ</a></p>
+<h5>Arguments</h5>
+<p><code>element</code> <em>(Object)</em>: 选中的节点</p>
+<p><code>className</code> <em>(String)</em>: 添加的类名</p>
+</div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="addloadevent">_.addLoadEvent(func)</h3></div><div class="section double-padded">
 <p>把在页面加载完毕时执行的函数创建为一个队列(摘自 JavaScript DOM 编程艺术) <a href="https://github.com/MuYunyun/diana/blob/master/src/browser/dom/addLoadEvent.js" title="View in source">Ⓢ</a></p>
 <h5>Arguments</h5>
 <p><code>func</code> <em>(Function)</em> 需加进队列的函数</p>
+</div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="getnextelement">getNextElement(node)</h3></div><div class="section double-padded">
+<p>获取相邻的元素节点(修改自 JavaScript DOM 编程艺术) <a href="https://github.com/MuYunyun/diana/blob/master/src/browser/dom/getNextElement.js" title="View in source">Ⓢ</a></p>
+<h5>Arguments</h5>
+<p><code>node</code> <em>(Dom)</em> 传入当前节点</p>
+<p>  </p>
+<h5>Return</h5>
+<p><code>node</code> <em>(Dom)</em> 返回相邻的下一个元素节点</p>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="insertafter">insertAfter(newNode, referenceNode)</h3></div><div class="section double-padded">
 <p>在指定节点后插入节点(摘自 JavaScript DOM 编程艺术) <a href="https://github.com/MuYunyun/diana/blob/master/src/browser/dom/insertAfter.js" title="View in source">Ⓢ</a></p>
 <h5>Arguments</h5>
