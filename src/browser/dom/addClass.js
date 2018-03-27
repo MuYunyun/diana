@@ -1,13 +1,14 @@
+const hasClass = require('./hasClass')
 /**
  * 为元素添加类名
- * @param {*} element
- * @param {*} className
+ * @param {HTMLElement} element
+ * @param {string} className
  */
 function addClass(element, className) {
-  if (element.className === '') {
-    element.className = className
-  } else {
-    element.className = `${element.className} ${className}` // className 属性只能覆盖
+  if (element.classList) {
+    element.classList.add(className)
+  } else if (!hasClass(element, className)) {
+    element.setAttribute('class', `${element.className} ${className}`)
   }
 }
 
