@@ -15,6 +15,7 @@ escapeStr:String
 gcd:Math
 getNextElement:Dom(B)
 getOS:Device(B)
+hasClass:Device(B)
 insertAfter:Dom(B)
 intersection:Array
 isArguments:Lang

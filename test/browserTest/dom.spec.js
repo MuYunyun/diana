@@ -36,21 +36,21 @@ describe('#DOM API:', () => {
     it(`_.addClass()`, () => {
       _.addClass($ele, 'test')
       const className = $ele.className
-      _.equal(className, 'test')
+      assert.equal(className, 'test')
     })
   })
   describe('#hasClass()', () => {
     it(`_.hasClass()`, () => {
       _.addClass($ele, 'testHas')
       const bHasClass = _.hasClass($ele, 'testHas')
-      _.equal(bHasClass, false)
+      assert(bHasClass)
     })
   })
   describe('#getNextElement()', () => {
     it(`_.getNextElement()`, () => {
       const p1 = document.getElementById('p1Test')
       const hopeP2 = _.getNextElement(p1)
-      _.equal(hopeP2.lastChild.nodeValue, 'test2')
+      assert.equal(hopeP2.lastChild.nodeValue, 'test2')
     })
   })
   describe('#insertAfter()', () => {
@@ -67,7 +67,7 @@ describe('#DOM API:', () => {
       _.insertAfter($newele, $oldele)
 
       const hopenewele = _.getNextElement($oldele)
-      _.equal(hopenewele.lastChild.nodeValue, 'm_insertAfter')
+      assert.equal(hopenewele.lastChild.nodeValue, 'm_insertAfter')
     })
   })
   afterEach(function() {
