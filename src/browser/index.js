@@ -12,6 +12,7 @@ const redirect = require('./http/redirect')
 const addLoadEvent = require('./dom/addLoadEvent')
 const insertAfter = require('./dom/insertAfter')
 const addClass = require('./dom/addClass')
+const hasClass = require('./dom/hasClass')
 const getNextElement = require('./dom/getNextElement')
 
 const browserFn = {
@@ -21,6 +22,7 @@ const browserFn = {
   addLoadEvent,
   insertAfter,
   addClass,
+  hasClass,
   getNextElement
 }
 

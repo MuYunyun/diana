@@ -39,6 +39,13 @@ describe('#DOM API:', () => {
       _.equal(className, 'test')
     })
   })
+  describe('#hasClass()', () => {
+    it(`_.hasClass()`, () => {
+      _.addClass($ele, 'testHas')
+      const bHasClass = _.hasClass($ele, 'testHas')
+      _.equal(bHasClass, false)
+    })
+  })
   describe('#getNextElement()', () => {
     it(`_.getNextElement()`, () => {
       const p1 = document.getElementById('p1Test')
