@@ -50,7 +50,7 @@ describe('Lang API:', () => {
       c: anotherFunction,
       d: new Date('2017'),
       e: array,
-    };
+    }
     it(`shallow_clone`, () => {
       const copyObject = _.clone(myObject)
       assert(myObject.e === copyObject.e)
@@ -62,6 +62,9 @@ describe('Lang API:', () => {
     })
     it(`test isFunction()`, () => {
       assert(_.isFunction(() => {return 1}))
+    })
+    it(`test isNumber()`, () => {
+      assert(_.isNumber(+'abc') === false)
     })
   })
 })
