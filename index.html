@@ -107,6 +107,7 @@
 <h3>Lang
 </h3><a class="sublink-1" href="#clone">clone</a>
 <a class="sublink-1" href="#clonedeep">cloneDeep</a>
+<a class="sublink-1" href="#codetomean">codeToMean</a>
 <a class="sublink-1" href="#isarguments">isArguments</a>
 <a class="sublink-1" href="#isarray">isArray</a>
 <a class="sublink-1" href="#isdate">isDate</a>
@@ -115,6 +116,7 @@
 <a class="sublink-1" href="#isnumber">isNumber</a>
 <a class="sublink-1" href="#isregexp">isRegExp</a>
 <a class="sublink-1" href="#isstring">isString</a>
+<a class="sublink-1" href="#meantocode">meanToCode</a>
 
 <h3>Math
 </h3><a class="sublink-1" href="#distance">distance</a>
@@ -297,6 +299,24 @@ _.clone(obj).a === obj.a; // =&gt; true
 <h5>Example</h5>
 <pre><code class="language-js">let obj = {a: 1}
 _.cloneDeep(obj).a === obj.a; // =&gt; false</code></pre>
+</div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="codetomean">_.codeToMean(arr, code)</h3></div><div class="section double-padded">
+<p>将数组中的 code 转化为 mean. <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/convertMeanValue.js" title="View in source">Ⓢ</a></p>
+<h5>Arguments</h5>
+<p><code>arr</code> <em>(Array)</em>: 数组</p>
+<p><code>code</code> <em>(String | Number)</em>: 要转化的 code 值</p>
+<p>  </p>
+<h5>Returns</h5>
+<p><em>(mean)</em>: 数组中 code 对应的 mean，若找不到则返回 null</p>
+<p>  </p>
+<h5>Example</h5>
+<pre><code class="language-js">const arr = [
+  { code: 10, mean: '午高峰时段' },
+  { code: 20, mean: '晚高峰时段' },
+  { code: 30, mean: '夜宵时段' },
+]
+
+_.codeToMean(arr, 20) // =&gt; 晚高峰时段
+</code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><hr>
 <h3 id="isarguments">_.isArguments(object)</h3></div><div class="section double-padded">
 <p>如果 object 是一个参数对象，返回 true <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.js" title="View in source">Ⓢ</a></p>
@@ -340,6 +360,24 @@ _.isArguments([1,2,3]); // =&gt; false
 <p>如果 object 是一个字符串，返回 true <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.js" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
 <pre><code class="language-js">_.isString('abc'); // =&gt; true
+</code></pre>
+</div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="meantocode">_.meanToCode(arr, mean)</h3></div><div class="section double-padded">
+<p>将数组中的 mean 转化为 code. <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/convertMeanValue.js" title="View in source">Ⓢ</a></p>
+<h5>Arguments</h5>
+<p><code>arr</code> <em>(Array)</em>: 数组</p>
+<p><code>mean</code> <em>(String)</em>: 要转化的 mean 值</p>
+<p>  </p>
+<h5>Returns</h5>
+<p><em>(code)</em>: 数组中 mean 对应的 code，若找不到则返回 null</p>
+<p>  </p>
+<h5>Example</h5>
+<pre><code class="language-js">const arr = [
+  { code: 10, mean: '午高峰时段' },
+  { code: 20, mean: '晚高峰时段' },
+  { code: 30, mean: '夜宵时段' },
+]
+
+_.meanToCode(arr, '晚高峰时段') // =&gt; 30
 </code></pre>
 </div></div><br/><h2 style="text-align:center;">Math</h2>
 <div class="card fluid"><div class="section double-padded"><h3 id="distance">_.distance(x0, y0, x1, y1)</h3></div><div class="section double-padded">
