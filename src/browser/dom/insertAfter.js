@@ -11,6 +11,7 @@ function insertAfter(newNode, referenceNode) {
   } else {
     parent.insertBefore(newNode, referenceNode.nextSibling)
   }
+  return this
 }
 
 module.exports = insertAfter

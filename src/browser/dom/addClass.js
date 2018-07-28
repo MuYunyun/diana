@@ -10,6 +10,7 @@ function addClass(element, className) {
   } else if (!hasClass(element, className)) {
     element.setAttribute('class', `${element.className} ${className}`)
   }
+  return this
 }
 
 module.exports = addClass

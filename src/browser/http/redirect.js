@@ -5,6 +5,7 @@
  */
 function redirect(url, aslink = true) {
   aslink ? window.location.href = url : window.location.replace(url)
+  return this
 }
 
 module.exports = redirect

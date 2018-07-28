@@ -4,7 +4,7 @@ const MAX_ARRAY_INDEX = Math.pow(2, 53) - 1
 /**
  * 处理数组、类数组以及对象
  */
-const each = (obj, iteratee, context) => {
+const each = function (obj, iteratee, context) {
   iteratee = optimizeCb(iteratee, context)
   let i, length
   // 数组以及类数组
@@ -19,7 +19,7 @@ const each = (obj, iteratee, context) => {
       iteratee(obj[keys[i]], keys[i], obj)
     }
   }
-  return obj
+  return this
 }
 
 const isArrayLike = (collection) => {

@@ -12,6 +12,7 @@ function addLoadEvent(func) {
       func()
     }
   }
+  return this
 }
 
 module.exports = addLoadEvent
