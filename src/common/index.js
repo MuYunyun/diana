@@ -1,6 +1,3 @@
-/**
- * webpack 打包入口文件
- */
 /* ---------------- common ------------------- */
 // array
 const uniq = require('./array/uniq')
@@ -27,6 +24,7 @@ const isArray = require('./lang/isArray')
 const clone = require('./lang/clone')
 const cloneDeep = require('./lang/cloneDeep')
 const isType = require('./lang/isType')
+const { meanToCode, codeToMean } = require('./lang/convertMeanValue')
 
 // math
 const sum = require('./math/sum')
@@ -72,6 +70,8 @@ const fn = {
   isArray,
   clone,
   cloneDeep,
+  meanToCode,
+  codeToMean,
   sum,
   mean,
   max,

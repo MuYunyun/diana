@@ -87,13 +87,13 @@
 
 <h3>Device(B)
 </h3><a class="sublink-1" href="#getos">getOS</a>
-<a class="sublink-1" href="#hasclass">hasClass</a>
 <a class="sublink-1" href="#ismobile">isMobile</a>
 
 <h3>Dom(B)
 </h3><a class="sublink-1" href="#addclass">addClass</a>
 <a class="sublink-1" href="#addloadevent">addLoadEvent</a>
 <a class="sublink-1" href="#getnextelement">getNextElement</a>
+<a class="sublink-1" href="#hasclass">hasClass</a>
 <a class="sublink-1" href="#insertafter">insertAfter</a>
 
 <h3>Function
@@ -205,11 +205,6 @@ _.each({1, 2, 3}, (value) =&gt; {console.log(value)}); // =&gt; 1, 2, 3
 <h5>Example</h5>
 <pre><code class="language-js">_.getOS(); // =&gt; 'MacOSX'
 </code></pre>
-</div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="hasclass">_.hasClass(element, className)</h3></div><div class="section double-padded">
-<p>判断当前节点是否有指定的 class 属性 <a href="https://github.com/MuYunyun/diana/blob/master/src/browser/dom/hasClass.js" title="View in source">Ⓢ</a></p>
-<h5>Arguments</h5>
-<p><code>element</code> <em>(HTMLElement)</em>: 选中的节点</p>
-<p><code>className</code> <em>(String)</em>: 判断的类名</p>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="ismobile">_.isMobile()</h3></div><div class="section double-padded">
 <p>判断当前环境是否为手机 <a href="https://github.com/MuYunyun/diana/blob/master/src/browser/device/isMobile.js" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
@@ -232,6 +227,11 @@ _.each({1, 2, 3}, (value) =&gt; {console.log(value)}); // =&gt; 1, 2, 3
 <p>  </p>
 <h5>Return</h5>
 <p><code>node</code> <em>(Dom)</em> 返回相邻的下一个元素节点</p>
+</div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="hasclass">_.hasClass(element, className)</h3></div><div class="section double-padded">
+<p>判断当前节点是否有指定的 class 属性 <a href="https://github.com/MuYunyun/diana/blob/master/src/browser/dom/hasClass.js" title="View in source">Ⓢ</a></p>
+<h5>Arguments</h5>
+<p><code>element</code> <em>(HTMLElement)</em>: 选中的节点</p>
+<p><code>className</code> <em>(String)</em>: 判断的类名</p>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="insertafter">insertAfter(newNode, referenceNode)</h3></div><div class="section double-padded">
 <p>在指定节点后插入节点(摘自 JavaScript DOM 编程艺术) <a href="https://github.com/MuYunyun/diana/blob/master/src/browser/dom/insertAfter.js" title="View in source">Ⓢ</a></p>
 <h5>Arguments</h5>
