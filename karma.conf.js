@@ -67,7 +67,7 @@ module.exports = function(config) {
       }
     },
 
-    reporters: ['progress', 'karma-remap-istanbul'], // 好吧，，remap-isbanbul 也报了一个未找到 sourcemap 的 error，直接注释了 remap-istanbul 包的 CoverageTransformer.js 文件的 169 行，以后有机会再捣鼓吧。（心累）
+    reporters: ['progress', 'karma-remap-istanbul-fix'], // 好吧，，remap-isbanbul 也报了一个未找到 sourcemap 的 error，直接注释了 remap-istanbul 包的 CoverageTransformer.js 文件的 169 行，以后有机会再捣鼓吧。（心累）
 
     // web server port
     port: 9876,
