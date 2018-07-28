@@ -3,6 +3,7 @@ addLoadEvent:Dom(B)
 changeCase:String
 clone:Lang
 cloneDeep:Lang
+codeToMean:Lang
 convertInObj:Object
 countInArr:Array
 curry:Function
@@ -31,6 +32,7 @@ isRegExp:Lang
 isString:Lang
 max:Math
 mean:Math
+meanToCode:Lang
 min:Math
 obj2query:Url
 pairs2obj:Object
