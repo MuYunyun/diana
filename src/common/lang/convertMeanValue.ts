@@ -1,4 +1,4 @@
-const isArray = require('./isArray')
+import { isArray } from './isArray'
 
 /**
  * 找到数组中 mean 对应的 code

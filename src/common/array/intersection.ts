@@ -6,7 +6,7 @@ import { uniq } from './uniq'
  * _.intersection([1, 3, 'a', 'a', 1]) => [1, 'a']
  * _.intersection([1, 'a', 'b', 1], [4, 'a', 'b'], ['a', 2, 'b', 'c']) => ['a', 'b']
  */
-function intersection(...arr) {
+function intersection(...arr: Array<any>) {
   if (arr.length === 1) { // _.intersection([1, 3, 'a', 1, 'a']) => [1, 'a']
     const arraySort = arr[0].sort()
     const arrayResult = []
@@ -17,7 +17,7 @@ function intersection(...arr) {
     }
     return arrayResult
   } else if (arr.length > 1) { // _.intersection([1, 2, 'a', 1], [4, 2, 'a'], [2, 'a', 'c']) => [2, 'a']
-    let array = []
+    let array: Array<any> = []
     for (let i = 0; i < arr.length; i++) {
       array = array.concat(uniq(arr[i]))
     }

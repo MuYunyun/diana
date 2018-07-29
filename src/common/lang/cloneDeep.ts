@@ -9,16 +9,16 @@ import { isArray } from '../lang/isArray'
 const { isDate, isRegExp, isFunction } = typeObj
 
 function cloneDeep(values: any) {
-  const parents = []
-  const children = []
+  const parents: Array<any> = []
+  const children: Array<any> = []
 
-  function clone(values) {
+  function clone(values: any) {
     // handle loop reference
     const num = parents.indexOf(values)
     if (~num) {
       return children[num]
     }
-    let copy
+    let copy: any
 
     if (values == null || (typeof values !== 'object' && !isFunction(values))) return values
 
@@ -67,7 +67,7 @@ function cloneDeep(values: any) {
   return clone(values)
 }
 
-const getRegExp = re => {
+const getRegExp = (re: any) => {
   var flags = ''
   if (re.global) flags += 'g'
   if (re.ignoreCase) flags += 'i'

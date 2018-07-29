@@ -6,7 +6,7 @@
  * @param {*} args
  * _.curry(Math.pow)(2)(10) => 1024
  */
-function curry(fn: any, arity = fn.length, ...args) {
+function curry(fn: any, arity = fn.length, ...args: Array<any>) {
   return arity <= args.length
     ? fn(...args)
     : curry.bind(null, fn, arity, ...args)

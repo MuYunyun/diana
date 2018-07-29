@@ -12,7 +12,7 @@ function getOS() {
     MacOSX: (navigator.platform === 'Mac68K') || (navigator.platform === 'MacPPC')
         || (navigator.platform === 'Macintosh') || (navigator.platform == 'MacIntel'),
 
-    Unix: (navigator.platform === 'X11') && !OSObject.Windows && !OSObject.MacOSX,
+    Unix: (navigator.platform === 'X11') && !this.Windows && !this.MacOSX,
 
     Linux: /linux/i.test(platform),
 

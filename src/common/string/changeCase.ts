@@ -11,7 +11,7 @@
 // }
 // var newString = 'abc12345#$*%'.replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
 // console.log(newString);  // abc - 12345 - #$*%
-function changeCase(str, type) {
+function changeCase(str: String, type: number) {
   switch (type) {
     case 1:
       return str.replace(/^(\w)(\w+)/, (v, v1, v2) => {
@@ -30,7 +30,7 @@ function changeCase(str, type) {
   }
 }
 
-function ToggleCase(str) {
+function ToggleCase(str: String) {
   let itemText = ''
   str.split('').forEach((value) => {
     if (/^[a-z]/.test(value)) {

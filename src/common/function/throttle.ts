@@ -10,11 +10,11 @@
  * @param {*} options
  */
 function throttle(func: any, wait: number, options: any) {
-  let timeout
+  let timeout: any
   let previous = 0
   if (!options) options = {}
 
-  const throttled = function () {
+  const throttled: any = function (...args: Array<any>) {
     const now = new Date().getTime()
     // leading：false 表示禁用第一次执行
     if (!previous && options.leading === false) previous = now
@@ -27,17 +27,17 @@ function throttle(func: any, wait: number, options: any) {
         timeout = null
       }
       previous = now
-      func.apply(this, arguments)
+      func.apply(this, args)
     } else if (!timeout && options.trailing !== false) {
       timeout = setTimeout(() => {
         previous = options.leading === false ? 0 : new Date().getTime()
         timeout = null
-        func.apply(this, arguments)
+        func.apply(this, args)
       }, remaining)
     }
   }
 
-  throttled.cancel = function () {
+  throttled.cancel = function (...args: Array<any>) {
     clearTimeout(timeout)
     previous = 0
     timeout = null

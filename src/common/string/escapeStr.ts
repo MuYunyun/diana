@@ -3,7 +3,7 @@
  * @param {*} str
  * _.escapeRegExp('(test)') => \\(test\\)
  */
-function escapeStr(str) {
+function escapeStr(str: String) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 }
 

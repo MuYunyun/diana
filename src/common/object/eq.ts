@@ -1,12 +1,14 @@
+import { typeObj } from '../lang/isType'
+const { isFunction } = typeObj
+
 /**
  * 判断两个数组是否相等
  * @param {*} arr1
  * @param {*} arr2
  */
-const isFunction = require('../lang/isType').isFunction
 const toString = Object.prototype.toString
 
-function eq(a, b, aStack, bStack) {
+function eq(a: any, b: any, aStack?: any, bStack?: any) {
   // +0 === -0, 但是它们行为不相等，所以要进行区分
   if (a === b) return a !== 0 || 1 / a === 1 / b
   // undefined !== null
@@ -19,7 +21,7 @@ function eq(a, b, aStack, bStack) {
   return deepEqual(a, b, aStack, bStack)
 }
 
-function deepEqual(a, b, aStack = [], bStack = []) {
+function deepEqual(a: any, b: any, aStack: Array<any>, bStack: Array<any>) {
   const className = toString.call(a)
   // a 和 b 的内部属性 [[class]] 不同时 返回 false
   if (className !== toString.call(b)) return false

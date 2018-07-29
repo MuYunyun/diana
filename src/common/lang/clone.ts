@@ -5,7 +5,7 @@
  */
 function clone(values: any) {
   if (values instanceof Object) {
-    let clone = {}
+    let clone: any = {}
     for (let i in values) {
       clone[i] = values[i]
     }

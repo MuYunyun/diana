@@ -3,7 +3,7 @@
  * @param {*} func 需加进队列的函数
  */
 function addLoadEvent(func: any) {
-  const oldFunc = window.onload
+  const oldFunc: any = window.onload
   if (typeof window.onload !== 'function') {
     window.onload = func
   } else {

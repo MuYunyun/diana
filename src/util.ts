@@ -2,12 +2,12 @@
 const optimizeCb = function (func: any, context: any, argCount?: any) {
   if (context === void 0) return func
   switch (argCount) {
-    case 1: return (value) => {
+    case 1: return (value: any) => {
       return func.call(context, value)
     }
   }
-  return () => {
-    return func.apply(context, arguments)
+  return (...args: Array<any>) => {
+    return func.apply(context, args)
   }
 }
 

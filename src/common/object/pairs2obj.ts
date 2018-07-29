@@ -3,7 +3,7 @@
  * [['a',1],['b',2]] -> {a: 1, b: 2}
  * @param {*} arr
  */
-function pairs2obj(arr) {
+function pairs2obj(arr: Array<any>) {
   return arr.reduce((a, v) => (a[v[0]] = v[1], a), {})
 }
 

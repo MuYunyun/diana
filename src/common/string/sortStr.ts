@@ -3,7 +3,7 @@
  * @param {*} str
  * sortStr('cabbage') -> 'aabbceg'
  */
-function sortStr(str) {
+function sortStr(str: String) {
   return str.split('').sort((a, b) => a.localeCompare(b)).join('')
 }
 

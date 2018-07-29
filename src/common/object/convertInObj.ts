@@ -10,7 +10,7 @@
       })
     => { att1: 1, att2: 2, att3: 'att3value', att4: null, att5: '5', att6: false }
  */
-function convertInObj(obj, ruleObj) {
+function convertInObj(obj: any, ruleObj: any) {
   Object.keys(obj).map(r => {
     if (ruleObj.number && ruleObj.number.length > 0) {
       if (~ruleObj.number.indexOf(r)) {

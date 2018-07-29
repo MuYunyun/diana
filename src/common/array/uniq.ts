@@ -23,7 +23,7 @@
 // }
 
 // 方法三
-function uniq(...arr) {
+function uniq(...arr: Array<any>) {
   let array: Array<any> = []
   for (let i = 0; i < arr.length; i++) {
     array = array.concat(arr[i])
