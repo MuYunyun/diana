@@ -43,6 +43,6 @@ Fork [the repository](https://github.com/MuYunyun/diana) and create your branch 
 
 > pr the document
 
-1.fix or add the corresponding document in the docs/snippets.
+1.Fix or add the corresponding document in the docs/snippets.
 
 Welcome your pull request, very thanks!

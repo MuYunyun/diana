@@ -1,5 +1,5 @@
-import commonFn from '../common'
+import * as commonFn from '../common'
 
 const nodeFn = Object.assign({}, commonFn)
 
-export default nodeFn
+export = nodeFn

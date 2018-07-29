@@ -5,8 +5,9 @@
 // Load modules
 const fs = require('fs'),
       path = require('path'),
-      chalk = require('chalk'),
+      chalk = require('chalk')
       _ = require('diana')
+
 const snippetsPath = './docs/snippets'
 let snippets = {}, output = '', tagDbData = {}, missingTags = 0, tagDbStats = {}
 // Start the timer of the script

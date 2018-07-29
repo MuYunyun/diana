@@ -21,7 +21,7 @@ function eq(a: any, b: any, aStack?: any, bStack?: any) {
   return deepEqual(a, b, aStack, bStack)
 }
 
-function deepEqual(a: any, b: any, aStack: Array<any>, bStack: Array<any>) {
+function deepEqual(a: any, b: any, aStack: Array<any> = [], bStack: Array<any> = []) {
   const className = toString.call(a)
   // a 和 b 的内部属性 [[class]] 不同时 返回 false
   if (className !== toString.call(b)) return false

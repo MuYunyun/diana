@@ -1,5 +1,7 @@
 {
+  "exclude": [],
   "compilerOptions": {
+    "outDir": "./dist/",
     "alwaysStrict": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",

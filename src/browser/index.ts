@@ -1,4 +1,4 @@
-import commonFn from '../common'
+import * as commonFn from '../common'
 
 /* ---------------- browser ------------------- */
 // device
@@ -26,4 +26,4 @@ const browserFn = Object.assign({}, commonFn, {
   getNextElement
 })
 
-export default browserFn
+export = browserFn

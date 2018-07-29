@@ -1,4 +1,4 @@
-const _ = require('../../dist/common/index.js').default
+const _ = require('../../dist/common/index.js')
 const assert = require('assert')
 
 describe('#Array API:', () => {

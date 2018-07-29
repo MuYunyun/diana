@@ -17,9 +17,6 @@ function distance(x0: number, y0: number, x1: number, y1: number) {
  * _.gcd (8, 36) -> 4
  */
 function gcd(x: number, y: number): any {
-  if (x === 0 || y === 0) {
-    return 'parameters cannot be 0'
-  }
   return !y ? x : gcd(y, x % y)
 }
 

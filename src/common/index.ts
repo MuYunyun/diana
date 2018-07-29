@@ -87,4 +87,4 @@ const fn = {
 
 const commonFn = Object.assign({}, fn, typeObj)
 
-export default commonFn
+export = commonFn

@@ -1,4 +1,4 @@
-const _ = require('../../dist/common/index').default
+const _ = require('../../dist/common/index')
 const assert = require('assert')
 
 describe('#Object API:', () => {

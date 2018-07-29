@@ -18,10 +18,10 @@ const mobileType: any = {
     return (/IEMobile/i).test(navigator.userAgent)
   },
   any() {
-    return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows())
+    return (this.Android() || this.BlackBerry() || this.iOS() || this.Opera() || this.Windows())
   }
 }
 
-const isMobile = mobileType.any
+const isMobile = mobileType.any.bind(mobileType)
 
 export { isMobile }
