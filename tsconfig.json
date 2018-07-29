@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "inlineSources": true,
+    "target": "es5",
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "importHelpers": true,
+    "plugins": [
+      {
+        "name": "tslint-language-service"
+      }
+    ],
+    "lib": [
+      "es5",
+      "es6",
+      "dom"
+    ],
+  },
+  "include": [
+    "src/**/*"
+  ]
+}

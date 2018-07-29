@@ -5,7 +5,6 @@
   "browser": "lib/diana.js",
   "main": "lib/diana.back.js",
   "dependencies": {
-    "diana": "^0.3.4"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -13,6 +12,7 @@
     "babel-preset-env": "^1.6.1",
     "chalk": "^2.3.0",
     "codecov": "^3.0.0",
+    "diana": "^0.3.4",
     "eslint": "^4.12.1",
     "karma": "^1.7.1",
     "karma-chrome-launcher": "^2.2.0",
@@ -29,6 +29,8 @@
     "pre-commit": "^1.2.2",
     "rimraf": "^2.6.2",
     "sourcemap-istanbul-instrumenter-loader": "^0.2.0",
+    "tslib": "^1.9.3",
+    "typescript": "^2.9.2",
     "watchify": "^3.9.0",
     "webpack": "^3.10.0"
   },
@@ -39,7 +41,8 @@
     "pre-lint": "node script/check.js",
     "tagger": "node script/tag-script.js",
     "webber": "node script/web-script.js",
-    "publish": "git subtree push --prefix=docs origin gh-pages"
+    "publish": "git subtree push --prefix=docs origin gh-pages",
+    "compile": "tsc -w -p tsconfig.build.json"
   },
   "repository": {
     "type": "git",

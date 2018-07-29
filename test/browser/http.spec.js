@@ -1,6 +1,4 @@
-import { setTimeout } from 'timers';
-
-const _ = require('../../src/browser/index.js')
+const _ = require('../../dist/browser/index.js').default
 const assert = require('assert')
 
 describe('#Http API:', () => {

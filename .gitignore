@@ -10,3 +10,5 @@ coverage
 npm-debug.log
 
 snippets
+
+dist
