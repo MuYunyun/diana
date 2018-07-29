@@ -1,10 +1,10 @@
-# diana
+<div align="center">
+  <img src="http://oqhtscus0.bkt.clouddn.com/dcce7b9509a0e23f91d8cd2aa3ecffd3.jpg-200">
+</div>
 
 ![Build Status](https://travis-ci.org/MuYunyun/diana.svg?branch=master) [![codecov](https://codecov.io/gh/MuYunyun/diana/branch/master/graph/badge.svg)](https://codecov.io/gh/MuYunyun/diana) ![LICENSE MIT](https://img.shields.io/npm/l/express.svg)
 
-![](http://oqhtscus0.bkt.clouddn.com/5aa428c1014d75db4d2d331fb2b41334.jpg-muyy)
-
-轻量级工具库（支持 `browser` 和 `node` 环境）。
+轻量级工具库（支持 `browser` 和 `node` 环境）
 
 > [文档地址](http://muyunyun.cn/diana/)
 
@@ -37,7 +37,7 @@ Fork [the repository](https://github.com/MuYunyun/diana) and create your branch 
 
 1.Run `yarn install` in the repository root.
 
-2.If you've fixed a bug that should be tested, Run `yarn test`.
+2.If you've fixed a bug that should be tested, Run `yarn compile` then run `yarn test`.
 
 3.If you've add a function，at the meanwhile you should also add the test case in the test/xx.
 

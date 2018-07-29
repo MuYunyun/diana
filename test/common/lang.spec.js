@@ -1,10 +1,9 @@
-const _ = require('../../dist/common/index.js')
+const _ = require('../../dist/common/index.js').default
 const assert = require('assert')
 
 describe('Lang API:', () => {
   describe('#isArray()', () => {
     it('_.isArray([1, 2, 3]) should return true', () => {
-      Array.isArray = false
       assert(_.isArray([1, 2, 3]))
     })
     it('_.isArray("abc") should return false', () => {

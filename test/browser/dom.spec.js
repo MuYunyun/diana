@@ -1,4 +1,4 @@
-const _ = require('../../dist/browser/index.js')
+const _ = require('../../dist/browser/index.js').default
 const assert = require('assert')
 
 describe('#DOM API:', () => {

@@ -1,4 +1,4 @@
-const _ = require('../../dist/common/index.js')
+const _ = require('../../dist/common/index.js').default
 const assert = require('assert')
 
 describe('Regexp API:', () => {
