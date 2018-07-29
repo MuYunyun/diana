@@ -1632,11 +1632,11 @@ di@^0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/di/-/di-0.0.1.tgz#806649326ceaa7caa3306d75d985ea2748ba913c"
 
-diana@^0.2.4:
-  version "0.2.9"
-  resolved "https://registry.yarnpkg.com/diana/-/diana-0.2.9.tgz#e59d23f4cc20fca564cbca32344d82b07f574672"
+diana@^0.3.4:
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/diana/-/diana-0.3.4.tgz#65f5a64129caa4b5d6b0d0f93d4e55d724736675"
   dependencies:
-    diana "^0.2.4"
+    diana "^0.3.4"
 
 diff@3.3.1:
   version "3.3.1"
@@ -5142,6 +5142,10 @@ type-is@~1.6.16:
 typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
+
+typescript@^2.9.2:
+  version "2.9.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.9.2.tgz#1cbf61d05d6b96269244eb6a3bce4bd914e0f00c"
 
 uc.micro@^1.0.1, uc.micro@^1.0.5:
   version "1.0.5"

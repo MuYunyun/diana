@@ -1,4 +1,4 @@
-const _ = require('../../src/common/index.js')
+const _ = require('../../dist/common/index.js')
 const assert = require('assert')
 
 describe('#Math API:', () => {

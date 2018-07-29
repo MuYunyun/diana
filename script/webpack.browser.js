@@ -6,7 +6,7 @@ const pkg = require('../package.json')
 const rootPath = path.resolve(__dirname, '../')
 
 const config = {
-  entry: path.resolve(rootPath, 'src/browser', 'index.js'),
+  entry: path.resolve(rootPath, 'dist/browser', 'index.js'),
   output: {
     filename: `${pkg.name}.js`,
     path: path.resolve(rootPath, 'lib'),

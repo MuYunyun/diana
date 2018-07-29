@@ -81,15 +81,15 @@ declare module "diana" {
   ): boolean
 
   export function distance(
-    x0: any,
-    y0: any,
-    x1: any,
-    y1: any
+    x0: number,
+    y0: number,
+    x1: number,
+    y1: number
   ): number
 
   export function gcd(
-    x: any,
-    y: any
+    x: number,
+    y: number
   ): number
 
   export function max(
@@ -169,4 +169,13 @@ declare module "diana" {
     queryurl: string
   ): string
 
+  export function meanToCode(
+    arr: Array<any>,
+    mean: String
+  ): (Number | String)
+
+  export function codeToMean(
+    arr: Array<any>,
+    code: any
+  ): String
 }

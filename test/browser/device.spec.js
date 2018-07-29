@@ -1,4 +1,4 @@
-const _ = require('../../src/browser/index.js')
+const _ = require('../../dist/browser/index.js')
 const assert = require('assert')
 
 describe('#Device API:', () => {
