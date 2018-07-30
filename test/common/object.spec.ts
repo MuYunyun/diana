@@ -1,5 +1,5 @@
-const _ = require('../../dist/common/index')
-const assert = require('assert')
+import * as _ from '../../src/common/index.js'
+import * as assert from 'assert'
 
 describe('#Object API:', () => {
   describe('test equal()', () => {
@@ -16,12 +16,25 @@ describe('#Object API:', () => {
       const test10 = _.equal(true, new Boolean(true)) // true
       const symbol = Symbol(1)
       const test11 = _.equal(symbol, Object(symbol)) // true
-      function Person(name) {
-        this.name = name
+
+      interface Person {
+        name: string
       }
 
-      function Animal(name) {
-        this.name = name
+      class Person {
+        constructor(name: string) {
+          this.name = name
+        }
+      }
+
+      interface Animal {
+        name: string
+      }
+
+      class Animal {
+        constructor(name: string) {
+          this.name = name
+        }
       }
 
       var person = new Person('diana')
@@ -39,7 +52,7 @@ describe('#Object API:', () => {
       }
       const test14 = _.equal(obj1, obj2) // true
       assert(!test1 && !test2 && test3 && !test4 && test5 && test6 && test7 && test8
-      && test9 && test11 & !test12 & !test13 && test14)
+      && test9 && test10 && test11 && !test12 && !test13 && test14)
     })
   })
   describe('test pairs2obj()', () => {

@@ -1,5 +1,5 @@
-const _ = require('../../dist/common/index.js')
-const assert = require('assert')
+import * as _ from '../../src/common/index.js'
+import * as assert from 'assert'
 
 describe('Lang API:', () => {
   describe('#isArray()', () => {
@@ -11,8 +11,13 @@ describe('Lang API:', () => {
     })
   })
   describe('#cloneDeep()', () => {
-    function person(pname) {
-      this.name = pname;
+    interface person {
+      name: string
+    }
+    class person {
+      constructor(pname: string) {
+        this.name = pname
+      }
     }
 
     const muyy = new person('muyy')
@@ -21,7 +26,7 @@ describe('Lang API:', () => {
       console.log('hi');
     }
 
-    const oldObj = {
+    const oldObj: any = {
       a: say, // 测试函数
       c: new RegExp('ab+c', 'i'), // 测试正则
       d: muyy, // 测试原型对象

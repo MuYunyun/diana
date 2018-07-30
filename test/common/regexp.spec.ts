@@ -1,5 +1,5 @@
-const _ = require('../../dist/common/index.js')
-const assert = require('assert')
+import * as _ from '../../src/common/index.js'
+import * as assert from 'assert'
 
 describe('Regexp API:', () => {
 

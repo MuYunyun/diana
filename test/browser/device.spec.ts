@@ -1,5 +1,5 @@
-const _ = require('../../dist/browser/index.js')
-const assert = require('assert')
+import * as _ from '../../src/browser/index.js'
+import * as assert from 'assert'
 
 describe('#Device API:', () => {
   describe('#getOS()', () => {

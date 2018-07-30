@@ -1,8 +1,8 @@
-const _ = require('../../dist/browser/index.js')
-const assert = require('assert')
+import * as _ from '../../src/browser/index.js'
+import * as assert from 'assert'
 
 describe('#DOM API:', () => {
-  let $ele = null
+  let $ele: any = null
   beforeEach(function() {
     const container = document.createElement('div')
     container.setAttribute('id', 'm_addClass')

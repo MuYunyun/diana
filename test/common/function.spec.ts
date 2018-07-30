@@ -1,5 +1,5 @@
-const _ = require('../../dist/common/index.js')
-const assert = require('assert')
+import * as _ from '../../src/common/index.js'
+import * as assert from 'assert'
 
 describe('#Function API:', () => {
   describe('#debounce', () => {
@@ -54,7 +54,7 @@ describe('#Function API:', () => {
       }, 128)
     })
     it(`debounce asap cancel`, (done) => {
-      let a, b, c
+      let a, b
       let counter = 0
       let incr = function () {
         return ++counter
@@ -94,7 +94,7 @@ describe('#Function API:', () => {
     })
     it(`throttle arguments`, (done) => {
       let value = 0
-      let update = function (val) {
+      let update = function (val: any) {
         value = val
       }
       let throttledUpdate = _.throttle(update, 32)

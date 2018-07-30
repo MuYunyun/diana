@@ -1,6 +1,3 @@
-const _ = require('../../dist/browser/index.js')
-const assert = require('assert')
-
 describe('#Http API:', () => {
   describe('#redirect()', () => {
     it(`test redirect`, () => {
