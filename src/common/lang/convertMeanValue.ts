@@ -1,4 +1,6 @@
-import { isArray } from './isArray'
+import { typeObj } from './isType'
+
+const { isArray } = typeObj
 
 /**
  * 找到数组中 mean 对应的 code

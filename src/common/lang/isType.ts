@@ -11,4 +11,12 @@ typeObj.isNumber = (obj: any) => {
   return Object.prototype.toString.call(obj) === '[object Number]' && !isNaN(obj)
 }
 
+/**
+ * 是否为数组
+ * @param {value}
+ */
+typeObj.isArray = (value: any) => {
+  return Array.isArray(value)
+}
+
 export { typeObj }

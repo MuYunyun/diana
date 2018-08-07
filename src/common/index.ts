@@ -20,7 +20,6 @@ import { escapeStr } from './string/escapeStr'
 import { sortStr } from './string/sortStr'
 
 // lang
-import { isArray } from './lang/isArray'
 import { clone } from './lang/clone'
 import { cloneDeep } from './lang/cloneDeep'
 import { typeObj } from './lang/isType'
@@ -62,7 +61,6 @@ const fn = {
   changeCase,
   escapeStr,
   sortStr,
-  isArray,
   clone,
   cloneDeep,
   meanToCode,

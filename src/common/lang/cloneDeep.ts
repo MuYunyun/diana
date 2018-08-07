@@ -4,9 +4,8 @@
 //  * @param {Any} values
 //  */
 import { typeObj } from '../lang/isType'
-import { isArray } from '../lang/isArray'
 
-const { isDate, isRegExp, isFunction } = typeObj
+const { isDate, isRegExp, isFunction, isArray } = typeObj
 
 function cloneDeep(values: any) {
   const parents: Array<any> = []
