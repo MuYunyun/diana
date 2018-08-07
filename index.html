@@ -154,7 +154,7 @@
 
 </nav><main class="col-sm-12 col-md-8 col-lg-9" style="height: 100%;overflow-y: auto; background: #eceef2;"><a id="top">&nbsp;</a><h2 style="text-align:center;">Array</h2>
 <div class="card fluid"><div class="section double-padded"><h3 id="countinarr">_.countInArr(arr, value)</h3></div><div class="section double-padded">
-<p>统计数组中特定值出现的次数 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/array/countInArr.js" title="View in source">Ⓢ</a></p>
+<p>统计数组中特定值出现的次数 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/array/countInArr.ts" title="View in source">Ⓢ</a></p>
 <h5>Returns</h5>
 <p><em>(Number)</em>: 返回数组中特定值出现的次数.</p>
 <p>  </p>
@@ -162,7 +162,7 @@
 <pre><code class="language-js">_.countInArr([1, 1, 2, 1, 2, 3], 1) // =&gt; 3
 </code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="difference">_.difference(arr1, arr2)</h3></div><div class="section double-padded">
-<p>数组取差集(即取 arr1 中存在，arr2 中不存在的值) <a href="https://github.com/MuYunyun/diana/blob/master/src/common/array/difference.js" title="View in source">Ⓢ</a></p>
+<p>数组取差集(即取 arr1 中存在，arr2 中不存在的值) <a href="https://github.com/MuYunyun/diana/blob/master/src/common/array/difference.ts" title="View in source">Ⓢ</a></p>
 <h5>Returns</h5>
 <p><em>(Array)</em>: 返回取差集后的 array.</p>
 <p>  </p>
@@ -170,7 +170,7 @@
 <pre><code class="language-js">_.difference([1,2,3], [1,2,4]) // =&gt; [3]
 </code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="intersection">_.intersection(...arr)</h3></div><div class="section double-padded">
-<p>多个数组取交集 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/array/intersection.js" title="View in source">Ⓢ</a></p>
+<p>多个数组取交集 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/array/intersection.ts" title="View in source">Ⓢ</a></p>
 <h5>Arguments</h5>
 <p><code>...arr</code> <em>(Array)</em>: 可传入 1 个或多个数组</p>
 <p>  </p>
@@ -182,7 +182,7 @@
 _.intersection([1, 2, 'a', 1], [4, 2, 'a'], [2, 'a', 'c']) // =&gt; [ 2, 'a']
 </code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="uniq">_.uniq(...arr)</h3></div><div class="section double-padded">
-<p>多个数组取并集 | 数组去重 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/array/uniq.js" title="View in source">Ⓢ</a></p>
+<p>多个数组取并集 | 数组去重 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/array/uniq.ts" title="View in source">Ⓢ</a></p>
 <h5>Arguments</h5>
 <p><code>...arr</code> <em>(Array)</em>: 可传入 1 个或多个数组</p>
 <p>  </p>
@@ -196,46 +196,46 @@ _.uniq([1, 'a', 3, 1], [4, 'a', 'b'], [2, 3, 'b', 'c'])
 </code></pre>
 </div></div><br/><h2 style="text-align:center;">Collection</h2>
 <div class="card fluid"><div class="section double-padded"><h3 id="each">_.each(list, iteratee)</h3></div><div class="section double-padded">
-<p>遍历 list 中的所有元素，按顺序用每个元素当做参数调用 iteratee 函数。支持数组，对象，和类数组对象 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/collection/equal.js" title="View in source">Ⓢ</a></p>
+<p>遍历 list 中的所有元素，按顺序用每个元素当做参数调用 iteratee 函数。支持数组，对象，和类数组对象 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/collection/equal.ts" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
 <pre><code class="language-js">_.each([1, 2, 3], (value) =&gt; {console.log(value)}); // =&gt; 1, 2, 3
 _.each({1, 2, 3}, (value) =&gt; {console.log(value)}); // =&gt; 1, 2, 3
 </code></pre>
 </div></div><br/><h2 style="text-align:center;">Device(B)</h2>
 <div class="card fluid"><div class="section double-padded"><h3 id="getos">_.getOS()</h3></div><div class="section double-padded">
-<p>获取当前的操作系统 <a href="https://github.com/MuYunyun/diana/blob/master/src/browser/device/getOS.js" title="View in source">Ⓢ</a></p>
+<p>获取当前的操作系统 <a href="https://github.com/MuYunyun/diana/blob/master/src/browser/device/getOS.ts" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
 <pre><code class="language-js">_.getOS(); // =&gt; 'MacOSX'
 </code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="ismobile">_.isMobile()</h3></div><div class="section double-padded">
-<p>判断当前环境是否为手机 <a href="https://github.com/MuYunyun/diana/blob/master/src/browser/device/isMobile.js" title="View in source">Ⓢ</a></p>
+<p>判断当前环境是否为手机 <a href="https://github.com/MuYunyun/diana/blob/master/src/browser/device/isMobile.ts" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
 <pre><code class="language-js">_.isMobile(); // =&gt; true
 </code></pre>
 </div></div><br/><h2 style="text-align:center;">Dom(B)</h2>
 <div class="card fluid"><div class="section double-padded"><h3 id="addclass">_.addClass(element, className)</h3></div><div class="section double-padded">
-<p>为元素添加类名 <a href="https://github.com/MuYunyun/diana/blob/master/src/browser/dom/addClass.js" title="View in source">Ⓢ</a></p>
+<p>为元素添加类名 <a href="https://github.com/MuYunyun/diana/blob/master/src/browser/dom/addClass.ts" title="View in source">Ⓢ</a></p>
 <h5>Arguments</h5>
 <p><code>element</code> <em>(HTMLElement)</em>: 选中的节点</p>
 <p><code>className</code> <em>(String)</em>: 添加的类名</p>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="addloadevent">_.addLoadEvent(func)</h3></div><div class="section double-padded">
-<p>把在页面加载完毕时执行的函数创建为一个队列(摘自 JavaScript DOM 编程艺术) <a href="https://github.com/MuYunyun/diana/blob/master/src/browser/dom/addLoadEvent.js" title="View in source">Ⓢ</a></p>
+<p>把在页面加载完毕时执行的函数创建为一个队列(摘自 JavaScript DOM 编程艺术) <a href="https://github.com/MuYunyun/diana/blob/master/src/browser/dom/addLoadEvent.ts" title="View in source">Ⓢ</a></p>
 <h5>Arguments</h5>
 <p><code>func</code> <em>(Function)</em> 需加进队列的函数</p>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="getnextelement">getNextElement(node)</h3></div><div class="section double-padded">
-<p>获取相邻的元素节点(修改自 JavaScript DOM 编程艺术) <a href="https://github.com/MuYunyun/diana/blob/master/src/browser/dom/getNextElement.js" title="View in source">Ⓢ</a></p>
+<p>获取相邻的元素节点(修改自 JavaScript DOM 编程艺术) <a href="https://github.com/MuYunyun/diana/blob/master/src/browser/dom/getNextElement.ts" title="View in source">Ⓢ</a></p>
 <h5>Arguments</h5>
 <p><code>node</code> <em>(Dom)</em> 传入当前节点</p>
 <p>  </p>
 <h5>Return</h5>
 <p><code>node</code> <em>(Dom)</em> 返回相邻的下一个元素节点</p>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="hasclass">_.hasClass(element, className)</h3></div><div class="section double-padded">
-<p>判断当前节点是否有指定的 class 属性 <a href="https://github.com/MuYunyun/diana/blob/master/src/browser/dom/hasClass.js" title="View in source">Ⓢ</a></p>
+<p>判断当前节点是否有指定的 class 属性 <a href="https://github.com/MuYunyun/diana/blob/master/src/browser/dom/hasClass.ts" title="View in source">Ⓢ</a></p>
 <h5>Arguments</h5>
 <p><code>element</code> <em>(HTMLElement)</em>: 选中的节点</p>
 <p><code>className</code> <em>(String)</em>: 判断的类名</p>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="insertafter">insertAfter(newNode, referenceNode)</h3></div><div class="section double-padded">
-<p>在指定节点后插入节点(摘自 JavaScript DOM 编程艺术) <a href="https://github.com/MuYunyun/diana/blob/master/src/browser/dom/insertAfter.js" title="View in source">Ⓢ</a></p>
+<p>在指定节点后插入节点(摘自 JavaScript DOM 编程艺术) <a href="https://github.com/MuYunyun/diana/blob/master/src/browser/dom/insertAfter.ts" title="View in source">Ⓢ</a></p>
 <h5>Arguments</h5>
 <p><code>newNode</code> <em>(Dom)</em> 新节点</p>
 <p><code>referenceNode</code> <em>(Dom)</em> 指定节点</p>
@@ -248,7 +248,7 @@ _.each({1, 2, 3}, (value) =&gt; {console.log(value)}); // =&gt; 1, 2, 3
 </code></pre>
 </div></div><br/><h2 style="text-align:center;">Function</h2>
 <div class="card fluid"><div class="section double-padded"><h3 id="curry">_.curry(fn, arity = fn.length, ...args)</h3></div><div class="section double-padded">
-<p>函数柯里化。如果提供的参数 (args) 数量足够，则调用传递函数 f ，否则返回一个 curried 函数 f <a href="https://github.com/MuYunyun/diana/blob/master/src/common/function/curry.js" title="View in source">Ⓢ</a></p>
+<p>函数柯里化。如果提供的参数 (args) 数量足够，则调用传递函数 f ，否则返回一个 curried 函数 f <a href="https://github.com/MuYunyun/diana/blob/master/src/common/function/curry.ts" title="View in source">Ⓢ</a></p>
 <h5>Arguments</h5>
 <p><code>fn</code> <em>(Function)</em> 调用函数</p>
 <p><code>arity</code> <em>(Number)</em> 参数数量(可不传)</p>
@@ -258,20 +258,20 @@ _.each({1, 2, 3}, (value) =&gt; {console.log(value)}); // =&gt; 1, 2, 3
 <pre><code class="language-js">_.curry(Math.pow)(2)(10) // =&gt; 1024
 </code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="debounce">_.debounce(function, wait, [immediate])</h3></div><div class="section double-padded">
-<p>函数防抖。限制事件的频繁触发，将延迟函数的执行(真正的执行)在函数最后一次调用时刻的 wait 毫秒之后，对于必须在一些输入（多是一些用户操作）停止到达之后执行的行为有帮助。例如: 渲染一个 Markdown 格式的评论预览, 当窗口停止改变大小之后重新计算布局, 等等。传参 immediate 为 true，debounce会在 wait 时间间隔的开始调用这个函数。 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/function/debounce.js" title="View in source">Ⓢ</a></p>
+<p>函数防抖。限制事件的频繁触发，将延迟函数的执行(真正的执行)在函数最后一次调用时刻的 wait 毫秒之后，对于必须在一些输入（多是一些用户操作）停止到达之后执行的行为有帮助。例如: 渲染一个 Markdown 格式的评论预览, 当窗口停止改变大小之后重新计算布局, 等等。传参 immediate 为 true，debounce会在 wait 时间间隔的开始调用这个函数。 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/function/debounce.ts" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
 <pre><code class="language-js">const lazyLayout = _.debounce(calculateLayout, 300)
 $(window).resize(lazyLayout)
 </code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="throttle">_.throttle(function, wait, [options])</h3></div><div class="section double-padded">
-<p>函数节流。创建并返回一个像节流阀一样的函数，当重复调用函数的时候，至少每隔 wait 毫秒调用一次该函数。对于想控制一些触发频率较高的事件有帮助。默认情况下，throttle 将在你调用的第一时间尽快执行这个 function，(默认第一次和最后一次都执行function)。如果你想禁用第一次首先执行的话，传递{leading: false}，还有如果你想禁用最后一次执行的话，传递{trailing: false} <a href="https://github.com/MuYunyun/diana/blob/master/src/common/function/throttle.js" title="View in source">Ⓢ</a></p>
+<p>函数节流。创建并返回一个像节流阀一样的函数，当重复调用函数的时候，至少每隔 wait 毫秒调用一次该函数。对于想控制一些触发频率较高的事件有帮助。默认情况下，throttle 将在你调用的第一时间尽快执行这个 function，(默认第一次和最后一次都执行function)。如果你想禁用第一次首先执行的话，传递{leading: false}，还有如果你想禁用最后一次执行的话，传递{trailing: false} <a href="https://github.com/MuYunyun/diana/blob/master/src/common/function/throttle.ts" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
 <pre><code class="language-js">const throttled = _.throttle(updatePosition, 100)
 $(window).scroll(throttled)
 </code></pre>
 </div></div><br/><h2 style="text-align:center;">Http(B)</h2>
 <div class="card fluid"><div class="section double-padded"><h3 id="redirect">_.redirect(url, aslink = true)</h3></div><div class="section double-padded">
-<p>重定向到指定的 URL <a href="https://github.com/MuYunyun/diana/blob/master/src/browser/http/redirect.js" title="View in source">Ⓢ</a></p>
+<p>重定向到指定的 URL <a href="https://github.com/MuYunyun/diana/blob/master/src/browser/http/redirect.ts" title="View in source">Ⓢ</a></p>
 <h5>Arguments</h5>
 <p><code>url</code> <em>(String)</em> 待跳转 URL</p>
 <p><code>aslink</code> <em>(Boolean)</em> 默认为 true, 传 false 时，你不能通过 “前进” 和 “后退” 来访问已经被替换的 URL</p>
@@ -281,7 +281,7 @@ $(window).scroll(throttled)
 </code></pre>
 </div></div><br/><h2 style="text-align:center;">Lang</h2>
 <div class="card fluid"><div class="section double-padded"><h3 id="clone">_.clone(obj)</h3></div><div class="section double-padded">
-<p>浅拷贝 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/clone.js" title="View in source">Ⓢ</a></p>
+<p>浅拷贝 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/clone.ts" title="View in source">Ⓢ</a></p>
 <h5>Arguments</h5>
 <p><code>any</code> <em>(values)</em>: 拷贝对象</p>
 <h5>Returns</h5>
@@ -291,7 +291,7 @@ $(window).scroll(throttled)
 _.clone(obj).a === obj.a; // =&gt; true
 </code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="clonedeep">_.cloneDeep(obj)</h3></div><div class="section double-padded">
-<p>深拷贝 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/cloneDeep.js" title="View in source">Ⓢ</a></p>
+<p>深拷贝 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/cloneDeep.ts" title="View in source">Ⓢ</a></p>
 <h5>Arguments</h5>
 <p><code>any</code> <em>(values)</em>: 拷贝对象</p>
 <h5>Returns</h5>
@@ -300,7 +300,7 @@ _.clone(obj).a === obj.a; // =&gt; true
 <pre><code class="language-js">let obj = {a: 1}
 _.cloneDeep(obj).a === obj.a; // =&gt; false</code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="codetomean">_.codeToMean(arr, code)</h3></div><div class="section double-padded">
-<p>将数组中的 code 转化为 mean. <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/convertMeanValue.js" title="View in source">Ⓢ</a></p>
+<p>将数组中的 code 转化为 mean. <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/convertMeanValue.ts" title="View in source">Ⓢ</a></p>
 <h5>Arguments</h5>
 <p><code>arr</code> <em>(Array)</em>: 数组</p>
 <p><code>code</code> <em>(String | Number)</em>: 要转化的 code 值</p>
@@ -319,50 +319,50 @@ _.codeToMean(arr, 20) // =&gt; 晚高峰时段
 </code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><hr>
 <h3 id="isarguments">_.isArguments(object)</h3></div><div class="section double-padded">
-<p>如果 object 是一个参数对象，返回 true <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.js" title="View in source">Ⓢ</a></p>
+<p>如果 object 是一个参数对象，返回 true <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.ts" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
 <pre><code class="language-js">(function(){ return _.isArguments(arguments); })(1, 2, 3); // =&gt; true
 _.isArguments([1,2,3]); // =&gt; false
 </code></pre>
 <hr>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="isarray">_.isArray(val)</h3></div><div class="section double-padded">
-<p>判断是否为数组 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/isArray.js" title="View in source">Ⓢ</a></p>
+<p>判断是否为数组 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.ts" title="View in source">Ⓢ</a></p>
 <p>  </p>
 <h5>Example</h5>
 <pre><code class="language-js">_.isArray([1, 2]); // =&gt; true
 </code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="isdate">_.isDate(object)</h3></div><div class="section double-padded">
-<p>如果 object 是一个日期，返回 true <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.js" title="View in source">Ⓢ</a></p>
+<p>如果 object 是一个日期，返回 true <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.ts" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
 <pre><code class="language-js">_.isDate(new Date()); // =&gt; true
 </code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="iserror">_.isError(object)</h3></div><div class="section double-padded">
-<p>如果object继承至 Error 对象，那么返回 true <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.js" title="View in source">Ⓢ</a></p>
+<p>如果object继承至 Error 对象，那么返回 true <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.ts" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
 <pre><code class="language-js">_.isError(/abc/); // =&gt; true
 </code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="isfunction">_.isFunction(object)</h3></div><div class="section double-padded">
-<p>如果 object 是一个函数（Function），返回 true <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.js" title="View in source">Ⓢ</a></p>
+<p>如果 object 是一个函数（Function），返回 true <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.ts" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
 <pre><code class="language-js">_.isFunction(() =&gt; {return 1}); // =&gt; true
 </code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="isnumber">_.isNumber(object)</h3></div><div class="section double-padded">
-<p>如果 object 是一个数值，返回 true <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.js" title="View in source">Ⓢ</a></p>
+<p>如果 object 是一个数值，返回 true <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.ts" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
 <pre><code class="language-js">_.isNumber(123); // =&gt; true
 </code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="isregexp">_.isRegExp(object)</h3></div><div class="section double-padded">
-<p>如果 object 是一个正则表达式，返回 true <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.js" title="View in source">Ⓢ</a></p>
+<p>如果 object 是一个正则表达式，返回 true <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.ts" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
 <pre><code class="language-js">_.isRegExp(/abc/); // =&gt; true
 </code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="isstring">_.isString(object)</h3></div><div class="section double-padded">
-<p>如果 object 是一个字符串，返回 true <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.js" title="View in source">Ⓢ</a></p>
+<p>如果 object 是一个字符串，返回 true <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.ts" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
 <pre><code class="language-js">_.isString('abc'); // =&gt; true
 </code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="meantocode">_.meanToCode(arr, mean)</h3></div><div class="section double-padded">
-<p>将数组中的 mean 转化为 code. <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/convertMeanValue.js" title="View in source">Ⓢ</a></p>
+<p>将数组中的 mean 转化为 code. <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/convertMeanValue.ts" title="View in source">Ⓢ</a></p>
 <h5>Arguments</h5>
 <p><code>arr</code> <em>(Array)</em>: 数组</p>
 <p><code>mean</code> <em>(String)</em>: 要转化的 mean 值</p>
@@ -381,38 +381,38 @@ _.meanToCode(arr, '晚高峰时段') // =&gt; 30
 </code></pre>
 </div></div><br/><h2 style="text-align:center;">Math</h2>
 <div class="card fluid"><div class="section double-padded"><h3 id="distance">_.distance(x0, y0, x1, y1)</h3></div><div class="section double-padded">
-<p>计算两点 (x0, y0), (x1, y1) 之间的欧几里得距离 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/math/distance.js" title="View in source">Ⓢ</a></p>
+<p>计算两点 (x0, y0), (x1, y1) 之间的欧几里得距离 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/math/math.ts" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
 <pre><code class="language-js">_.distance(1,1, 2,3) // =&gt; 2.23606797749979
 </code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="gcd">_.gcd(x, y)</h3></div><div class="section double-padded">
-<p>求最大公约数 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/math/gcd.js" title="View in source">Ⓢ</a></p>
+<p>求最大公约数 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/math/math.ts" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
 <pre><code class="language-js">_.gcd(8, 36) // =&gt; 4
 </code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="max">_.max(arr)</h3></div><div class="section double-padded">
-<p>判断数组中的最大值 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/math/max.js" title="View in source">Ⓢ</a></p>
+<p>判断数组中的最大值 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/math/math.ts" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
 <pre><code class="language-js">_.max([1, 2, 3, 4]); // =&gt; 4
 </code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="mean">_.mean(arr)</h3></div><div class="section double-padded">
-<p>数组求平均值 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/math/mean.js" title="View in source">Ⓢ</a></p>
+<p>数组求平均值 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/math/math.ts" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
 <pre><code class="language-js">_.mean([1, 2, 3, 4]); // =&gt; 2.5
 </code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="min">_.min(arr)</h3></div><div class="section double-padded">
-<p>判断数组中的最小值 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/math/min.js" title="View in source">Ⓢ</a></p>
+<p>判断数组中的最小值 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/math/math.ts" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
 <pre><code class="language-js">_.min([1, 2, 3, 4]); // =&gt; 1
 </code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="sum">_.sum(arr)</h3></div><div class="section double-padded">
-<p>数组求和 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/math/sum.js" title="View in source">Ⓢ</a></p>
+<p>数组求和 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/math/math.ts" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
 <pre><code class="language-js">_.sum([1, 2, 3, 4]); // =&gt; 10
 </code></pre>
 </div></div><br/><h2 style="text-align:center;">Object</h2>
 <div class="card fluid"><div class="section double-padded"><h3 id="convertinobj">_.convertInObj(obj, ruleObj)</h3></div><div class="section double-padded">
-<p>该函数可以将相应字段转化为指定格式 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/object/convertInObj.js" title="View in source">Ⓢ</a></p>
+<p>该函数可以将相应字段转化为指定格式 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/object/convertInObj.ts" title="View in source">Ⓢ</a></p>
 <h5>Arguments</h5>
 <p><code>obj</code> <em>(Object)</em></p>
 <p><code>ruleObj</code> <em>(Object)</em>: 给相应字段配置规则，暂时支持 number、string、boolean 类型</p>
@@ -427,7 +427,7 @@ _.meanToCode(arr, '晚高峰时段') // =&gt; 30
     =&gt; { att1: 1, att2: 2, att3: 'att3value', att4: null, att5: '5', att6: false }
 </code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="equal">_.equal(value1, value2)</h3></div><div class="section double-padded">
-<p>判断两个任意值是否相等(包含对象、数组深度遍历) <a href="https://github.com/MuYunyun/diana/blob/master/src/common/object/equal.js" title="View in source">Ⓢ</a></p>
+<p>判断两个任意值是否相等(包含对象、数组深度遍历) <a href="https://github.com/MuYunyun/diana/blob/master/src/common/object/equal.ts" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
 <pre><code class="language-js">const obj1 = {
     a: 1,
@@ -440,13 +440,13 @@ const obj2 = {
 _.equal(obj1, obj2) // =&gt; true
 </code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="pairs2obj">_.pairs2obj(arr)</h3></div><div class="section double-padded">
-<p>将给定的键值对转换为一个对象 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/object/pairs2obj.js" title="View in source">Ⓢ</a></p>
+<p>将给定的键值对转换为一个对象 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/object/pairs2obj.ts" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
 <pre><code class="language-js">_.pairs2obj([['a',1],['b',2]]) // =&gt; {a: 1, b: 2}
 </code></pre>
 </div></div><br/><h2 style="text-align:center;">Random</h2>
 <div class="card fluid"><div class="section double-padded"><h3 id="rdcolor">_.rdColor()</h3></div><div class="section double-padded">
-<p>生成随机颜色. <a href="https://github.com/MuYunyun/diana/blob/master/src/common/random/rdColor.js" title="View in source">Ⓢ</a></p>
+<p>生成随机颜色. <a href="https://github.com/MuYunyun/diana/blob/master/src/common/random/rdColor.ts" title="View in source">Ⓢ</a></p>
 <h5>Returns</h5>
 <p><em>(String)</em>: 返回颜色的十六进制值.</p>
 <p>  </p>
@@ -455,7 +455,7 @@ _.equal(obj1, obj2) // =&gt; true
 // =&gt; #b4370c
 </code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="rdnum">_.rdNum(min, max [, border])</h3></div><div class="section double-padded">
-<p>指定整数范围生成随机整数. <a href="https://github.com/MuYunyun/diana/blob/master/src/common/random/rdNum.js" title="View in source">Ⓢ</a></p>
+<p>指定整数范围生成随机整数. <a href="https://github.com/MuYunyun/diana/blob/master/src/common/random/rdNum.ts" title="View in source">Ⓢ</a></p>
 <h5>Arguments</h5>
 <p><code>min</code> <em>(Number)</em>: 边界最小值</p>
 <p><code>max</code> <em>(Number)</em>: 边界最大值</p>
@@ -472,18 +472,18 @@ _.rdNum(1, 3, 'no');      // =&gt;    1 &lt; result &lt; 3
 </code></pre>
 </div></div><br/><h2 style="text-align:center;">Regexp</h2>
 <div class="card fluid"><div class="section double-padded"><h3 id="isemail">_.isEmail(email)</h3></div><div class="section double-padded">
-<p>判断是否为邮箱地址. <a href="https://github.com/MuYunyun/diana/blob/master/src/common/regexp/isEmail.js" title="View in source">Ⓢ</a></p>
+<p>判断是否为邮箱地址. <a href="https://github.com/MuYunyun/diana/blob/master/src/common/regexp/isEmail.ts" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
 <pre><code class="language-js">_.isEmail('muyy95@gmail.com'); // =&gt; true
 </code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="isphonenum">_.isPhoneNum(phoneNum)</h3></div><div class="section double-padded">
-<p>判断是否为手机号. <a href="https://github.com/MuYunyun/diana/blob/master/src/common/regexp/isPhoneNum.js" title="View in source">Ⓢ</a></p>
+<p>判断是否为手机号. <a href="https://github.com/MuYunyun/diana/blob/master/src/common/regexp/isPhoneNum.ts" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
 <pre><code class="language-js">_.isPhoneNum('15712345678'); // =&gt; true
 </code></pre>
 </div></div><br/><h2 style="text-align:center;">String</h2>
 <div class="card fluid"><div class="section double-padded"><h3 id="changecase">_.changeCase(str, type)</h3></div><div class="section double-padded">
-<p>大小写转化 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/string/changeCase.js" title="View in source">Ⓢ</a></p>
+<p>大小写转化 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/string/changeCase.ts" title="View in source">Ⓢ</a></p>
 <h5>Arguments</h5>
 <p><code>str</code> <em>(String)</em>: 待去除空格的字符串</p>
 <p><code>type</code> <em>(Number)</em>: 1：首字母大写(默认) 2：首页母小写　3：大小写转换</p>
@@ -496,17 +496,17 @@ _.rdNum(1, 3, 'no');      // =&gt;    1 &lt; result &lt; 3
 _.changeCase('aBcD', 3); // =&gt; 'AbCd'
 </code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="escapestr">_.escapeStr(str)</h3></div><div class="section double-padded">
-<p>转义特殊字符 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/string/escapeStr.js" title="View in source">Ⓢ</a></p>
+<p>转义特殊字符 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/string/escapeStr.ts" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
 <pre><code class="language-js">_.escapeRegExp('(test)') // =&gt; \\(test\\)
 </code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="sortstr">_.sortStr(str)</h3></div><div class="section double-padded">
-<p>将字符串按字母顺序排序 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/string/sortStr.js" title="View in source">Ⓢ</a></p>
+<p>将字符串按字母顺序排序 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/string/sortStr.ts" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
 <pre><code class="language-js">_.sortStr('cabbage') // =&gt; 'aabbceg'
 </code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="trim">_.trim(str, type)</h3></div><div class="section double-padded">
-<p>去除空格 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/string/trim.js" title="View in source">Ⓢ</a></p>
+<p>去除空格 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/string/trim.ts" title="View in source">Ⓢ</a></p>
 <h5>Arguments</h5>
 <p><code>str</code> <em>(String)</em>: 待去除空格的字符串</p>
 <p><code>type</code> <em>(Number)</em>: 1-所有空格(默认)，2-前后空格，3-前空格，4-后空格</p>
@@ -520,14 +520,14 @@ _.trim(' ab cd ef ', 2); // =&gt; 'ab cd ef'
 </code></pre>
 </div></div><br/><h2 style="text-align:center;">Time</h2>
 <div class="card fluid"><div class="section double-padded"><h3 id="timetaken">_.timeTaken(callback)</h3></div><div class="section double-padded">
-<p>测试功能所花费的时间 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/time/timeTaken.js" title="View in source">Ⓢ</a></p>
+<p>测试功能所花费的时间 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/time/timeTaken.ts" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
 <pre><code class="language-js">_.timeTaken(() =&gt; Math.pow(2, 10)) // =&gt; 1024
 // (logged): timeTaken: 0.019775390625ms
 </code></pre>
 </div></div><br/><h2 style="text-align:center;">Url</h2>
 <div class="card fluid"><div class="section double-padded"><h3 id="obj2query">_.obj2query(baseurl, obj)</h3></div><div class="section double-padded">
-<p>对象转成 URL 中的 query <a href="https://github.com/MuYunyun/diana/blob/master/src/common/url/obj2query.js" title="View in source">Ⓢ</a></p>
+<p>对象转成 URL 中的 query <a href="https://github.com/MuYunyun/diana/blob/master/src/common/url/obj2query.ts" title="View in source">Ⓢ</a></p>
 <h5>Arguments</h5>
 <p><code>baseurl</code> <em>(String)</em> 基础 url</p>
 <p><code>obj</code> <em>(Object)</em> 待解析对象</p>
@@ -539,7 +539,7 @@ _.trim(' ab cd ef ', 2); // =&gt; 'ab cd ef'
 <pre><code class="language-js">_.obj2query('http://abc.com', {a: 1, b: 2}); // =&gt; http://abc.com?a=1&amp;b=2
 </code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="query2obj">_.query2obj(queryurl)</h3></div><div class="section double-padded">
-<p>将 URL 中的 query 转为对象 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/url/query2obj.js" title="View in source">Ⓢ</a></p>
+<p>将 URL 中的 query 转为对象 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/url/query2obj.ts" title="View in source">Ⓢ</a></p>
 <h5>Arguments</h5>
 <p><code>queryurl</code> <em>(String)</em> 基础 url</p>
 <p>  </p>
