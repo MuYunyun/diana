@@ -41,7 +41,7 @@ import { query2obj } from './url/query2obj'
 import { each } from './collection/each'
 
 // function
-import { debounce } from './function/debounce'
+import { debounce, Debounce } from './function/debounce'
 import { throttle } from './function/throttle'
 import { curry } from './function/curry'
 
@@ -78,6 +78,7 @@ const fn = {
   query2obj,
   each,
   debounce,
+  Debounce,
   throttle,
   curry,
   timeTaken,

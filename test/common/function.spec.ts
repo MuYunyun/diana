@@ -1,6 +1,8 @@
 import * as _ from '../../src/common/index.js'
 import * as assert from 'assert'
 
+const Debounce = _.Debounce
+
 describe('#Function API:', () => {
   describe('#debounce', () => {
     it(`debounce`, (done) => {
@@ -73,6 +75,27 @@ describe('#Function API:', () => {
         assert.strictEqual(counter, 2, 'incr was debounced')
         done()
       }, 128)
+    })
+    it(`debounce decorator`, (done) => {
+      interface Demo {
+        count: number;
+      }
+      class Demo {
+        constructor() {
+          this.count = 1
+        }
+        @Debounce(500)
+        submit() {
+          this.count++
+        }
+      }
+      const demo = new Demo()
+      assert.equal(demo.count, 1)
+      demo.submit()
+      setTimeout(() => {
+        assert.equal(demo.count, 2)
+        done()
+      }, 600)
     })
   })
   describe('#throttle', () => {

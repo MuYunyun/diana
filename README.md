@@ -19,12 +19,21 @@ You can also download [diana.js](https://github.com/MuYunyun/diana/blob/master/l
 > [Document](http://muyunyun.cn/diana/) :tada:
 
 ```js
-import * as _ from 'diana' // amd
-// const _ = require('diana') // common.js
+import * as _ from 'diana'    // browser
+// const _ = require('diana') // node.js
 const isEqual = _.equal([1, 2, 3], [1, 2, 3]) // true
+```
 
-// ofcource you can import the module you need
-import { isEqual } from 'diana'
+And there are some useful decorator methods in the diana, for example as follow:
+
+```js
+import { Debounce } from 'diana'
+class Demo {
+  @Debounce(1000)
+  submit() {
+    // call api
+  }
+}
 ```
 
 ### Contribute
