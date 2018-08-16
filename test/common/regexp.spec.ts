@@ -19,13 +19,10 @@ describe('Regexp API:', () => {
   })
 
   describe('#isPhoneNum()', () => {
-    it('_.isPhoneNum("18882324234") should return true ', () => {
+    it('_.isPhoneNum()', () => {
       assert(_.isPhoneNum("18882324234"))
-    })
-    it('_.isPhoneNum("8618882324234") should return true ', () => {
+      assert(_.isPhoneNum("17372247445"))
       assert(_.isPhoneNum("8618882324234"))
-    })
-    it('_.isPhoneNum("5534553") should return false', () => {
       assert(!_.isPhoneNum("5534553"))
     })
   })
