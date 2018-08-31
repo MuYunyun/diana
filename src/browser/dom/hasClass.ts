@@ -3,7 +3,7 @@
  * @param {HTMLElement} element 元素
  * @param {string} className 样式名称
  */
-function hasClass(element: any, className: any) {
+function hasClass(element: any, className: string) {
   const aClassName = element.className.split(' ')
   for (let i = 0; i < aClassName.length; i++) {
     if (className === aClassName[i]) {

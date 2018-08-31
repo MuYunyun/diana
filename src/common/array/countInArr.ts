@@ -5,7 +5,7 @@
  * @return {number}
  * _.countInArr([1, 1, 2, 1, 2, 3], 1) -> 3
  */
-function countInArr(arr: Array<any>, value: any) {
+function countInArr(arr: Array<any>, value: string|number|boolean) {
   return arr.reduce((a, v) => v === value ? a + 1 : a + 0, 0)
 }
 

@@ -5,7 +5,6 @@
  * (logged): timeTaken: 0.019775390625ms
  */
 function timeTaken(callback: any) {
-  /* eslint-disable */
   console.time('timeTaken')
   const r = callback()
   console.timeEnd('timeTaken')

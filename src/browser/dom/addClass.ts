@@ -4,7 +4,7 @@ import { hasClass } from './hasClass'
  * @param {HTMLElement} element
  * @param {string} className
  */
-function addClass(element: any, className: String) {
+function addClass(element: any, className: string) {
   if (element.classList) {
     element.classList.add(className)
   } else if (!hasClass(element, className)) {

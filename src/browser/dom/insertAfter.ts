@@ -1,12 +1,12 @@
 /**
- * 在指定节点后插入节点(摘自 JavaScript DOM 编程艺术)
- * @param {*} newNode 新节点
- * @param {*} referenceNode 指定节点
+ * 在指定节点后插入节点
+ * @param {HTMLElement} newNode 新节点
+ * @param {HTMLElement} referenceNode 指定节点
  */
 
 function insertAfter(newNode: any, referenceNode: any) {
   const parent = referenceNode.parentNode
-  if (referenceNode === parent.lastChild) { // 检测目标元素是不是 parent 的最后一个子元素
+  if (referenceNode === parent.lastChild) { // 如果目标元素是 parent 的最后一个子元素
     parent.appendChild(newNode)
   } else {
     parent.insertBefore(newNode, referenceNode.nextSibling)

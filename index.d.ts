@@ -1,7 +1,7 @@
 declare module "diana" {
   export function countInArr(
     arr: number[],
-    value: number
+    value: string|number|boolean
   ): number
 
   export function difference(

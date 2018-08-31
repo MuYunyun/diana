@@ -1,5 +1,5 @@
 /**
- * 把在页面加载完毕时执行的函数创建为一个队列(摘自 JavaScript DOM 编程艺术)
+ * 把在页面加载完毕时执行的函数创建为一个队列
  * @param {*} func 需加进队列的函数
  */
 function addLoadEvent(func: any) {
