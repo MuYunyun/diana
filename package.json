@@ -1,6 +1,6 @@
 {
   "name": "diana",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "description": "fe tool library",
   "browser": "lib/diana.js",
   "main": "lib/diana.back.js",
@@ -8,12 +8,9 @@
   "devDependencies": {
     "@types/mocha": "^5.2.5",
     "@types/node": "^10.5.4",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.1",
     "chalk": "^2.3.0",
     "codecov": "^3.0.0",
-    "diana": "^0.4.2",
+    "diana": "^0.4.5",
     "karma": "^1.7.1",
     "karma-chrome-launcher": "^2.2.0",
     "karma-coverage": "^1.1.1",
@@ -33,7 +30,7 @@
     "tslint": "^5.11.0",
     "typescript": "^2.9.2",
     "watchify": "^3.9.0",
-    "webpack": "^3.10.0"
+    "webpack": "^4.17.2"
   },
   "scripts": {
     "build": "node script/build.js",

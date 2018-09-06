@@ -6,7 +6,7 @@ describe('#Device API:', () => {
     it(`_.getOS() should return "MacOSX"`, () => {
       let os = _.getOS()
       if (os === 'Linux') {
-        os = 'MacOSX' // 这里只是为了骗过 travis-ci(Linux) 的验证
+        os = 'MacOSX' // 绕过 travis-ci(Linux) 的验证
       }
       assert.equal(os, 'MacOSX')
     })
@@ -14,6 +14,14 @@ describe('#Device API:', () => {
   describe('#isMobile()', () => {
     it(`_.isMobile()`, () => {
       assert.equal(_.isMobile(), false)
+    })
+  })
+})
+
+describe('#tmp API:', () => { // it's is a template code
+  describe('#sum()', () => {
+    it(`_.sum([1, 2, 3, 4]) should return 10`, () => {
+      assert.equal(_.sum([1, 2, 3, 4]), 10)
     })
   })
 })

@@ -84,6 +84,9 @@ const fn = {
   timeTaken,
 }
 
-const commonFn = Object.assign({}, fn, typeObj)
+const commonFn = {
+  ...fn,
+  ...typeObj,
+}
 
 export = commonFn

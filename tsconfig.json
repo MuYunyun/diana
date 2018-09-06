@@ -1,10 +1,10 @@
 {
   "exclude": [],
   "compilerOptions": {
+    "module": "commonjs",
     "outDir": "./dist/",
     "alwaysStrict": true,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
     "sourceMap": true,
     "inlineSources": true,
     "target": "es5",
@@ -24,6 +24,7 @@
     ],
   },
   "include": [
-    "test/"
+    "test/",
+    "src",
   ]
 }

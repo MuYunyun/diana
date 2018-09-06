@@ -1,27 +1,16 @@
-const webpack = require('webpack')
 const path = require('path')
-
 const pkg = require('../package.json')
-
 const rootPath = path.resolve(__dirname, '../')
 
 const config = {
   entry: path.resolve(rootPath, 'dist/src/browser', 'index.js'),
+  mode: "production",
   output: {
     filename: `${pkg.name}.js`,
     path: path.resolve(rootPath, 'lib'),
     library: `${pkg.name}`,
-    libraryTarget: 'umd' // http://www.imooc.com/article/10969
-  },
-  module: {
-    rules: [{
-      test: /\.js$/,
-      loader: "babel-loader",
-    }]
-  },
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin()
-  ]
+    libraryTarget: 'umd'
+  }
 }
 
 module.exports = config
