@@ -1,4 +1,5 @@
-import { typeObj } from '../lang/isType'
+import typeObj = require('../lang/isType')
+
 const { isFunction } = typeObj
 
 /**
@@ -96,4 +97,4 @@ function deepEqual(a: any, b: any, aStack: Array<any> = [], bStack: Array<any> =
   return true
 }
 
-export { eq }
+export = eq

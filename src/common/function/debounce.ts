@@ -43,4 +43,6 @@ function Debounce(time: number, immediate?: boolean) {
   }
 }
 
-export { debounce, Debounce }
+const obj = { debounce, Debounce }
+
+export = obj

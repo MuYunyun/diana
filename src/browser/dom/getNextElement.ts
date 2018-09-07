@@ -18,4 +18,4 @@ function getNextElement(node: any): any {
   return null
 }
 
-export { getNextElement }
+export = getNextElement

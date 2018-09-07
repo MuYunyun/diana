@@ -11,4 +11,4 @@ function timeTaken(callback: any) {
   return r
 }
 
-export { timeTaken }
+export = timeTaken

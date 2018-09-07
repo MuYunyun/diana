@@ -52,4 +52,6 @@ function sum(arr: Array<number>) {
   return arr.reduce((pre, cur) => pre + cur)
 }
 
-export { distance, gcd, max, mean, min, sum }
+const obj = { distance, gcd, max, mean, min, sum }
+
+export = obj

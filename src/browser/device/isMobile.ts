@@ -24,4 +24,4 @@ const mobileType: any = {
 
 const isMobile = mobileType.any.bind(mobileType)
 
-export { isMobile }
+export = isMobile

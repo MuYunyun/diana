@@ -1,4 +1,4 @@
-import { uniq } from './uniq'
+const uniq = require('./uniq')
 
 /**
  * 1 个或者多个数组取交集
@@ -32,4 +32,4 @@ function intersection(...arr: Array<any>) {
   }
 }
 
-export { intersection }
+export = intersection

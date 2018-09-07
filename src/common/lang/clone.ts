@@ -13,4 +13,4 @@ function clone(values: any) {
   }
 }
 
-export { clone }
+export = clone

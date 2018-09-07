@@ -3,15 +3,15 @@
   "compilerOptions": {
     "module": "commonjs",
     "outDir": "./dist/",
-    "alwaysStrict": true,
     "experimentalDecorators": true,
     "sourceMap": true,
-    "inlineSources": true,
     "target": "es5",
+    "inlineSources": true,
     "strictNullChecks": true,
     "noImplicitAny": true,
     "noUnusedLocals": true,
     "importHelpers": true,
+    "removeComments": true,
     "plugins": [
       {
         "name": "tslint-language-service"

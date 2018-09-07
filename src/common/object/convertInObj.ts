@@ -45,4 +45,4 @@ function convertInObj(obj: any, ruleObj: any) {
   return obj
 }
 
-export { convertInObj }
+export = convertInObj

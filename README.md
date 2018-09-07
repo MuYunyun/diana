@@ -6,7 +6,9 @@
 
 前端定制化工具库
 
-* 支持 browser 和 node 环境
+* 使用 TypeScript 构建(更为友好地支持装饰器等语法)
+* 支持 Browser、Node 两端
+* 支持按需加载（相关 babel 插件正在开发）
 
 ### Install
 
@@ -24,23 +26,20 @@ import * as _ from 'diana'    // browser
 const isEqual = _.equal([1, 2, 3], [1, 2, 3]) // true
 ```
 
-同时也加了一些有用的装饰器函数，例如可以像如下使用防抖函数：
+同时集成了一些有用的装饰器函数，例如可以像如下使用防抖函数：
 
 ```js
 import { Debounce } from 'diana'
 class Demo {
   @Debounce(1000)
-  submit() {
-    // call api
-  }
+  submit() {} // 点击按钮
 }
 ```
 
+### 开发历程
+
+[关于 diana](https://github.com/MuYunyun/diana/issues/1)
+
 ### Contribute
 
-Before submitting a pull request, please make sure read [how to pr](https://github.com/MuYunyun/diana/blob/master/.github/PULL_REQUEST_TEMPLATE.md)
-
-### Todo
-
-- [ ] 将 diana 的函数进行拆分打包
-- [ ] 实现相应的按需加载 babel 插件
+Before submitting a pull request, make sure read [how to pr](https://github.com/MuYunyun/diana/blob/master/.github/PULL_REQUEST_TEMPLATE.md)

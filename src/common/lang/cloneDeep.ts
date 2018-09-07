@@ -3,8 +3,7 @@
 //  * 深拷贝，支持常见类型
 //  * @param {Any} values
 //  */
-import { typeObj } from '../lang/isType'
-
+import typeObj = require('./isType')
 const { isDate, isRegExp, isFunction, isArray } = typeObj
 
 function cloneDeep(values: any) {
@@ -74,4 +73,4 @@ const getRegExp = (re: any) => {
   return flags
 }
 
-export { cloneDeep }
+export = cloneDeep

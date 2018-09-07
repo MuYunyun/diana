@@ -9,4 +9,4 @@ function difference(arr1: Array<any>, arr2: Array<any>) {
   return arr1.filter(x => !s.has(x))
 }
 
-export { difference }
+export = difference

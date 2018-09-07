@@ -1,4 +1,4 @@
-import { hasClass } from './hasClass'
+const hasClass = require('./hasClass')
 /**
  * 为元素添加类名
  * @param {HTMLElement} element
@@ -13,4 +13,4 @@ function addClass(element: any, className: string) {
   return this
 }
 
-export { addClass }
+export = addClass

@@ -1,4 +1,4 @@
-LICENCE
+LICENSE
 coverage/
 test/
 .travis.yml
@@ -14,3 +14,6 @@ karma.conf.js
 tag_database
 bower.json
 dist
+.github
+yarn-error.log
+yarn.lock

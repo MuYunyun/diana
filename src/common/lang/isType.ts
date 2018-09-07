@@ -1,4 +1,4 @@
-import { each } from '../collection/each'
+import each = require('../collection/each')
 
 const typeObj: any = {}
 each(['Arguments', 'Function', 'String', 'Date', 'RegExp', 'Error', 'Symbol', 'Map', 'WeakMap', 'Set', 'WeakSet'], (name: String) => {
@@ -19,4 +19,4 @@ typeObj.isArray = (value: any) => {
   return Array.isArray(value)
 }
 
-export { typeObj }
+export = typeObj

@@ -15,4 +15,4 @@ function addLoadEvent(func: any) {
   return this
 }
 
-export { addLoadEvent }
+export = addLoadEvent

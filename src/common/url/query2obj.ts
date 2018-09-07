@@ -3,7 +3,7 @@
  * @param {queryurl} url
  * @return {Object} 返回解析后的对象
  */
-function query2obj(queryurl: any) {
+function query2obj(queryurl: string) {
   const search = queryurl.substring(queryurl.lastIndexOf('?') + 1)
   if (!search) {
     return {}
@@ -19,4 +19,4 @@ function query2obj(queryurl: any) {
   return obj
 }
 
-export { query2obj }
+export = query2obj

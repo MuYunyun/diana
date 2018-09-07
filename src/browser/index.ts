@@ -2,18 +2,18 @@ import * as commonFn from '../common'
 
 /* ---------------- browser ------------------- */
 // device
-import { getOS } from './device/getOS'
-import { isMobile } from './device/isMobile'
+const getOS = require('./device/getOS')
+const isMobile = require('./device/isMobile')
 
 // redirect
-import { redirect } from './http/redirect'
+const redirect = require('./http/redirect')
 
 // dom
-import { addLoadEvent } from './dom/addLoadEvent'
-import { insertAfter } from './dom/insertAfter'
-import { addClass } from './dom/addClass'
-import { hasClass } from './dom/hasClass'
-import { getNextElement } from './dom/getNextElement'
+const addLoadEvent = require('./dom/addLoadEvent')
+const insertAfter = require('./dom/insertAfter')
+const addClass = require('./dom/addClass')
+const hasClass = require('./dom/hasClass')
+const getNextElement = require('./dom/getNextElement')
 
 const browserFn = Object.assign({}, commonFn, {
   getOS,

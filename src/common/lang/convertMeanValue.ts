@@ -1,4 +1,4 @@
-import { typeObj } from './isType'
+import typeObj = require('./isType')
 
 const { isArray } = typeObj
 
@@ -33,4 +33,6 @@ function codeToMean(arr: Array<any>, code: any) {
   }
 }
 
-export { meanToCode, codeToMean }
+const obj = { meanToCode, codeToMean }
+
+export = obj
