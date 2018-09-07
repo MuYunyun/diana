@@ -17,3 +17,5 @@ dist
 .github
 yarn-error.log
 yarn.lock
+tsconfig.json
+src

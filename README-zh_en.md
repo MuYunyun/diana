@@ -36,6 +36,12 @@ class Demo {
 }
 ```
 
+### Develop Process
+
+[CHANGELOG](https://github.com/MuYunyun/diana/blob/master/CHANGELOG.md)
+
+[About diana](https://github.com/MuYunyun/diana/issues/1)
+
 ### Contribute
 
 Before submitting a pull request, please make sure read [how to pr](https://github.com/MuYunyun/diana/blob/master/.github/PULL_REQUEST_TEMPLATE.md)

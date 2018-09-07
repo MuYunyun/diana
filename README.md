@@ -36,7 +36,9 @@ class Demo {
 }
 ```
 
-### 开发历程
+### Develop Process
+
+[更新日志](https://github.com/MuYunyun/diana/blob/master/CHANGELOG.md)
 
 [关于 diana](https://github.com/MuYunyun/diana/issues/1)
 
