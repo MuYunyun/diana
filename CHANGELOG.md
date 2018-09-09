@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.9] 2018-9-10
+
+### Features
+
+* [相关按需加载 babel 插件](https://github.com/demos-platform/babel-plugin-on-demand-loading)实现
+
 ### Removed
 
 * 移除 getNextElement，可以使用原生 api —— nextElementSibling

@@ -48,4 +48,4 @@ class Demo {
 
 ### Contribute
 
-Before submitting a pull request, make sure read [how to pr](https://github.com/MuYunyun/diana/blob/master/.github/PULL_REQUEST_TEMPLATE.md)
+If you want to contrubute this proj, you can read [how to pr](https://github.com/MuYunyun/diana/blob/master/.github/PULL_REQUEST_TEMPLATE.md)
