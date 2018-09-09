@@ -8,7 +8,7 @@
 
 * 使用 TypeScript 构建(更为友好地支持装饰器等语法)
 * 支持 Browser、Node 两端
-* 支持按需加载(配合 [babel-plugin-on-demand-loading](https://github.com/demos-platform/babel-plugin-on-demand-loading))
+* 支持按需加载
 
 ### Install
 
@@ -43,6 +43,8 @@ class Demo {
 [更新日志](https://github.com/MuYunyun/diana/blob/master/CHANGELOG.md)
 
 [关于 diana](https://github.com/MuYunyun/diana/issues/1)
+
+[按需加载实践](https://github.com/MuYunyun/diana/issues/5)
 
 ### Contribute
 
