@@ -14,7 +14,6 @@ each:Collection
 equal:Object
 escapeStr:String
 gcd:Math
-getNextElement:Dom(B)
 getOS:Device(B)
 hasClass:Dom(B)
 insertAfter:Dom(B)

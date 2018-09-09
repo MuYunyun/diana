@@ -10,7 +10,7 @@
     "@types/node": "^10.5.4",
     "chalk": "^2.3.0",
     "codecov": "^3.0.0",
-    "diana": "^0.4.5",
+    "diana": "^0.4.8",
     "karma": "^1.7.1",
     "karma-chrome-launcher": "^2.2.0",
     "karma-coverage": "^1.1.1",

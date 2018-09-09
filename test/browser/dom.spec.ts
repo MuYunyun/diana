@@ -46,13 +46,6 @@ describe('#DOM API:', () => {
       assert(bHasClass)
     })
   })
-  describe('#getNextElement()', () => {
-    it(`_.getNextElement()`, () => {
-      const p1 = document.getElementById('p1Test')
-      const hopeP2 = _.getNextElement(p1)
-      assert.equal(hopeP2.lastChild.nodeValue, 'test2')
-    })
-  })
   describe('#insertAfter()', () => {
     it(`_.insertAfter()`, () => {
       const container = document.createElement('p')
@@ -63,10 +56,10 @@ describe('#DOM API:', () => {
       document.body.appendChild(container)
 
       const $newele = document.getElementById('m_insertAfter')
-      const $oldele = document.getElementById('p2Test')
+      const $oldele: any = document.getElementById('p2Test')
       _.insertAfter($newele, $oldele)
 
-      const hopenewele = _.getNextElement($oldele)
+      const hopenewele = $oldele.nextElementSibling
       assert.equal(hopenewele.lastChild.nodeValue, 'm_insertAfter')
     })
   })

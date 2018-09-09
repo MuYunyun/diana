@@ -1,4 +1,15 @@
-# Change Log
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+### Removed
+
+* 移除 getNextElement，可以使用原生 api —— nextElementSibling
 
 ## [0.4.8] 2018-9-7
 
