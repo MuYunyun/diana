@@ -1,14 +1,6 @@
-# files
 *.log
-
-# folders
 node_modules/*
 coverage
-
 .vscode
-
 npm-debug.log
-
-snippets
-
 dist

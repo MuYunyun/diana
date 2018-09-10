@@ -19,8 +19,8 @@ You can also download [diana.js](https://github.com/MuYunyun/diana/blob/master/l
 > [Document](http://muyunyun.cn/diana/) :tada:
 
 ```js
-import * as _ from 'diana'    // browser
-// const _ = require('diana') // node.js
+import _ from 'diana'         // ES6
+// const _ = require('diana') // common.js
 const isEqual = _.equal([1, 2, 3], [1, 2, 3]) // true
 ```
 

@@ -4,10 +4,13 @@
   "description": "fe customized tool library",
   "browser": "lib/diana.js",
   "main": "lib/diana.back.js",
-  "dependencies": {},
+  "dependencies": {
+    "babel-preset-env": "^1.7.0"
+  },
   "devDependencies": {
     "@types/mocha": "^5.2.5",
     "@types/node": "^10.5.4",
+    "babel-cli": "^6.26.0",
     "chalk": "^2.3.0",
     "codecov": "^3.0.0",
     "diana": "^0.4.8",
@@ -33,7 +36,7 @@
     "webpack": "^4.17.2"
   },
   "scripts": {
-    "build": "node script/build.js",
+    "build": "babel-node script/build.js",
     "test": "karma start karma.conf.js",
     "codecov": "codecov --token=921e25b4-c2ac-488f-8007-2749741689d0",
     "pre-lint": "node script/check.js",
