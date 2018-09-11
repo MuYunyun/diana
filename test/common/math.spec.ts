@@ -34,13 +34,19 @@ describe('#Math API:', () => {
   })
   describe('#round()', () => {
     it(`_.round(1.234, 2) should return 1.23`, () => {
-      assert.equal(_.round(1.234, 2), 1.23)
+      assert.equal(_.round(1.234, 2), '1.23')
     })
     it(`_.round(1.235, 2) should return 1.24`, () => {
-      assert.equal(_.round(1.235, 2), 1.24)
+      assert.equal(_.round(1.235, 2), '1.24')
     })
     it(`_.round(1.235, 0) should return 1`, () => {
-      assert.equal(_.round(1.235, 0), 1)
+      assert.equal(_.round(1.235, 0), '1')
+    })
+    it(`_.round(1, 2) should return 1.00`, () => {
+      assert.equal(_.round(1, 2), '1.00')
+    })
+    it(`_.round(1.2, 2) should return 1.00`, () => {
+      assert.equal(_.round(1.2, 2), '1.20')
     })
   })
 })

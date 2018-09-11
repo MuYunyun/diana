@@ -5,7 +5,17 @@
  */
 function round(value: number, position = 0) {
   const tmp = Math.pow(10, position)
-  return Math.round(value * tmp) / tmp
+  let result = (Math.round(value * tmp) / tmp).toString()
+  let num = result.split('.')[1] ? result.split('.')[1].length : 0
+  while (num < position) {
+    if (!result.includes('.')) {
+      result += '.0'
+    } else {
+      result += '0'
+    }
+    num++
+  }
+  return result
 }
 
 export = round

@@ -108,6 +108,11 @@ declare module "diana" {
     arr: number[]
   ): number
 
+  export function round(
+    value: number,
+    position: number
+  ): string
+
   export function convertInObj(
     obj: any,
     ruleObj: any
