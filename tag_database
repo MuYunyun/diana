@@ -39,6 +39,7 @@ query2obj:Url
 rdColor:Random
 rdNum:Random
 redirect:Http(B)
+round:Math
 sortStr:String
 sum:Math
 throttle:Function
