@@ -32,4 +32,15 @@ describe('#Math API:', () => {
       assert.equal(_.gcd(8, 36), 4)
     })
   })
+  describe('#round()', () => {
+    it(`_.round(1.234, 2) should return 1.23`, () => {
+      assert.equal(_.round(1.234, 2), 1.23)
+    })
+    it(`_.round(1.235, 2) should return 1.24`, () => {
+      assert.equal(_.round(1.235, 2), 1.24)
+    })
+    it(`_.round(1.235, 0) should return 1`, () => {
+      assert.equal(_.round(1.235, 0), 1)
+    })
+  })
 })

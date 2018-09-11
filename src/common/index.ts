@@ -27,6 +27,7 @@ import { meanToCode, codeToMean } from './lang/convertMeanValue'
 
 // math
 import { sum, mean, max, min, distance, gcd } from './math/math'
+import round = require('./math/round')
 
 // object
 import equal = require('./object/equal')
@@ -71,6 +72,7 @@ const fn = {
   min,
   distance,
   gcd,
+  round,
   equal,
   pairs2obj,
   convertInObj,

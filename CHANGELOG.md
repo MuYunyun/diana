@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.5.0] 2018-9-11
+
+### Features
+
+* 增加 round 函数
+
 ## [0.4.9] 2018-9-10
 
 ### Features

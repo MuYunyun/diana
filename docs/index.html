@@ -123,6 +123,7 @@
 <a class="sublink-1" href="#max">max</a>
 <a class="sublink-1" href="#mean">mean</a>
 <a class="sublink-1" href="#min">min</a>
+<a class="sublink-1" href="#round">round</a>
 <a class="sublink-1" href="#sum">sum</a>
 
 <h3>Object
@@ -410,6 +411,16 @@ _.meanToCode(arr, '晚高峰时段') // =&gt; 30
 <p>判断数组中的最小值 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/math/math.ts" title="View in source">Ⓢ</a></p>
 <h5>Example</h5>
 <pre><code class="language-js">_.min([1, 2, 3, 4]); // =&gt; 1
+</code></pre>
+</div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="round">_.round(value, position)</h3></div><div class="section double-padded">
+<p>数字四舍五入(可以指定保留几位小数) <a href="https://github.com/MuYunyun/diana/blob/master/src/common/math/round.ts" title="View in source">Ⓢ</a></p>
+<h5>Arguments</h5>
+<p><code>value</code> <em>(number)</em>: 数值
+<code>position</code> <em>(number)</em>: 保留几位小数, 默认为 0</p>
+<h5>Example</h5>
+<pre><code class="language-js">_.round(1.235, 2) =&gt; 1.24
+_.round(1.234, 2) =&gt; 1.23
+_.round(1.234, 0) =&gt; 1
 </code></pre>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="sum">_.sum(arr)</h3></div><div class="section double-padded">
 <p>数组求和 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/math/math.ts" title="View in source">Ⓢ</a></p>
