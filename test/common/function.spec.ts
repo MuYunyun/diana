@@ -12,67 +12,29 @@ describe('#Function API:', () => {
       }
       let debouncedIncr = _.debounce(incr, 32)
       debouncedIncr()
-      debouncedIncr() // 把上行覆盖掉了
+      debouncedIncr() // 模拟快速点击，覆盖上面一行的效果
       setTimeout(debouncedIncr, 16) // 16 < 32,相当于又把上行效果覆盖掉
       setTimeout(() => {
         assert.equal(counter, 1)
         done()
       }, 100)
     })
-    it(`debounce cancel`, (done) => {
-      let counter = 0
-      let incr = function() {
-        counter++
-      }
-      let debouncedIncr = _.debounce(incr, 32)
-      debouncedIncr()
-      debouncedIncr.cancel() // 测试 cancel
-      setTimeout(() => {
-        assert.equal(counter, 0)
-        done()
-      }, 100)
-    })
     it(`debounce asap`, (done) => {
-      let a, b, c
       let counter = 0
       let incr = function () {
         return ++counter
       }
       let debouncedIncr = _.debounce(incr, 64, true)
-      a = debouncedIncr()
-      b = debouncedIncr()
-      assert.strictEqual(a, 1)
-      assert.strictEqual(b, 1)
+      debouncedIncr()
+      debouncedIncr()
       assert.strictEqual(counter, 1, 'incr was called immediately')
       setTimeout(debouncedIncr, 16)
       setTimeout(debouncedIncr, 32)
       setTimeout(debouncedIncr, 48)
       setTimeout(() => {
         assert.strictEqual(counter, 1, 'incr was debounced')
-        c = debouncedIncr()
-        assert.strictEqual(c, 2)
+        debouncedIncr()
         assert.strictEqual(counter, 2, 'incr was called again')
-        done()
-      }, 128)
-    })
-    it(`debounce asap cancel`, (done) => {
-      let a, b
-      let counter = 0
-      let incr = function () {
-        return ++counter
-      }
-      let debouncedIncr = _.debounce(incr, 64, true)
-      a = debouncedIncr()
-      debouncedIncr.cancel()
-      b = debouncedIncr()
-      assert.strictEqual(a, 1)
-      assert.strictEqual(b, 2)
-      assert.strictEqual(counter, 2, 'incr was called immediately')
-      setTimeout(debouncedIncr, 16)
-      setTimeout(debouncedIncr, 32)
-      setTimeout(debouncedIncr, 48)
-      setTimeout(() => {
-        assert.strictEqual(counter, 2, 'incr was debounced')
         done()
       }, 128)
     })
@@ -92,10 +54,32 @@ describe('#Function API:', () => {
       const demo = new Demo()
       assert.equal(demo.count, 1)
       demo.submit()
+      demo.submit()
+      assert.equal(demo.count, 1)
       setTimeout(() => {
         assert.equal(demo.count, 2)
         done()
       }, 600)
+    })
+    it(`debounce decorator asap`, (done) => {
+      interface Demo {
+        count: number;
+      }
+      class Demo {
+        constructor() {
+          this.count = 1
+        }
+        @Debounce(500, true)
+        submit() {
+          this.count++
+        }
+      }
+      const demo = new Demo()
+      assert.equal(demo.count, 1)
+      demo.submit()
+      demo.submit()
+      assert.equal(demo.count, 2)
+      done()
     })
   })
   describe('#throttle', () => {

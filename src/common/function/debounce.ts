@@ -7,7 +7,7 @@
  * @param {*} immediate
  */
 function debounce(func: any, wait: number, immediate?: boolean) {
-  let timeout: any, result: any
+  let timeout: any
   const debounced: any = function (...args: Array<any>) {
     if (timeout) clearTimeout(timeout)
     if (immediate) {     // 立即执行函数，n 秒内不再触发事件，才可以重新触发执行
@@ -15,18 +15,13 @@ function debounce(func: any, wait: number, immediate?: boolean) {
       timeout = setTimeout(() => {
         timeout = null
       }, wait)
-      if (callNow) result = func.apply(this, args)
+      if (callNow) func.apply(this, args)
     } else {
       timeout = setTimeout(() => { // 触发完事件 n 秒内不再触发事件后才可以重新触发执行
         func.apply(this, args)
+        timeout = null
       }, wait)
     }
-    return result
-  }
-
-  debounced.cancel = () => {
-    clearTimeout(timeout)
-    timeout = null
   }
 
   return debounced
