@@ -26,9 +26,9 @@ import _ from 'diana'         // ES6
 const isEqual = _.equal([1, 2, 3], [1, 2, 3]) // true
 ```
 
-> 配合使用 [babel-plugin-on-demand-loading](https://github.com/demos-platform/babel-plugin-on-demand-loading) 可以实现按需加载，体积能极大的减小。
+> 配合使用 [babel-plugin-on-demand-loading](https://github.com/demos-platform/babel-plugin-on-demand-loading) 可以实现按需加载, 体积能极大的减小。
 
-与此同时该库后续会集成一些有用的装饰器函数，比如目前可以像如下使用防抖函数：
+与此同时该库后续会集成一些有用的装饰器函数, 比如目前可以像如下使用防抖函数:
 
 ```js
 import { Debounce } from 'diana'
@@ -37,6 +37,11 @@ class Demo {
   submit() {} // 点击按钮
 }
 ```
+
+### Philosophy
+
+* 抽离系统间通用的方法;
+* 定制化的瑞士军刀;
 
 ### Develop Process
 

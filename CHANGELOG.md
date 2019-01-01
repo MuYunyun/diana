@@ -7,7 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.5.1] 2018-9-11
+## [0.5.2] 2019-01-01
+
+### Chore
+
+* 移除 `lib` 目录, `travis.yml` 中完成 `build`
+
+## [0.5.1] 2018-09-11
 
 ### Features
 

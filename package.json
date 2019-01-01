@@ -1,6 +1,6 @@
 {
   "name": "diana",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "fe customized tool library",
   "browser": "lib/diana.js",
   "main": "lib/diana.back.js",
