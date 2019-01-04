@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.5.3] 2019-03-04
+
+* 使用 `Rollup` 代替 `Webpack`
+
 ## [0.5.2] 2019-01-01
 
 ### Chore
