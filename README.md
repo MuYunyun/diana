@@ -6,11 +6,11 @@
 
 前端定制化工具库
 
-* 使用 TypeScript 构建(更为友好地支持装饰器等语法)
-* 支持 Browser、Node 两端
-* 支持按需加载
+* 使用 `TypeScript`、`Rollup` 构建
+* 支持 `Browser`、`Node` 两端
+* 支持[按需加载](https://github.com/demos-platform/babel-plugin-on-demand-loading)
 
-### Install
+### Installp
 
 ```bash
 npm install diana --save
@@ -40,7 +40,7 @@ class Demo {
 
 ### Philosophy
 
-* 抽离系统间通用的方法;
+* 抽离出系统间通用的方法;
 * 定制化的瑞士军刀;
 
 ### Develop Process

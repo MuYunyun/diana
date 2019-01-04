@@ -4,3 +4,4 @@ coverage
 .vscode
 npm-debug.log
 dist
+lib
