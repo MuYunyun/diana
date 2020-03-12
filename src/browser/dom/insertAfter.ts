@@ -6,10 +6,11 @@
 
 function insertAfter(newNode: any, referenceNode: any) {
   const parent = referenceNode.parentNode
-  if (referenceNode === parent.lastChild) { // 如果目标元素是 parent 的最后一个子元素
-    parent.appendChild(newNode)
+  if (referenceNode === parent.lastElementChild) {
+    // 如果目标元素是 parent 的最后一个子元素
+    parent.appendChild(newNode);
   } else {
-    parent.insertBefore(newNode, referenceNode.nextSibling)
+    parent.insertBefore(newNode, referenceNode.nextSibling);
   }
   return this
 }
