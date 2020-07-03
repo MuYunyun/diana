@@ -1,5 +1,5 @@
 /**
- * 判断是否为移动设备
+ * judge if is mobile device.
  */
 const mobileType: any = {
   Android() {

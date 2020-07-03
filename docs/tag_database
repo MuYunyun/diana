@@ -25,6 +25,7 @@ isEmail:Regexp
 isError:Lang
 isFunction:Lang
 isMobile:Device(B)
+isClient:Device
 isNumber:Lang
 isPhoneNum:Regexp
 isRegExp:Lang

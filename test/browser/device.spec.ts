@@ -16,6 +16,11 @@ describe('#Device API:', () => {
       assert.equal(_.isMobile(), false)
     })
   })
+  describe('#isClient()', () => {
+    it(`_.isClient()`, () => {
+      assert.equal(_.isClient(), true);
+    })
+  })
 })
 
 describe('#tmp API:', () => { // it's is a template code
