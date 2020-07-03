@@ -1,5 +1,5 @@
 /**
- * 判断是否为邮箱地址
+ * judge if is email
  * https://regexper.com/
  * @param {String} email
  */

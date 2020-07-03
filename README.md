@@ -4,21 +4,21 @@
 
 [![npm version](https://badge.fury.io/js/diana.svg)](https://badge.fury.io/js/diana) [![week download](https://img.shields.io/npm/dw/diana.svg)](https://www.npmjs.com/package/diana) ![Build Status](https://travis-ci.org/MuYunyun/diana.svg?branch=master) [![codecov](https://codecov.io/gh/MuYunyun/diana/branch/master/graph/badge.svg)](https://codecov.io/gh/MuYunyun/diana) ![LICENSE MIT](https://img.shields.io/npm/l/diana.svg)
 
-前端定制化工具库
+English | [简体中文](./README-zh-cn.md)
 
-* 使用 `TypeScript`、`Rollup` 构建
-* 支持 `Browser`、`Node` 两端
-* 支持[按需加载](https://github.com/demos-platform/babel-plugin-on-demand-loading)
+Diana is a lightweight fe tool library.
 
-### Installp
+### Installation
 
 ```bash
-npm install diana --save
+yarn add diana || npm install diana --save
 ```
+
+You can also download [diana.js](https://github.com/MuYunyun/diana/blob/master/lib/diana.js) directly in the browser，it support UMD common module specification.
 
 ### Usage
 
-> [使用文档](http://muyunyun.cn/diana/) :tada:
+> [Document](http://muyunyun.cn/diana/) :tada:
 
 ```js
 import _ from 'diana'         // ES6
@@ -26,31 +26,23 @@ import _ from 'diana'         // ES6
 const isEqual = _.equal([1, 2, 3], [1, 2, 3]) // true
 ```
 
-> 配合使用 [babel-plugin-on-demand-loading](https://github.com/demos-platform/babel-plugin-on-demand-loading) 可以实现按需加载, 体积能极大的减小。
-
-与此同时该库后续会集成一些有用的装饰器函数, 比如目前可以像如下使用防抖函数:
+And there are some useful decorator methods in the diana, for example as follow:
 
 ```js
 import { Debounce } from 'diana'
 class Demo {
   @Debounce(1000)
-  submit() {} // 点击按钮
+  submit() {
+    // call api
+  }
 }
 ```
 
-### Philosophy
-
-* 抽离出系统间通用的方法;
-* 定制化的瑞士军刀;
-
 ### Develop Process
 
-[更新日志](https://github.com/MuYunyun/diana/blob/master/CHANGELOG.md)
-
-[关于 diana](https://github.com/MuYunyun/diana/issues/1)
-
-[按需加载实践](https://github.com/MuYunyun/diana/issues/5)
+* [CHANGELOG](https://github.com/MuYunyun/diana/blob/master/CHANGELOG.md)
+* [About Diana](https://github.com/MuYunyun/diana/issues/1)
 
 ### Contribute
 
-If you want to contrubute this proj, you can read [how to pr](https://github.com/MuYunyun/diana/blob/master/.github/PULL_REQUEST_TEMPLATE.md)
+Before submitting a pull request, please make sure read [how to pr](https://github.com/MuYunyun/diana/blob/master/.github/PULL_REQUEST_TEMPLATE.md)

@@ -62,7 +62,7 @@
   <header class="height">
     <h1 class="logo" href="https://github.com/MuYunyun/diana">
       <span id="title">&nbsp;Diana</span>
-      <small>前端定制化工具库</small>
+      <small>前端工具库</small>
     </h1>
     <label for="doc-drawer-checkbox" class="button drawer-toggle" id="menu-toggle"></label>
   </header>
@@ -84,6 +84,9 @@
 
 <h3>Collection
 </h3><a class="sublink-1" href="#each">each</a>
+
+<h3>Device
+</h3><a class="sublink-1" href="#isclient">isClient</a>
 
 <h3>Device(B)
 </h3><a class="sublink-1" href="#getos">getOS</a>
@@ -201,6 +204,12 @@ _.uniq([1, 'a', 3, 1], [4, 'a', 'b'], [2, 3, 'b', 'c'])
 <pre><code class="language-js">_.each([1, 2, 3], (value) =&gt; {console.log(value)}); // =&gt; 1, 2, 3
 _.each({1, 2, 3}, (value) =&gt; {console.log(value)}); // =&gt; 1, 2, 3
 </code></pre>
+</div></div><br/><h2 style="text-align:center;">Device</h2>
+<div class="card fluid"><div class="section double-padded"><h3 id="isclient">_.isClient()</h3></div><div class="section double-padded">
+<p>Judge if current environment is client. <a href="https://github.com/MuYunyun/diana/blob/master/src/browser/device/isClient.ts" title="View in source">Ⓢ</a></p>
+<h5>Example</h5>
+<pre><code class="language-js">_.isClient(); // =&gt; true
+</code></pre>
 </div></div><br/><h2 style="text-align:center;">Device(B)</h2>
 <div class="card fluid"><div class="section double-padded"><h3 id="getos">_.getOS()</h3></div><div class="section double-padded">
 <p>获取当前的操作系统 <a href="https://github.com/MuYunyun/diana/blob/master/src/browser/device/getOS.ts" title="View in source">Ⓢ</a></p>
@@ -306,24 +315,7 @@ _.clone(obj).a === obj.a; // =&gt; true
 <h5>Example</h5>
 <pre><code class="language-js">let obj = {a: 1}
 _.cloneDeep(obj).a === obj.a; // =&gt; false</code></pre>
-</div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="codetomean">_.codeToMean(arr, code)</h3></div><div class="section double-padded">
-<p>将数组中的 code 转化为 mean. <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/convertMeanValue.ts" title="View in source">Ⓢ</a></p>
-<h5>Arguments</h5>
-<p><code>arr</code> <em>(Array)</em>: 数组</p>
-<p><code>code</code> <em>(String | Number)</em>: 要转化的 code 值</p>
-<p>  </p>
-<h5>Returns</h5>
-<p><em>(mean)</em>: 数组中 code 对应的 mean，若找不到则返回 null</p>
-<p>  </p>
-<h5>Example</h5>
-<pre><code class="language-js">const arr = [
-  { code: 10, mean: '午高峰时段' },
-  { code: 20, mean: '晚高峰时段' },
-  { code: 30, mean: '夜宵时段' },
-]
-
-_.codeToMean(arr, 20) // =&gt; 晚高峰时段
-</code></pre>
+</div></div><br/><div class="card fluid"><div class="section double-padded"><p>undefined</p>
 </div></div><br/><div class="card fluid"><div class="section double-padded"><hr>
 <h3 id="isarguments">_.isArguments(object)</h3></div><div class="section double-padded">
 <p>如果 object 是一个参数对象，返回 true <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.ts" title="View in source">Ⓢ</a></p>
@@ -368,24 +360,7 @@ _.isArguments([1,2,3]); // =&gt; false
 <h5>Example</h5>
 <pre><code class="language-js">_.isString('abc'); // =&gt; true
 </code></pre>
-</div></div><br/><div class="card fluid"><div class="section double-padded"><h3 id="meantocode">_.meanToCode(arr, mean)</h3></div><div class="section double-padded">
-<p>将数组中的 mean 转化为 code. <a href="https://github.com/MuYunyun/diana/blob/master/src/common/lang/convertMeanValue.ts" title="View in source">Ⓢ</a></p>
-<h5>Arguments</h5>
-<p><code>arr</code> <em>(Array)</em>: 数组</p>
-<p><code>mean</code> <em>(String)</em>: 要转化的 mean 值</p>
-<p>  </p>
-<h5>Returns</h5>
-<p><em>(code)</em>: 数组中 mean 对应的 code，若找不到则返回 null</p>
-<p>  </p>
-<h5>Example</h5>
-<pre><code class="language-js">const arr = [
-  { code: 10, mean: '午高峰时段' },
-  { code: 20, mean: '晚高峰时段' },
-  { code: 30, mean: '夜宵时段' },
-]
-
-_.meanToCode(arr, '晚高峰时段') // =&gt; 30
-</code></pre>
+</div></div><br/><div class="card fluid"><div class="section double-padded"><p>undefined</p>
 </div></div><br/><h2 style="text-align:center;">Math</h2>
 <div class="card fluid"><div class="section double-padded"><h3 id="distance">_.distance(x0, y0, x1, y1)</h3></div><div class="section double-padded">
 <p>计算两点 (x0, y0), (x1, y1) 之间的欧几里得距离 <a href="https://github.com/MuYunyun/diana/blob/master/src/common/math/math.ts" title="View in source">Ⓢ</a></p>

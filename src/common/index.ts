@@ -23,7 +23,6 @@ import sortStr = require('./string/sortStr')
 import clone = require('./lang/clone')
 import cloneDeep = require('./lang/cloneDeep')
 import typeObj = require('./lang/isType')
-import { meanToCode, codeToMean } from './lang/convertMeanValue'
 
 // math
 import { sum, mean, max, min, distance, gcd } from './math/math'
@@ -64,8 +63,6 @@ const fn = {
   sortStr,
   clone,
   cloneDeep,
-  meanToCode,
-  codeToMean,
   sum,
   mean,
   max,

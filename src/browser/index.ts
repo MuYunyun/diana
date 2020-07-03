@@ -4,6 +4,7 @@ import * as commonFn from '../common'
 // device
 import getOS = require('./device/getOS')
 import isMobile = require('./device/isMobile')
+import isClient = require('./device/isClient')
 
 // redirect
 import redirect = require('./http/redirect')
@@ -17,6 +18,7 @@ import hasClass = require('./dom/hasClass')
 const browserFn = Object.assign({}, commonFn, {
   getOS,
   isMobile,
+  isClient,
   redirect,
   addLoadEvent,
   insertAfter,

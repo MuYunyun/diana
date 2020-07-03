@@ -71,25 +71,4 @@ describe('Lang API:', () => {
       assert(_.isNumber(+'abc') === false)
     })
   })
-  describe('#convertMeanValue()', () => {
-    const arr = [
-      { code: 10, mean: '午高峰时段' },
-      { code: 20, mean: '晚高峰时段' },
-      { code: 30, mean: '夜宵时段' },
-    ]
-    it(`test notArray`, () => {
-      assert(_.meanToCode({}, '') === null)
-      assert(_.codeToMean({}) === null)
-    })
-    it(`test isArray but the array not contains the code`, () => {
-      assert(_.meanToCode([], '晚高峰时段') === null)
-      assert(_.codeToMean([], '30') === null)
-    })
-    it(`test meanToCode()`, () => {
-      assert(_.meanToCode(arr, '晚高峰时段') === 20)
-    })
-    it(`test codeToMean()`, () => {
-      assert(_.codeToMean(arr, 30) === '夜宵时段')
-    })
-  })
 })

@@ -5,7 +5,7 @@
  * @return {String} 返回 queryurl
  */
 function obj2query(baseurl: string, obj: any) {
-  if (!obj) return '请检查参数是否为对象'
+  if (!obj) return 'please check if the second params is Object'
   const handleKey = Object.keys(obj).filter(key => obj[key] != null)
   const handleArray = handleKey.map(key => `${key}=${encodeURIComponent(obj[key])}`)
   return baseurl + '?' + handleArray.join('&')

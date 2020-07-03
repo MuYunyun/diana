@@ -7,21 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] 2020-07-04
+
+* add function isClient.
+* remove meanToCode, codeToMean.
+
 ## [0.5.3] 2019-03-04
 
-* 使用 `Rollup` 代替 `Webpack`
+* use `Rollup` instead of `Webpack`.
 
 ## [0.5.2] 2019-01-01
 
 ### Chore
 
-* 移除 `lib` 目录, `travis.yml` 中完成 `build`
+* remove `lib`, and build in `travis.yml`.
 
 ## [0.5.1] 2018-09-11
 
 ### Features
 
-* 增加 round 函数
+* add Function `round`.
 
 ## [0.4.9] 2018-9-10
 
