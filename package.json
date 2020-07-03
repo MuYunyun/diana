@@ -1,6 +1,6 @@
 {
   "name": "diana",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "lightweight tool library",
   "browser": "lib/diana.js",
   "main": "lib/diana.back.js",
