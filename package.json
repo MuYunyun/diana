@@ -4,12 +4,6 @@
   "description": "lightweight tool library",
   "browser": "lib/diana.js",
   "main": "lib/diana.back.js",
-  "dependencies": {
-    "babel-preset-env": "^1.7.0",
-    "rollup": "^1.0.1",
-    "rollup-plugin-commonjs": "^9.2.0",
-    "rollup-plugin-terser": "^4.0.1"
-  },
   "devDependencies": {
     "@types/mocha": "^5.2.5",
     "@types/node": "^10.5.4",
@@ -34,7 +28,11 @@
     "tslint": "^5.11.0",
     "typescript": "^2.9.2",
     "watchify": "^3.9.0",
-    "webpack": "^4.17.2"
+    "webpack": "^4.17.2",
+    "babel-preset-env": "^1.7.0",
+    "rollup": "^1.0.1",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-terser": "^4.0.1"
   },
   "scripts": {
     "build": "babel-node script/build.js",
@@ -43,7 +41,7 @@
     "pre-lint": "node script/check.js",
     "tagger": "node script/tag-script.js",
     "webber": "node script/web-script.js",
-    "publish": "git subtree push --prefix=docs origin gh-pages",
+    "deploy": "git subtree push --prefix=docs origin gh-pages",
     "compile": "tsc -w -p tsconfig.json",
     "release": "release-it --src.tagName='v%s'"
   },
