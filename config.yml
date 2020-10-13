@@ -1,0 +1,24 @@
+# create-react-doc configuration
+
+# Site
+title: Diana
+
+# Menu dir
+## you can also set detailed dir, such as BasicSkill/css
+menu: doc
+## set init open menu keys
+menuOpenKeys: /doc
+
+# site theme
+theme: crd-seed
+
+# Github
+## if you want to editing pages on github, you should config these arguments.
+user: MuYunyun
+repo: diana
+branch: master            # the default value of branch is master
+deploy_branch: gh-pages   # which branch to deploy.(default: gh-pages)
+# publish:                # if you want upload to gitlab or other git platform, you can set full git url in it
+
+# Available values: en | zh-cn
+language: en
