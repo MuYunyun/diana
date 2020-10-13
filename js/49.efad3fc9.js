@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[49],{739:function(n,e){n.exports='### _.timeTaken(callback)\n\n测试功能所花费的时间 [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/time/timeTaken.ts "View in source")\n\n##### Example\n```js\n_.timeTaken(() => Math.pow(2, 10)) // => 1024\n// (logged): timeTaken: 0.019775390625ms\n```'}}]);

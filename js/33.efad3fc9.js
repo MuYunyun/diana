@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[33],{723:function(n,a){n.exports='### _.max(arr)\n\n判断数组中的最大值 [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/math/math.ts "View in source")\n\n##### Example\n```js\n_.max([1, 2, 3, 4]); // => 4\n```'}}]);

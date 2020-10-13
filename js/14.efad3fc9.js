@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[14],{704:function(n,e){n.exports="### _.getOS()\n\n获取当前的操作系统 [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/browser/device/getOS.ts \"View in source\")\n\n##### Example\n```js\n_.getOS(); // => 'MacOSX'\n```"}}]);

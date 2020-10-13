@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[43],{733:function(n,i){n.exports="### _.isEmail(email)\n\n判断是否为邮箱地址. [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/regexp/isEmail.ts \"View in source\")\n\n##### Example\n```js\n_.isEmail('muyy95@gmail.com'); // => true\n```"}}]);

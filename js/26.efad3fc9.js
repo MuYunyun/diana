@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[26],{716:function(n,o){n.exports='### _.isError(object)\n\n如果object继承至 Error 对象，那么返回 true [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.ts "View in source")\n\n##### Example\n```js\n_.isError(/abc/); // => true\n```'}}]);

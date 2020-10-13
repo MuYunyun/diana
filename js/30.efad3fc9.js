@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[30],{720:function(n,o){n.exports="### _.isString(object)\n\n如果 object 是一个字符串，返回 true [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.ts \"View in source\")\n\n##### Example\n```js\n_.isString('abc'); // => true\n```"}}]);

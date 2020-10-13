@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[11],{701:function(n,o){n.exports='### _.addLoadEvent(func)\n\n把在页面加载完毕时执行的函数创建为一个队列(摘自 JavaScript DOM 编程艺术) [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/browser/dom/addLoadEvent.ts "View in source")\n\n##### Arguments\n\n`func` *(Function)* 需加进队列的函数'}}]);

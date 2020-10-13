@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[16],{706:function(n,e){n.exports='### _.isMobile()\n\n判断当前环境是否为手机 [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/browser/device/isMobile.ts "View in source")\n\n##### Example\n```js\n_.isMobile(); // => true\n```'}}]);

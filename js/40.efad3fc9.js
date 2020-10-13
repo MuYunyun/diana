@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[40],{730:function(n,o){n.exports="### _.pairs2obj(arr)\n\n将给定的键值对转换为一个对象 [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/object/pairs2obj.ts \"View in source\")\n\n##### Example\n```js\n_.pairs2obj([['a',1],['b',2]]) // => {a: 1, b: 2}\n```"}}]);

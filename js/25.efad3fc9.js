@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[25],{715:function(n,e){n.exports='### _.isDate(object)\n\n如果 object 是一个日期，返回 true [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.ts "View in source")\n\n##### Example\n```js\n_.isDate(new Date()); // => true\n```\n'}}]);

@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{695:function(n,r){n.exports='### _.countInArr(arr, value)\n\n统计数组中特定值出现的次数 [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/array/countInArr.ts "View in source")\n\n##### Returns\n*(Number)*: 返回数组中特定值出现的次数.\n\n&nbsp;&nbsp;\n\n##### Example\n```js\n_.countInArr([1, 1, 2, 1, 2, 3], 1) // => 3\n```'}}]);

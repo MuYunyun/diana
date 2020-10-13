@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[44],{734:function(n,o){n.exports="### _.isPhoneNum(phoneNum)\n\n判断是否为手机号. [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/regexp/isPhoneNum.ts \"View in source\")\n\n##### Example\n```js\n_.isPhoneNum('15712345678'); // => true\n```"}}]);

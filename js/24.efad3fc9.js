@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[24],{714:function(n,s){n.exports='### _.isArray(val)\n\n判断是否为数组 [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/lang/isType.ts "View in source")\n\n&nbsp;&nbsp;\n\n##### Example\n```js\n_.isArray([1, 2]); // => true\n```'}}]);

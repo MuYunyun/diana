@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[37],{727:function(n,s){n.exports='### _.sum(arr)\n\n数组求和 [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/math/math.ts "View in source")\n\n##### Example\n```js\n_.sum([1, 2, 3, 4]); // => 10\n```'}}]);

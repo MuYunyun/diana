@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[32],{722:function(n,o){n.exports='### _.gcd(x, y)\n\n求最大公约数 [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/common/math/math.ts "View in source")\n\n##### Example\n```js\n_.gcd(8, 36) // => 4\n```'}}]);

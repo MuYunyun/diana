@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[15],{705:function(n,e){n.exports='### _.isClient()\n\nJudge if current environment is client. [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/browser/device/isClient.ts "View in source")\n\n##### Example\n```js\n_.isClient(); // => true\n```'}}]);

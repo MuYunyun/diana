@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[10],{700:function(n,s){n.exports='### _.addClass(element, className)\n\n为元素添加类名 [&#x24C8;](https://github.com/MuYunyun/diana/blob/master/src/browser/dom/addClass.ts "View in source")\n\n##### Arguments\n`element` *(HTMLElement)*: 选中的节点\n\n`className` *(String)*: 添加的类名'}}]);
