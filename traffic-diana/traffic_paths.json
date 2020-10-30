@@ -2,7 +2,7 @@
   {
     "path": "/MuYunyun/diana",
     "title": "MuYunyun/diana: fe customized tools",
-    "count": 17,
+    "count": 15,
     "uniques": 5
   },
   {
@@ -14,12 +14,6 @@
   {
     "path": "/MuYunyun/diana/blob/master/README-zh-cn.md",
     "title": "diana/README-zh-cn.md at master · MuYunyun/diana",
-    "count": 3,
-    "uniques": 3
-  },
-  {
-    "path": "/MuYunyun/diana/issues/7",
-    "title": "关于装饰器装饰箭头函数 · Issue #7 · MuYunyun/diana · GitHub",
     "count": 3,
     "uniques": 3
   },
@@ -56,6 +50,12 @@
   {
     "path": "/MuYunyun/diana/blob/master/src/browser/index.ts",
     "title": "diana/index.ts at master · MuYunyun/diana",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/diana/blob/master/src/common/array/countInArr.ts",
+    "title": "diana/countInArr.ts at master · MuYunyun/diana",
     "count": 1,
     "uniques": 1
   }
