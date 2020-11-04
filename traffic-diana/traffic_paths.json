@@ -2,20 +2,14 @@
   {
     "path": "/MuYunyun/diana",
     "title": "MuYunyun/diana: fe customized tools",
-    "count": 18,
-    "uniques": 8
+    "count": 12,
+    "uniques": 7
   },
   {
     "path": "/MuYunyun/diana/blob/master/README-zh-cn.md",
     "title": "diana/README-zh-cn.md at master · MuYunyun/diana · GitHub",
-    "count": 5,
-    "uniques": 5
-  },
-  {
-    "path": "/MuYunyun/diana/issues/5",
-    "title": "按需加载实践 · Issue #5 · MuYunyun/diana",
     "count": 4,
-    "uniques": 3
+    "uniques": 4
   },
   {
     "path": "/MuYunyun/diana/blob/master/src/common/array/countInArr.ts",
@@ -30,20 +24,14 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/diana/commit/208ca770bca00b4766fdec431b02f87ab3a0f23d",
-    "title": "perf: 并发打包 · MuYunyun/diana@208ca77",
-    "count": 2,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/diana/issues",
     "title": "Issues · MuYunyun/diana",
     "count": 2,
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/diana/tree/master/src",
-    "title": "diana/src at master · MuYunyun/diana",
+    "path": "/MuYunyun/diana/issues/5",
+    "title": "按需加载实践 · Issue #5 · MuYunyun/diana",
     "count": 2,
     "uniques": 1
   },
@@ -54,8 +42,20 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/diana/blob/master/script/build.js",
-    "title": "diana/build.js at master · MuYunyun/diana",
+    "path": "/MuYunyun/diana/blob/master/src/browser/device/getOS.ts",
+    "title": "diana/getOS.ts at master · MuYunyun/diana · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/diana/blob/master/src/browser/http/redirect.ts",
+    "title": "diana/redirect.ts at master · MuYunyun/diana · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/diana/blob/master/src/common/array/difference.ts",
+    "title": "diana/difference.ts at master · MuYunyun/diana · GitHub",
     "count": 1,
     "uniques": 1
   }
