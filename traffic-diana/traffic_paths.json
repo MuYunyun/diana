@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/diana",
     "title": "MuYunyun/diana: fe customized tools",
-    "count": 15,
-    "uniques": 8
+    "count": 11,
+    "uniques": 7
   },
   {
     "path": "/MuYunyun/diana/blob/master/README-zh-cn.md",
@@ -18,12 +18,6 @@
     "uniques": 5
   },
   {
-    "path": "/MuYunyun/diana/issues/5",
-    "title": "按需加载实践 · Issue #5 · MuYunyun/diana · GitHub",
-    "count": 5,
-    "uniques": 3
-  },
-  {
     "path": "/MuYunyun/diana/blob/master/src/common/array/countInArr.ts",
     "title": "diana/countInArr.ts at master · MuYunyun/diana · GitHub",
     "count": 3,
@@ -32,6 +26,12 @@
   {
     "path": "/MuYunyun/diana/issues",
     "title": "Issues · MuYunyun/diana",
+    "count": 3,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/diana/issues/5",
+    "title": "按需加载实践 · Issue #5 · MuYunyun/diana · GitHub",
     "count": 3,
     "uniques": 2
   },
