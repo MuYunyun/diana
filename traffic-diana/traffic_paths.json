@@ -14,14 +14,8 @@
   {
     "path": "/MuYunyun/diana/issues/7",
     "title": "关于装饰器装饰箭头函数 · Issue #7 · MuYunyun/diana · GitHub",
-    "count": 5,
-    "uniques": 5
-  },
-  {
-    "path": "/MuYunyun/diana/blob/master/src/common/array/countInArr.ts",
-    "title": "diana/countInArr.ts at master · MuYunyun/diana · GitHub",
-    "count": 3,
-    "uniques": 2
+    "count": 7,
+    "uniques": 6
   },
   {
     "path": "/MuYunyun/diana/issues",
@@ -46,6 +40,12 @@
     "title": "diana/redirect.ts at master · MuYunyun/diana · GitHub",
     "count": 2,
     "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/diana/blob/master/src/common/array/countInArr.ts",
+    "title": "diana/countInArr.ts at master · MuYunyun/diana · GitHub",
+    "count": 2,
+    "uniques": 1
   },
   {
     "path": "/MuYunyun/diana/blob/master/package.json",
