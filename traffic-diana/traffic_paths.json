@@ -2,14 +2,14 @@
   {
     "path": "/MuYunyun/diana",
     "title": "MuYunyun/diana: fe customized tools",
-    "count": 11,
-    "uniques": 7
+    "count": 9,
+    "uniques": 5
   },
   {
     "path": "/MuYunyun/diana/blob/master/README-zh-cn.md",
     "title": "diana/README-zh-cn.md at master · MuYunyun/diana · GitHub",
-    "count": 10,
-    "uniques": 5
+    "count": 9,
+    "uniques": 4
   },
   {
     "path": "/MuYunyun/diana/issues/7",
@@ -24,28 +24,10 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/diana/issues",
-    "title": "Issues · MuYunyun/diana",
-    "count": 3,
-    "uniques": 2
-  },
-  {
     "path": "/MuYunyun/diana/tree/master/src",
     "title": "diana/src at master · MuYunyun/diana · GitHub",
     "count": 3,
     "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/diana/blob/master/src/browser/http/redirect.ts",
-    "title": "diana/redirect.ts at master · MuYunyun/diana · GitHub",
-    "count": 2,
-    "uniques": 2
-  },
-  {
-    "path": "/MuYunyun/diana/blob/master/src/common/array/countInArr.ts",
-    "title": "diana/countInArr.ts at master · MuYunyun/diana · GitHub",
-    "count": 2,
-    "uniques": 1
   },
   {
     "path": "/MuYunyun/diana/blob/master/package.json",
@@ -56,6 +38,24 @@
   {
     "path": "/MuYunyun/diana/blob/master/script/rollup.js",
     "title": "diana/rollup.js at master · MuYunyun/diana · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/diana/blob/master/src/browser/dom/hasClass.ts",
+    "title": "diana/hasClass.ts at master · MuYunyun/diana · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/diana/blob/master/src/browser/http/redirect.ts",
+    "title": "diana/redirect.ts at master · MuYunyun/diana · GitHub",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/diana/blob/master/src/common/math/math.ts",
+    "title": "diana/math.ts at master · MuYunyun/diana · GitHub",
     "count": 1,
     "uniques": 1
   }
