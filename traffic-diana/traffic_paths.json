@@ -2,13 +2,19 @@
   {
     "path": "/MuYunyun/diana",
     "title": "MuYunyun / diana：fe定制工具",
-    "count": 14,
+    "count": 17,
     "uniques": 7
   },
   {
     "path": "/MuYunyun/diana/blob/master/README-zh-cn.md",
-    "title": "diana/README-zh-cn.md at master · MuYunyun/diana",
-    "count": 7,
+    "title": "diana/README-zh-cn.md at master · MuYunyun/diana · GitHub",
+    "count": 8,
+    "uniques": 3
+  },
+  {
+    "path": "/MuYunyun/diana/commits/master",
+    "title": "Commits · MuYunyun/diana · GitHub",
+    "count": 8,
     "uniques": 2
   },
   {
@@ -30,16 +36,16 @@
     "uniques": 3
   },
   {
-    "path": "/MuYunyun/diana/commits/master",
-    "title": "Commits · MuYunyun/diana · GitHub",
-    "count": 4,
-    "uniques": 2
-  },
-  {
     "path": "/MuYunyun/diana/pulls",
     "title": "Pull requests · MuYunyun/diana",
     "count": 3,
     "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/diana/tags",
+    "title": "Tags · MuYunyun/diana",
+    "count": 3,
+    "uniques": 1
   },
   {
     "path": "/MuYunyun/diana/blob/master/CHANGELOG.md",
@@ -50,12 +56,6 @@
   {
     "path": "/MuYunyun/diana/graphs/commit-activity",
     "title": "Commit Activity · MuYunyun/diana",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/diana/issues/1",
-    "title": "why to make diana · Issue #1 · MuYunyun/diana",
     "count": 2,
     "uniques": 1
   }
