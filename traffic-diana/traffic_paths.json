@@ -2,8 +2,8 @@
   {
     "path": "/MuYunyun/diana",
     "title": "MuYunyun/diana: fe customized tools",
-    "count": 20,
-    "uniques": 7
+    "count": 17,
+    "uniques": 5
   },
   {
     "path": "/MuYunyun/diana/blob/master/README-zh-cn.md",
@@ -13,9 +13,9 @@
   },
   {
     "path": "/MuYunyun/diana/commits/master",
-    "title": "Commits · MuYunyun/diana · GitHub",
-    "count": 9,
-    "uniques": 2
+    "title": "Commits · MuYunyun/diana",
+    "count": 8,
+    "uniques": 1
   },
   {
     "path": "/MuYunyun/diana/issues",
@@ -27,12 +27,6 @@
     "path": "/MuYunyun/diana/issues/5",
     "title": "按需加载实践 · Issue #5 · MuYunyun/diana · GitHub",
     "count": 5,
-    "uniques": 4
-  },
-  {
-    "path": "/MuYunyun/diana/issues/7",
-    "title": "关于装饰器装饰箭头函数 · Issue #7 · MuYunyun/diana · GitHub",
-    "count": 4,
     "uniques": 4
   },
   {
@@ -48,14 +42,20 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/diana/tree/v0.4.1/lib",
-    "title": "diana/lib at v0.4.1 · MuYunyun/diana · GitHub",
+    "path": "/MuYunyun/diana/issues/7",
+    "title": "关于装饰器装饰箭头函数 · Issue #7 · MuYunyun/diana · GitHub",
     "count": 2,
     "uniques": 2
   },
   {
     "path": "/MuYunyun/diana/blob/146afab607/src/index.js",
     "title": "diana/index.js at 146afab607a981e429619ab136a4c1d5d12c749f · MuYunyun/diana",
+    "count": 2,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/diana/blob/master/CHANGELOG.md",
+    "title": "diana/CHANGELOG.md at master · MuYunyun/diana",
     "count": 2,
     "uniques": 1
   }
