@@ -2,14 +2,8 @@
   {
     "path": "/MuYunyun/diana",
     "title": "MuYunyun/diana: fe customized tools",
-    "count": 11,
-    "uniques": 6
-  },
-  {
-    "path": "/MuYunyun/diana/issues/5",
-    "title": "按需加载实践 · Issue #5 · MuYunyun/diana",
-    "count": 3,
-    "uniques": 3
+    "count": 12,
+    "uniques": 7
   },
   {
     "path": "/MuYunyun/diana/commits/master",
@@ -18,14 +12,14 @@
     "uniques": 1
   },
   {
-    "path": "/MuYunyun/diana/blob/master/README.md",
-    "title": "diana/README.md at master · MuYunyun/diana · GitHub",
-    "count": 1,
-    "uniques": 1
-  },
-  {
     "path": "/MuYunyun/diana/blob/master/README-zh-cn.md",
     "title": "diana/README-zh-cn.md at master · MuYunyun/diana · GitHub",
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/diana/blob/master/README.md",
+    "title": "diana/README.md at master · MuYunyun/diana · GitHub",
     "count": 1,
     "uniques": 1
   },
@@ -50,6 +44,12 @@
   {
     "path": "/MuYunyun/diana/commits/7fff32c27909c06a176bcf53358b1ac49d37e77b/lib/diana.back.js",
     "title": "History for lib/diana.back.js - MuYunyun/diana",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/diana/issues/5",
+    "title": "按需加载实践 · Issue #5 · MuYunyun/diana",
     "count": 1,
     "uniques": 1
   },
