@@ -36,12 +36,6 @@
     "uniques": 2
   },
   {
-    "path": "/MuYunyun/diana/issues/7",
-    "title": "关于装饰器装饰箭头函数 · Issue #7 · MuYunyun/diana",
-    "count": 2,
-    "uniques": 2
-  },
-  {
     "path": "/MuYunyun/diana/blob/master/script/build.js",
     "title": "diana/build.js at master · MuYunyun/diana · GitHub",
     "count": 2,
@@ -56,6 +50,12 @@
   {
     "path": "/MuYunyun/diana/blob/master/.babelrc",
     "title": "diana/.babelrc at master · MuYunyun/diana",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/MuYunyun/diana/blob/master/script/check.js",
+    "title": "diana/check.js at master · MuYunyun/diana · GitHub",
     "count": 1,
     "uniques": 1
   }
