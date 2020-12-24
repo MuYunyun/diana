@@ -20,7 +20,7 @@
   {
     "path": "/MuYunyun/diana/issues/5",
     "title": "按需加载实践 · Issue #5 · MuYunyun/diana",
-    "count": 4,
+    "count": 5,
     "uniques": 2
   },
   {
@@ -33,6 +33,12 @@
     "path": "/MuYunyun/diana/tree/master/src/common",
     "title": "diana/src/common at master · MuYunyun/diana · GitHub",
     "count": 3,
+    "uniques": 2
+  },
+  {
+    "path": "/MuYunyun/diana/issues/7",
+    "title": "关于装饰器装饰箭头函数 · Issue #7 · MuYunyun/diana",
+    "count": 2,
     "uniques": 2
   },
   {
@@ -50,12 +56,6 @@
   {
     "path": "/MuYunyun/diana/blob/master/.babelrc",
     "title": "diana/.babelrc at master · MuYunyun/diana",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/MuYunyun/diana/blob/master/script/check.js",
-    "title": "diana/check.js at master · MuYunyun/diana · GitHub",
     "count": 1,
     "uniques": 1
   }
