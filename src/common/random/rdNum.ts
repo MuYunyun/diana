@@ -29,5 +29,5 @@ function rdNum(min: number, max: number, border: string) {
   }
 }
 
-export = rdNum
+export default rdNum
 

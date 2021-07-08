@@ -1,54 +1,54 @@
 /* ---------------- common ------------------- */
 // array
-import uniq = require('./array/uniq')
-import intersection = require('./array/intersection')
-import countInArr = require('./array/countInArr')
-import difference = require('./array/difference')
+const uniq = require('./array/uniq')
+const intersection = require('./array/intersection')
+const countInArr = require('./array/countInArr')
+const difference = require('./array/difference')
 
 // random
-import rdColor = require('./random/rdColor')
-import rdNum = require('./random/rdNum')
+const rdColor = require('./random/rdColor')
+const rdNum = require('./random/rdNum')
 
 // regexp
-import isEmail = require('./regexp/isEmail')
-import isPhoneNum = require('./regexp/isPhoneNum')
+const isEmail = require('./regexp/isEmail')
+const isPhoneNum = require('./regexp/isPhoneNum')
 
 // string
-import trim = require('./string/trim')
-import changeCase = require('./string/changeCase')
-import escapeStr = require('./string/escapeStr')
-import sortStr = require('./string/sortStr')
+const trim = require('./string/trim')
+const changeCase = require('./string/changeCase')
+const escapeStr = require('./string/escapeStr')
+const sortStr = require('./string/sortStr')
 
 // lang
-import clone = require('./lang/clone')
-import cloneDeep = require('./lang/cloneDeep')
-import typeObj = require('./lang/isType')
+const clone = require('./lang/clone')
+const cloneDeep = require('./lang/cloneDeep')
+const typeObj = require('./lang/isType')
 
 // math
-import { sum, mean, max, min, distance, gcd } from './math/math'
-import round = require('./math/round')
+const { sum, mean, max, min, distance, gcd } = require('./math/math')
+const round = require('./math/round')
 
 // object
-import equal = require('./object/equal')
-import pairs2obj = require('./object/pairs2obj')
-import convertInObj = require('./object/convertInObj')
+const equal = require('./object/equal')
+const pairs2obj = require('./object/pairs2obj')
+const convertInObj = require('./object/convertInObj')
 
 // url
-import obj2query = require('./url/obj2query')
-import query2obj = require('./url/query2obj')
+const obj2query = require('./url/obj2query')
+const query2obj = require('./url/query2obj')
 
 // collection
-import each = require('./collection/each')
+const each = require('./collection/each')
 
 // function
-import { debounce, Debounce } from './function/debounce'
-import throttle = require('./function/throttle')
-import curry = require('./function/curry')
+const { debounce, Debounce } = require('./function/debounce')
+const throttle = require('./function/throttle')
+const curry = require('./function/curry')
 
 // time
-import timeTaken = require('./time/timeTaken')
+const timeTaken = require('./time/timeTaken')
 
-const fn = {
+module.exports = {
   uniq,
   intersection,
   countInArr,
@@ -81,11 +81,5 @@ const fn = {
   throttle,
   curry,
   timeTaken,
-}
-
-const commonFn = {
-  ...fn,
   ...typeObj,
 }
-
-export = commonFn

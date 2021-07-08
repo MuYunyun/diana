@@ -8,4 +8,4 @@ function equal(a: any, b: any) {
   return eq(a, b)
 }
 
-export = equal
+export default equal

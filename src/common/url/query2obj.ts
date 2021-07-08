@@ -11,7 +11,8 @@ function query2obj(queryurl: string) {
   const handleArr = decodeURIComponent(search).split('&').filter(r => r !== '')
   const obj: any = {}
   for (let value of handleArr) {
-    const key = value.match(/.*?(?==)/) // 第一个问号是懒惰型搜索，第二个问号是正向预查，解决 a==1&&b=2& 的情况
+    // 第一个问号是懒惰型搜索用于解决 a==1&&b=2& 的情况，第二个问号是正向预查
+    const key = value.match(/.*?(?==)/)
     if (key) {
       obj[key[0]] = value.substring(value.indexOf('=') + 1)
     }
@@ -19,4 +20,4 @@ function query2obj(queryurl: string) {
   return obj
 }
 
-export = query2obj
+export default query2obj

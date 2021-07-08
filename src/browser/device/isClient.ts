@@ -7,4 +7,4 @@ const isClient = () => !!(
   window.document.createElement
 );
 
-export = isClient
+export default isClient

@@ -12,4 +12,4 @@ function curry(fn: any, arity = fn.length, ...args: Array<any>) {
     : curry.bind(null, fn, arity, ...args)
 }
 
-export = curry
+export default curry

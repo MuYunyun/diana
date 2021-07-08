@@ -13,4 +13,4 @@ function trim(str: String, type: number) {
   }
 }
 
-export = trim
+export default trim

@@ -19,4 +19,4 @@ typeObj.isArray = (value: any) => {
   return Array.isArray(value)
 }
 
-export = typeObj
+export default typeObj

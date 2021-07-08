@@ -18,4 +18,4 @@ function round(value: number, position = 0) {
   return result
 }
 
-export = round
+export default round

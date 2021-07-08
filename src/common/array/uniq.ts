@@ -39,4 +39,4 @@ function uniq(...arr: Array<any>) {
   return result
 }
 
-export = uniq
+export default uniq

@@ -54,4 +54,4 @@ function sum(arr: Array<number>) {
 
 const obj = { distance, gcd, max, mean, min, sum }
 
-export = obj
+export default obj

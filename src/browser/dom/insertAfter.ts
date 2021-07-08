@@ -15,4 +15,4 @@ function insertAfter(newNode: any, referenceNode: any) {
   return this
 }
 
-export = insertAfter
+export default insertAfter

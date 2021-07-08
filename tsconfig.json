@@ -1,27 +1,26 @@
 {
   "exclude": [],
   "compilerOptions": {
-    "module": "commonjs",
     "outDir": "./dist/",
+    "strict": true,
     "experimentalDecorators": true,
-    "sourceMap": true,
-    "target": "es5",
-    "inlineSources": true,
-    "strictNullChecks": true,
-    "noImplicitAny": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noUnusedParameters": true,
     "noUnusedLocals": true,
-    "importHelpers": true,
-    "removeComments": true,
-    "plugins": [
-      {
-        "name": "tslint-language-service"
-      }
-    ],
+    "target": "es5",
     "lib": [
-      "es5",
       "es6",
+      "ES2016",
       "dom"
     ],
+    "moduleResolution": "node",
+    "declaration": true,
+    "module": "es6",
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "noImplicitThis": false,
+    "removeComments": false,
   },
   "include": [
     "test/",

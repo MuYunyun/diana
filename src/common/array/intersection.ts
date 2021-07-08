@@ -32,4 +32,4 @@ function intersection(...arr: Array<any>) {
   }
 }
 
-export = intersection
+export default intersection

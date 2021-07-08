@@ -40,4 +40,4 @@ function Debounce(time: number, immediate?: boolean) {
 
 const obj = { debounce, Debounce }
 
-export = obj
+export default obj

@@ -11,4 +11,4 @@ function obj2query(baseurl: string, obj: any) {
   return baseurl + '?' + handleArray.join('&')
 }
 
-export = obj2query
+export default obj2query

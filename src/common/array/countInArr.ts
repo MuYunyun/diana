@@ -9,4 +9,4 @@ function countInArr(arr: Array<any>, value: string|number|boolean) {
   return arr.reduce((a, v) => v === value ? a + 1 : a + 0, 0)
 }
 
-export = countInArr
+export default countInArr

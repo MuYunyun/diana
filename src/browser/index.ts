@@ -1,21 +1,22 @@
-import * as commonFn from '../common'
+import commonFn from '../common'
 
 /* ---------------- browser ------------------- */
 // device
-import getOS = require('./device/getOS')
-import isMobile = require('./device/isMobile')
-import isClient = require('./device/isClient')
+import getOS from './device/getOS'
+import isMobile from './device/isMobile'
+import isClient from './device/isClient'
 
 // redirect
-import redirect = require('./http/redirect')
+import redirect from './http/redirect'
 
 // dom
-import addLoadEvent = require('./dom/addLoadEvent')
-import insertAfter = require('./dom/insertAfter')
-import addClass = require('./dom/addClass')
-import hasClass = require('./dom/hasClass')
+import addLoadEvent from './dom/addLoadEvent'
+import insertAfter from './dom/insertAfter'
+import addClass from './dom/addClass'
+import hasClass from './dom/hasClass'
 
-const browserFn = Object.assign({}, commonFn, {
+export {
+  ...commonFn,
   getOS,
   isMobile,
   isClient,
@@ -24,6 +25,4 @@ const browserFn = Object.assign({}, commonFn, {
   insertAfter,
   addClass,
   hasClass,
-})
-
-export = browserFn
+}

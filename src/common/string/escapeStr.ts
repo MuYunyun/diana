@@ -7,4 +7,4 @@ function escapeStr(str: String) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 }
 
-export = escapeStr
+export default escapeStr

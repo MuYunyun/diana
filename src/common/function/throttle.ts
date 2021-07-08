@@ -45,4 +45,4 @@ function throttle(func: any, wait: number, options: any) {
   return throttled
 }
 
-export = throttle
+export default throttle

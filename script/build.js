@@ -2,7 +2,8 @@ const fs = require('fs')
 const path = require('path')
 const ora = require('ora')
 const { rollup } = require('rollup')
-const commenjs = require('rollup-plugin-commonjs')
+const commenjs = require('@rollup/plugin-commonjs')
+const typescript = require('@rollup/plugin-typescript')
 const { terser } = require('rollup-plugin-terser')
 const pkg = require('../package.json')
 const rootPath = path.resolve(__dirname, '../')
@@ -14,14 +15,15 @@ async function buildNode() {
     const result = await rollup({
       input: path.resolve(rootPath, 'dist/src/node', 'index.js'),
       plugins: [
+        typescript(),
         commenjs(),
         terser(),
       ],
-      external: ['tslib']
+      // external: ['tslib']
     })
     await result.write({
       file: `lib/${pkg.name}.back.js`,
-      format: 'esm',
+      format: 'cjs',
     })
   } catch (e) {
     throw e
@@ -33,10 +35,11 @@ async function buildBrowser() {
     const result = await rollup({
       input: path.resolve(rootPath, 'dist/src/browser', 'index.js'),
       plugins: [
+        typescript(),
         commenjs(),
         terser(),
       ],
-      external: ['tslib']
+      // external: ['tslib']
     })
     await result.write({
       file: `lib/${pkg.name}.js`,

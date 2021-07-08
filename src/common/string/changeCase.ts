@@ -44,4 +44,4 @@ function ToggleCase(str: String) {
   return itemText
 }
 
-export = changeCase
+export default changeCase

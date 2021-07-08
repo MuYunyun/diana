@@ -7,4 +7,4 @@ function sortStr(str: String) {
   return str.split('').sort((a, b) => a.localeCompare(b)).join('')
 }
 
-export = sortStr
+export default sortStr

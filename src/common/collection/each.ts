@@ -40,4 +40,4 @@ const isArrayLike = (collection: any) => {
   return typeof length === 'number' && length >= 0 && length <= MAX_ARRAY_INDEX
 }
 
-export = each
+export default each

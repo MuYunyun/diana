@@ -7,4 +7,4 @@ function pairs2obj(arr: Array<any>) {
   return arr.reduce((a, v) => (a[v[0]] = v[1], a), {})
 }
 
-export = pairs2obj
+export default pairs2obj

@@ -30,4 +30,4 @@ function getOS() {
   return currentOS
 }
 
-export = getOS
+export default getOS

@@ -13,4 +13,4 @@ function hasClass(element: any, className: string) {
   return false
 }
 
-export = hasClass
+export default hasClass

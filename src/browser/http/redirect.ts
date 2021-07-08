@@ -8,4 +8,4 @@ function redirect(url: string, aslink = true) {
   return this
 }
 
-export = redirect
+export default redirect

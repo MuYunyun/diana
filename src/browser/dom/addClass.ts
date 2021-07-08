@@ -13,4 +13,4 @@ function addClass(element: any, className: string) {
   return this
 }
 
-export = addClass
+export default addClass

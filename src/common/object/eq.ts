@@ -97,4 +97,4 @@ function deepEqual(a: any, b: any, aStack: Array<any> = [], bStack: Array<any> =
   return true
 }
 
-export = eq
+export default eq

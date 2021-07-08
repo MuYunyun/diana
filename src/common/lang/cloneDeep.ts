@@ -73,4 +73,4 @@ const getRegExp = (re: any) => {
   return flags
 }
 
-export = cloneDeep
+export default cloneDeep
