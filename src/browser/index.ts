@@ -1,22 +1,115 @@
-import commonFn from '../common'
+import {
+  uniq,
+  intersection,
+  countInArr,
+  difference,
+  rdColor,
+  rdNum,
+  isEmail,
+  isPhoneNum,
+  trim,
+  changeCase,
+  escapeStr,
+  sortStr,
+  clone,
+  cloneDeep,
+  sum,
+  mean,
+  max,
+  min,
+  distance,
+  gcd,
+  round,
+  equal,
+  pairs2obj,
+  convertInObj,
+  obj2query,
+  query2obj,
+  each,
+  debounce,
+  Debounce,
+  throttle,
+  curry,
+  timeTaken,
+  // type
+  isArguments,
+  isFunction,
+  isString,
+  isDate,
+  isRegExp,
+  isError,
+  isSymbol,
+  isMap,
+  isWeakMap,
+  isSet,
+  isWeakSet,
+  isNumber,
+  isArray,
+} from '../common'
 
 /* ---------------- browser ------------------- */
 // device
-import getOS from './device/getOS'
-import isMobile from './device/isMobile'
-import isClient from './device/isClient'
+import getOS from './getOS'
+import isMobile from './isMobile'
+import isClient from './isClient'
 
 // redirect
-import redirect from './http/redirect'
+import redirect from './redirect'
 
 // dom
-import addLoadEvent from './dom/addLoadEvent'
-import insertAfter from './dom/insertAfter'
-import addClass from './dom/addClass'
-import hasClass from './dom/hasClass'
+import addLoadEvent from './addLoadEvent'
+import insertAfter from './insertAfter'
+import addClass from './addClass'
+import hasClass from './hasClass'
 
 export {
-  ...commonFn,
+  uniq,
+  intersection,
+  countInArr,
+  difference,
+  rdColor,
+  rdNum,
+  isEmail,
+  isPhoneNum,
+  trim,
+  changeCase,
+  escapeStr,
+  sortStr,
+  clone,
+  cloneDeep,
+  sum,
+  mean,
+  max,
+  min,
+  distance,
+  gcd,
+  round,
+  equal,
+  pairs2obj,
+  convertInObj,
+  obj2query,
+  query2obj,
+  each,
+  debounce,
+  Debounce,
+  throttle,
+  curry,
+  timeTaken,
+  // type
+  isArguments,
+  isFunction,
+  isString,
+  isDate,
+  isRegExp,
+  isError,
+  isSymbol,
+  isMap,
+  isWeakMap,
+  isSet,
+  isWeakSet,
+  isNumber,
+  isArray,
+  // browser,
   getOS,
   isMobile,
   isClient,

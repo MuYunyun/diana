@@ -1,8 +1,6 @@
 {
   "exclude": [],
   "compilerOptions": {
-    "outDir": "./dist/",
-    "strict": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,

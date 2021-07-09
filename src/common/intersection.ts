@@ -1,4 +1,4 @@
-const uniq = require('./uniq')
+import uniq from './uniq'
 
 /**
  * 1 个或者多个数组取交集

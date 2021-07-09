@@ -4,6 +4,17 @@
   "description": "lightweight tool library",
   "browser": "lib/diana.js",
   "main": "lib/diana.back.js",
+  "scripts": {
+    "start": "react-doc start",
+    "build:doc": "react-doc build",
+    "deploy:doc": "react-doc deploy",
+    "build": "gulp",
+    "test": "karma start karma.conf.js",
+    "codecov": "codecov --token=921e25b4-c2ac-488f-8007-2749741689d0",
+    "pre-lint": "node script/check.js",
+    "compile": "tsc -w -p tsconfig.json",
+    "release": "release-it --src.tagName='v%s'"
+  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^19.0.0",
     "@rollup/plugin-typescript": "^8.2.1",
@@ -14,7 +25,10 @@
     "codecov": "^3.0.0",
     "crd-seed": "^1.1.3",
     "create-react-doc": "^1.3.4",
+    "del": "^6.0.0",
     "diana": "^0.4.8",
+    "gulp": "^4.0.2",
+    "gulp-typescript": "^6.0.0-alpha.1",
     "karma": "^1.7.1",
     "karma-chrome-launcher": "^2.2.0",
     "karma-coverage": "^1.1.1",
@@ -23,6 +37,7 @@
     "karma-remap-istanbul-fix": "^0.6.3",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^5.0.0",
+    "merge2": "^1.4.1",
     "mocha": "^4.0.1",
     "ora": "^1.3.0",
     "pre-commit": "^1.2.2",
@@ -37,17 +52,6 @@
   },
   "dependencies": {
     "tslib": "^2.3.0"
-  },
-  "scripts": {
-    "start": "react-doc start",
-    "build:doc": "react-doc build",
-    "deploy:doc": "react-doc deploy",
-    "build": "babel-node script/build.js",
-    "test": "karma start karma.conf.js",
-    "codecov": "codecov --token=921e25b4-c2ac-488f-8007-2749741689d0",
-    "pre-lint": "node script/check.js",
-    "compile": "tsc -w -p tsconfig.json",
-    "release": "release-it --src.tagName='v%s'"
   },
   "repository": {
     "type": "git",

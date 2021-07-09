@@ -1,54 +1,67 @@
 /* ---------------- common ------------------- */
 // array
-const uniq = require('./array/uniq')
-const intersection = require('./array/intersection')
-const countInArr = require('./array/countInArr')
-const difference = require('./array/difference')
+import uniq from './uniq'
+import intersection from './intersection'
+import countInArr from './countInArr'
+import difference from './difference'
 
 // random
-const rdColor = require('./random/rdColor')
-const rdNum = require('./random/rdNum')
+import rdColor from './rdColor'
+import rdNum from './rdNum'
 
 // regexp
-const isEmail = require('./regexp/isEmail')
-const isPhoneNum = require('./regexp/isPhoneNum')
+import isEmail from './isEmail'
+import isPhoneNum from './isPhoneNum'
 
 // string
-const trim = require('./string/trim')
-const changeCase = require('./string/changeCase')
-const escapeStr = require('./string/escapeStr')
-const sortStr = require('./string/sortStr')
+import trim from './trim'
+import changeCase from './changeCase'
+import escapeStr from './escapeStr'
+import sortStr from './sortStr'
 
 // lang
-const clone = require('./lang/clone')
-const cloneDeep = require('./lang/cloneDeep')
-const typeObj = require('./lang/isType')
+import clone from './clone'
+import cloneDeep from './cloneDeep'
+import {
+  isArguments,
+  isFunction,
+  isString,
+  isDate,
+  isRegExp,
+  isError,
+  isSymbol,
+  isMap,
+  isWeakMap,
+  isSet,
+  isWeakSet,
+  isNumber,
+  isArray } from './isType'
 
 // math
-const { sum, mean, max, min, distance, gcd } = require('./math/math')
-const round = require('./math/round')
+import { sum, mean, max, min, distance, gcd } from './math'
+import round from './round'
 
 // object
-const equal = require('./object/equal')
-const pairs2obj = require('./object/pairs2obj')
-const convertInObj = require('./object/convertInObj')
+import equal from './equal'
+import pairs2obj from './pairs2obj'
+import convertInObj from './convertInObj'
 
 // url
-const obj2query = require('./url/obj2query')
-const query2obj = require('./url/query2obj')
+import obj2query from './obj2query'
+import query2obj from './query2obj'
 
 // collection
-const each = require('./collection/each')
+import each from './each'
 
 // function
-const { debounce, Debounce } = require('./function/debounce')
-const throttle = require('./function/throttle')
-const curry = require('./function/curry')
+import { debounce, Debounce } from './debounce'
+import throttle from './throttle'
+import curry from './curry'
 
 // time
-const timeTaken = require('./time/timeTaken')
+import timeTaken from './timeTaken'
 
-module.exports = {
+export {
   uniq,
   intersection,
   countInArr,
@@ -81,5 +94,18 @@ module.exports = {
   throttle,
   curry,
   timeTaken,
-  ...typeObj,
+  // type
+  isArguments,
+  isFunction,
+  isString,
+  isDate,
+  isRegExp,
+  isError,
+  isSymbol,
+  isMap,
+  isWeakMap,
+  isSet,
+  isWeakSet,
+  isNumber,
+  isArray,
 }

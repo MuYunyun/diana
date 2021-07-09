@@ -1,6 +1,4 @@
-import typeObj = require('../lang/isType')
-
-const { isFunction } = typeObj
+import { isFunction } from './isType'
 
 /**
  * 判断两个数组是否相等

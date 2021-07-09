@@ -9,7 +9,8 @@ const { rollup } = require('rollup')
 const commenjs = require('@rollup/plugin-commonjs')
 const typescript = require('@rollup/plugin-typescript')
 const { terser } = require('rollup-plugin-terser')
-const pkg = require('../package.json')
+const pkg = require('./package.json')
+// const rootPath = path.resolve(__dirname, '/')
 
 let building = ora('building...')
 
@@ -43,7 +44,7 @@ async function buildBrowser() {
       ],
     })
     await result.write({
-      file: `lib/${pkg.name}.js`,
+      file: `es/${pkg.name}.js`,
       format: 'esm',
     })
   } catch (e) {
@@ -61,44 +62,20 @@ function compileTS(dir, esModule) {
 }
 
 function compileES() {
+  buildBrowser()
   return compileTS('es', true)
 }
 
 function compileCJS() {
+  buildNode()
   return compileTS('lib', false)
 }
 
 function clean() {
-  console.log('111222333')
   return del(['es', 'lib'])
 }
 
-// 导出单个函数
-function buildSingleFn() {
-  gulp.series(
-    clean,
-    gulp.parallel(compileES, compileCJS),
-  )
-}
-
-function build() {
-  // if (!fs.existsSync(path.resolve(__dirname, '../', 'lib'))) {
-  //   fs.mkdirSync(path.resolve(__dirname, '../', 'lib'))
-  // }
-  building.start()
-  buildSingleFn(),
-  // buildNode()
-  // buildBrowser()
-  // Promise.all([
-  //   await buildNode(),
-  //   await buildBrowser(),
-  // ]).then(([result1, result2, result3]) => {
-  //   building.stop()
-  // }).catch(e => {
-  //   building.stop()
-  //   throw e
-  // })
-  building.stop()
-}
-
-build()
+exports.default = gulp.series(
+  clean,
+  gulp.parallel(compileES, compileCJS),
+)

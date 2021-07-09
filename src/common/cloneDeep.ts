@@ -3,8 +3,7 @@
 //  * 深拷贝，支持常见类型
 //  * @param {Any} values
 //  */
-import typeObj = require('./isType')
-const { isDate, isRegExp, isFunction, isArray } = typeObj
+import { isDate, isRegExp, isFunction, isArray } from './isType'
 
 function cloneDeep(values: any) {
   const parents: Array<any> = []

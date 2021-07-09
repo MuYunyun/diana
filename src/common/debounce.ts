@@ -38,6 +38,4 @@ function Debounce(time: number, immediate?: boolean) {
   }
 }
 
-const obj = { debounce, Debounce }
-
-export default obj
+export { debounce, Debounce }

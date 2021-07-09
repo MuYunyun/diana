@@ -1,4 +1,4 @@
-const hasClass = require('./hasClass')
+import hasClass from './hasClass'
 /**
  * 为元素添加类名
  * @param {HTMLElement} element

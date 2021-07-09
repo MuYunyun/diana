@@ -37,7 +37,7 @@ function throttle(func: any, wait: number, options: any) {
     }
   }
 
-  throttled.cancel = function (...args: Array<any>) {
+  throttled.cancel = function () {
     clearTimeout(timeout)
     previous = 0
     timeout = null
