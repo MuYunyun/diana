@@ -1,4 +1,4 @@
-import * as _ from '../../src/common/index.js'
+import * as _ from '../src/index'
 import * as assert from 'assert'
 
 describe('Random API:', () => {

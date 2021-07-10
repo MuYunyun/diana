@@ -13,10 +13,10 @@ const pkg = require('../package.json')
 
 let building = ora('building...')
 
-async function buildNode() {
+async function buildCJS() {
   try {
     const result = await rollup({
-      input: path.resolve('src/common', 'index.ts'),
+      input: path.resolve('src', 'index.ts'),
       plugins: [
         typescript(),
         commenjs(),
@@ -32,10 +32,10 @@ async function buildNode() {
   }
 }
 
-async function buildBrowser() {
+async function buildEs() {
   try {
     const result = await rollup({
-      input: path.resolve('src/browser', 'index.ts'),
+      input: path.resolve('src', 'index.ts'),
       plugins: [
         typescript(),
         commenjs(),
@@ -43,7 +43,7 @@ async function buildBrowser() {
       ],
     })
     await result.write({
-      file: `lib/${pkg.name}.js`,
+      file: `es/${pkg.name}.js`,
       format: 'esm',
     })
   } catch (e) {
@@ -52,52 +52,32 @@ async function buildBrowser() {
 }
 
 function compileTS(dir, esModule) {
-  console.log('compileTS')
   const tsProject = ts.createProject('tsconfig.build.json', {
     module: esModule ? 'ES2015' : 'CommonJS'
   })
-  const tsResult = tsProject.src().pipe(tsProject())
-  return merge([tsResult.js.pipe(gulp.dest(dir)), tsResult.dts.pipe(gulp.dest(dir))])
-}
-
-function compileES() {
-  return compileTS('es', true)
-}
-
-function compileCJS() {
-  return compileTS('lib', false)
+  const tsResult = tsProject
+    .src()
+    .pipe(tsProject())
+  return merge([
+    tsResult.js.pipe(gulp.dest(dir)),
+    tsResult.dts.pipe(gulp.dest(dir))
+  ])
 }
 
 function clean() {
-  console.log('111222333')
   return del(['es', 'lib'])
 }
 
-// 导出单个函数
-function buildSingleFn() {
-  gulp.series(
-    clean,
-    gulp.parallel(compileES, compileCJS),
-  )
-}
-
 function build() {
-  // if (!fs.existsSync(path.resolve(__dirname, '../', 'lib'))) {
-  //   fs.mkdirSync(path.resolve(__dirname, '../', 'lib'))
-  // }
   building.start()
-  buildSingleFn(),
-  // buildNode()
-  // buildBrowser()
-  // Promise.all([
-  //   await buildNode(),
-  //   await buildBrowser(),
-  // ]).then(([result1, result2, result3]) => {
-  //   building.stop()
-  // }).catch(e => {
-  //   building.stop()
-  //   throw e
-  // })
+  clean()
+  // build for single function
+  compileTS('es', true)
+  compileTS('lib', false)
+  // build entire package
+  buildCJS()
+  // build entire package
+  buildEs()
   building.stop()
 }
 

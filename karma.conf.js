@@ -27,19 +27,19 @@ module.exports = function(config) {
       'dist/test/index.js': ['webpack', 'sourcemap', 'coverage'],
     },
 
-    webpack: {
-      mode: 'development',
-      devtool: 'inline-source-map',
-      module: {
-        rules: [{
-          enforce: 'post',
-          test: /\.js$/,
-          use: { loader: 'sourcemap-istanbul-instrumenter-loader' },
-          exclude: [/node_modules/, /\.spec.js$/],
-          // include: [/node_modules/, /\.spec.js$/],
-        }],
-      }
-    },
+    // webpack: {
+    //   mode: 'development',
+    //   devtool: 'inline-source-map',
+    //   module: {
+    //     rules: [{
+    //       enforce: 'post',
+    //       test: /\.js$/,
+    //       use: { loader: 'sourcemap-istanbul-instrumenter-loader' },
+    //       exclude: [/node_modules/, /\.spec.js$/],
+    //       // include: [/node_modules/, /\.spec.js$/],
+    //     }],
+    //   }
+    // },
 
     // optionally, configure the reporter
     coverageReporter: {

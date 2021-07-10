@@ -14,17 +14,17 @@
 function changeCase(str: String, type: number) {
   switch (type) {
     case 1:
-      return str.replace(/^(\w)(\w+)/, (v, v1, v2) => {
+      return str.replace(/^(\w)(\w+)/, (_v, v1, v2) => {
         return v1.toUpperCase() + v2.toLowerCase()
       })
     case 2:
-      return str.replace(/^(\w)(\w+)/, (v, v1, v2) => {
+      return str.replace(/^(\w)(\w+)/, (_v, v1, v2) => {
         return v1.toLowerCase() + v2.toUpperCase()
       })
     case 3:
       return ToggleCase(str)
     default:
-      return str.replace(/^(\w)(\w+)/, (v, v1, v2) => {
+      return str.replace(/^(\w)(\w+)/, (_v, v1, v2) => {
         return v1.toUpperCase() + v2.toLowerCase()
       })
   }

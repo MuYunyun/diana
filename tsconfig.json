@@ -1,6 +1,7 @@
 {
-  "exclude": [],
   "compilerOptions": {
+    "outDir": "",
+    "strict": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
@@ -19,9 +20,13 @@
     "baseUrl": ".",
     "noImplicitThis": false,
     "removeComments": false,
+    "allowJs": true
   },
   "include": [
     "test/",
-    "src",
+    "src/",
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
