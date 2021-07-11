@@ -1,5 +1,5 @@
 import * as _ from '../src/index'
-import * as assert from 'assert'
+import assert from 'assert'
 
 describe('String API:', () => {
   describe('#trim()', () => {

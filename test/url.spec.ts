@@ -1,5 +1,5 @@
 import * as _ from '../src/index'
-import * as assert from 'assert'
+import assert from 'assert'
 
 describe('#URL API:', () => {
   describe('#obj2query()', () => {

@@ -1,5 +1,5 @@
 import * as _ from '../src/index'
-import * as assert from 'assert'
+import assert from 'assert'
 
 describe('#Collection API:', () => {
   describe('#each([1, 2, 3], () => {})', () => {

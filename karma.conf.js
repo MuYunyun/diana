@@ -13,8 +13,8 @@ module.exports = function(config) {
 
     // 把文件导入浏览器，和下面的 preprocessors 对应
     files: [
-      // 'test/**/*.spec.js',
-      'dist/test/index.js',
+      'test/**/*.spec.ts',
+      // 'dist/test/index.js',
     ],
 
     // list of files to exclude
@@ -24,7 +24,9 @@ module.exports = function(config) {
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
       // 'test/**/*.spec.js': ['browserify'], // 踩了 browserify 的坑，生成的 coverage 只是一个 require 路径，就没深找还有什么类似 webpack 的 istanbul 插件了
-      'dist/test/index.js': ['webpack', 'sourcemap', 'coverage'],
+      // 'dist/test/index.js': ['webpack', 'sourcemap', 'coverage'],
+      // 'dist/test/index.js': ['sourcemap', 'coverage'],
+      'test/index.ts': ['sourcemap', 'coverage'],
     },
 
     // webpack: {
