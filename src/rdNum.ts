@@ -1,10 +1,12 @@
+type borderType = 'both' | 'left' | 'right' | 'no'
+
 /**
  * 生成指定范围随机整数
  * @param {Number} max
  * @param {Number} min
  * @param {String} 'both'(default)、'left'、'right'、'no'
  */
-function rdNum(min: number, max: number, border: string) {
+function rdNum(min: number, max: number, border: borderType = 'both') {
   if (min === max) {
     return 'rdNum() 边界值不合理'
   }

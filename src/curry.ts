@@ -6,6 +6,7 @@
  * @param {*} args
  * _.curry(Math.pow)(2)(10) => 1024
  */
+// todo
 function curry(fn: any, arity = fn.length, ...args: Array<any>) {
   return arity <= args.length
     ? fn(...args)

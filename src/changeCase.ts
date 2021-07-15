@@ -1,27 +1,21 @@
+type caseType = 'upperCaseFirst' | 'lowerCaseFirst' | 'toggle'
+
 /**
  * 大小写转化
  * @param {str}
- * @param {type} 1：首字母大写(默认) 2：首页母小写 3：大小写转换
+ * @param {type} 'upperCaseFirst'：首字母大写(默认) 'lowerCaseFirst'：首页母小写 'toggle'：大小写转换
  */
-
-// 知识点
-// str.replace(regexp|substr, newSubstr|function)，
-// function replacer(match, p1, p2, p3, offset, string) {
-// return [p1, p2, p3].join(' - ');
-// }
-// var newString = 'abc12345#$*%'.replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
-// console.log(newString);  // abc - 12345 - #$*%
-function changeCase(str: String, type: number) {
+function changeCase(str: String, type: caseType = 'upperCaseFirst') {
   switch (type) {
-    case 1:
+    case 'upperCaseFirst':
       return str.replace(/^(\w)(\w+)/, (_v, v1, v2) => {
         return v1.toUpperCase() + v2.toLowerCase()
       })
-    case 2:
+    case 'lowerCaseFirst':
       return str.replace(/^(\w)(\w+)/, (_v, v1, v2) => {
         return v1.toLowerCase() + v2.toUpperCase()
       })
-    case 3:
+    case 'toggle':
       return ToggleCase(str)
     default:
       return str.replace(/^(\w)(\w+)/, (_v, v1, v2) => {

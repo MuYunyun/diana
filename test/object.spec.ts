@@ -44,11 +44,11 @@ describe('#Object API:', () => {
 
       const obj1 = {
         a: 1,
-        b: [1, this.obj1],
+        b: [1, (this as any).obj1],
       }
       const obj2 = {
         a: 1,
-        b: [1, this.obj2],
+        b: [1, (this as any).obj2],
       }
       const test14 = _.equal(obj1, obj2) // true
       assert(!test1 && !test2 && test3 && !test4 && test5 && test6 && test7 && test8
