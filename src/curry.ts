@@ -7,7 +7,7 @@
  * _.curry(Math.pow)(2)(10) => 1024
  */
 // todo
-function curry(fn: any, arity = fn.length, ...args: Array<any>) {
+function curry(fn: any, arity: number = fn.length, ...args: any[]) {
   return arity <= args.length
     ? fn(...args)
     : curry.bind(null, fn, arity, ...args)
